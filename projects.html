@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    
+    <!-- Navigation menu section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="teaching.html">Teaching Practice</a></li>
+            <li><a href="projects.html">Project Showcase</a></li>
+            <li><a href="worksamples.html">Samples of Work</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+</body>
+<!-- This Section will contain boxes of my teaching areas that I've completed projects in -->
+
+<section>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 20px;
+        
+        }
+
+        .project-card {
+            flex: 1 1 150px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 1px 2px 4px rgba (0,0,0,0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px
+        }
+
+        .project-card h3 {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+    </style>
+    <div class="flex-container">
+        <div class="project-card">
+            <a href="textiles.html" target="_blank">
+                <img src="Images/Textiles.jpg" alt="Photo of colourful sewing stacked upon each other">
+                <h3>Textiles Technology</h3>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="industrial.html" target="_blank">
+                <img src="Images/Industrial.jpg" alt="Photo of chopping wood logs stacked upon each other">
+                <h3>Industrial</h3>
+            </a>
+        </div>  
+
+        <div class="project-card">
+            <a href="design-technology.html" target="_blank">
+                <img src="Images/Design-Technology.jpg" alt="Photo of someone drawing design plans for a chair using coloured pencils">
+                <h3>Design & Technology</h3>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="food.html" target="_blank">
+                <img src="Images/Food.jpg" alt="Photo of a spread of different foods from the 5 food areas">
+                <h3>Food Technology</h3>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="engineering.html" target="_blank">
+                <img src="Images/Engeneering.png" alt="Photo of a city with construction ideas sourrounding it">
+                <h3>Engeneering Technology</h3>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <a href="computing.html" target="_blank">
+                <img src="Images/Computing.jpg" alt="Photo of a blue graphics chip">
+                <h3>Computing</h3>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+</html>
