@@ -1,4 +1,12 @@
+/* =====================================================
+   COMP208 starter.css (plug-and-play)
+   Purpose: Give you a clean visual baseline quickly.
+   How to use: Link this in <head> of every page:
+     <link rel="stylesheet" href="starter.css">
+   Tip: Read the comments and tweak values as you go.
+   ===================================================== */
 
+/* ---------- 1) CSS Reset / Base ----------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
 
@@ -17,39 +25,20 @@ img {
 
 /* ---------- 2) Core Theme Tokens ----------- */
 :root {
-  --brand: #020659;        /* primary colour */
-  --brand-2: #5d768c;      /* accent colour */
-  --brand-3: #8C0303;         /* accent colour 2 */
-  --bg: #f6f6f6;           /* page background */
-  --head: #8C0303;         /* main header colour */
-  --text: #161616;         /* default text */
-  --muted: #6b6b6b;        /* secondary text */
+  --brand: #1c4c96;        /* primary colour */
+  --brand-2: #f39c12;      /* accent colour */
+  --bg: #ffffff;           /* page background */
+  --head: #0FDE4B;         /* main header colour */
+  --text: #222222;         /* default text */
+  --muted: #666666;        /* secondary text */
   --surface: #f6f8fb;      /* card/section bg */
-  --radius: 18px;          /* rounded corners */
+  --radius: 12px;          /* rounded corners */
   --shadow: 0 4px 12px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
   --spacing: 16px;         /* base spacing unit */
   --maxw: 1100px;          /* content width */
   --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;  /* Body font */
   --font-head: "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;   /* Headings font */
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-left, .nav-right {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-left a, .nav-right a {
-  text-decoration: none;
-  color: black;
-}
-
 
 /* ---------- 3) Page Defaults --------------- */
 body {
@@ -366,3 +355,5 @@ footer .container {
 .p-3 { 
   padding: 24px !important;     /* Large padding */
 }
+
+/* End of starter.css */

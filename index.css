@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;   /* Include padding & border in total size for all elements + pseudo-elements */
+}
+
+html, body { height: 100%; }
+
+img { 
+  max-width: 100%;  /* Ensures images never exceed container width */
+  height: auto;     /* Maintains image aspect ratio */
+  display: block;   /* Removes small gap under images by making them block-level */
+}
+
+/* ---------- 2) Core Theme Tokens ----------- */
+:root {
+  --brand: #B41620;        /* primary colour */
+  --brand-2: #020659;      /* accent colour 1 */
+  --brand-3: #5D768C;         /* accent colour 2 */
+  --brand-4: #6B6B6B;         /* accent colour 3 */
+  --brand-5: #D6D6D6;         /* accent colour 4 */
+  --brand-6: #F6F8FB;         /* accent colour 5 */
+  --brand-7: #0D0D0D;         /* accent colour 6 */
+  --bg: #f6f6f6;           /* page background */
+  --head: #b41620;         /* main header colour */
+  --head-1: #020659;         /* secondary header colour */
+  --head-2: #0D0D0D;         /* 3rd header colour */
+  --text: #161616;         /* default text */
+  --muted: #6b6b6b;        /* secondary text */
+  --surface: #f6f8fb;      /* card/section bg */
+  --radius: 18px;          /* rounded corners */
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
+  --spacing: 16px;         /* base spacing unit */
+  --maxw: 1100px;          /* content width */
+  --header-h: 100px;        /* Header height */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;     /* Body font */
+  --font-head: "Outfit", 'Playfair Display', Georgia, 'Times New Roman', serif;   /* Headings font */
+}
+
+/* ---------- 3) Page Defaults --------------- */
+body{
+  margin: 0;                                                                                     /* Removes default browser margin */
+  padding: 0;                                                                                    /* Removes default browser padding */
+  font-family: var(--font-body);                                                                 /* Sets font */
+  color: var(--text);                                                                            /* Sets text colour */
+  background: radial-gradient(1000px 600px at 50% -200px, #ffffff, #f3f3f3 60%, #f0f0f0);  /* Sets soft page gradient */
+  line-height: 1.6;  
+  padding-top: var(--header-h);                                                                  /* Prevent content overlap */                                                                            /* Improves readability by spacing out lines */
+}
+
+/* Full-page vertical stripe centered; sits behind content */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0 auto 0 50%;
+  transform: translateX(-50%);
+  width: clamp(80px, 8vw, 140px);
+  background: radial-gradient(1000px 600px at 50% -200px, #ffffff, var(--brand) 55%, var(--brand));
+  z-index: 0;                     /* behind header/nav content */
+  pointer-events: none;
+  opacity: .97;
+}
+
+.site-title { 
+  font-weight: 700;               /* Bold text */
+  letter-spacing: 0.5px;          /* Slight spacing between letters */
+}
+main {
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive content width */
+  margin: 32px auto;                                  /* Centers main content with spacing */
+}
+
+/* ---------- 4) Typography ------------------ */
+h1 {
+  font-family: var(--font-head);    /* Uses heading font */
+  line-height: 1.15;                /* Tight line spacing for headings */
+  margin: 0 0 .5rem 0;              /* Space below headings */
+  color: var(--brand);              /* Brand colour */
+  letter-spacing: .2px;             /* Spacing between letters*/
+  font-size: clamp(2rem, 3.4vw + 1rem, 3.8rem); 
+  font-weight: 900;
+}
+
+h2 {
+  font-family: var(--font-head);    /* Uses heading font */
+  line-height: 1.15;                /* Tight line spacing for headings */
+  margin: 0 0 .5rem 0;              /* Space below headings */
+  color: var(--brand-7);              /* Brand colour */
+  letter-spacing: .2px;             /* Spacing between letters*/
+  font-size: clamp(1.7rem, 1.8vw + 1rem, 2.4rem); 
+  font-weight: 900;
+}
+
+h3 {
+  font-family: var(--font-head);    /* Uses heading font */
+  line-height: 1.15;                /* Tight line spacing for headings */
+  margin: 0 0 .5rem 0;              /* Space below headings */
+  color: var(--brand-2);              /* Brand colour */
+  letter-spacing: .2px;             /* Spacing between letters*/
+  font-size: 1.25rem; 
+  font-weight: 800;
+}
+
+h3 {
+  font-family: var(--font-head);    /* Uses heading font */
+  line-height: 1.15;                /* Tight line spacing for headings */
+  margin: 0 0 .5rem 0;              /* Space below headings */
+  color: var(--brand-2);              /* Brand colour */
+  letter-spacing: .2px;             /* Spacing between letters*/
+  font-size: 1rem; 
+  font-weight: 800;
+}
+
+p { 
+  margin: 0 0 1rem 0;             /* Space below paragraphs */
+  color: var(--text);             /* Standard text colour */
+  font-size: 0.95rem;             /* Slightly smaller than default font size */
+}
+
+small { 
+  color: var(--muted);            /* Muted grey colour for less emphasis */
+}
+
+/* ---------- 5) Links ----------------------- */
+a { 
+  color: var(--brand);          /* Brand colour for links */
+  text-decoration: none;        /* No underline by default */
+}
+a:hover, a:focus { 
+  text-decoration: underline;   /* Underline on hover/focus for accessibility */
+}
+
+/* ---------- 6) Header / Nav ---------------- */
+
+.header {
+    background: color-mix(in oklab, white 80%, transparent);    /* Mostly transparent background */
+    color: #161616;                                             /* Black text */
+    padding: 4px 0;                                               /* Vertical spacing */
+    box-shadow: none;                                             /* No shadow for a cleaner look */
+    margin-bottom: 0;                                             /* Removes gap under header */
+    position: fixed;                                              /* Moves header with website scrolling */
+    top: 0;                                                       /* Keep nav bar at top of page always */
+    z-index: 10;                                                  /* stay above content */
+    width: 100%;                                                  /* avoid layout shifts */
+    backdrop-filter: blur(6px);                                   /* Blurs everything under the nav bar */
+    border-bottom: none                                           /* Gives nav bar a line underneith */
+}
+
+header .container {
+    width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive width */
+    margin: 0 auto;                                     /* Centers horizontally */
+    display: flex;                                      /* Aligns children horizontally */
+    gap: var(--spacing);                                /* Space between flex items */
+    align-items: center;                                /* Vertically centers items */
+    justify-content: space-between;                     /* Pushes items apart */
+}
+
+header h1 {
+    width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive heading width */
+    margin: 32px auto;                                  /* Centers heading */
+    color: var(--head);                                 /* Special header colour */
+}
+
+nav {
+    background: transparent;             /* Transparent background for nav bar */
+    font-size: 0.95rem;                  /* Slightly smaller font in navigation */
+    width: 100%;                         /* Spans full width */
+    margin: 0;                           /* Space above page content; no top gap */
+    margin-top: 0;                       /* Removes top gap above nav */
+    position: relative;
+    z-index: 6;                          /* Above the header & stripe */
+    padding: 8px 0;                      /* Vertical breathing room */
+    box-shadow: none;                    /* Depth for the bar area */
+}
+
+/* Three-column layout: left nav | center badge | right nav */
+nav .container {
+    width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive container width */
+    margin: 0 auto;                                     /* Centers content horizontally */
+    display: grid;                                      /* Layout: colums */
+    grid-template-columns: 1fr auto 1fr;                /* Makes left colum flexible, middle colum auto (fit content) and right colum flexible */
+    align-items: center;                                /* Centers nav items */
+    gap: var(--spacing);                                /* Space between flex items */
+}
+
+/* Push first 3 buttons towards middle and end 3 buttons towards the middle */
+.nav-left { justify-self: end; }
+.nav-right { justify-self: start; }
+
+nav ul {
+    list-style: none;   /* Removes bullets */
+    display: flex;      /* Horizontal layout */
+    gap: 14px;          /* Space between links */
+    margin: 0;          /* Removes margin */
+    padding: 0;         /* Removes padding */
+}
+
+nav a {
+    display: block;         /* Larger click target */
+    color: var(--text);     /* White link text */
+    text-decoration: none;  /* Remove underline/other decorations from text/links */
+    padding: 10px 12px;     /* Space inside link area */
+    border-radius: 8px;     /* Slightly rounded corners */
+}
+
+nav a:hover { 
+    background: #e8e8e8;   /* Grey tint background on hover */
+}
+
+nav a:focus-visible {     
+    outline: 2px solid var(--brand-5);        /* Off white outline for increased accessibility keyboard-focus styling */
+    outline-offset: 2px;                    /* Outline offset for increased accessibility keyboard-focus styling */
+}
+
+.active {
+    background-color: color-mix(in oklab, var(--brand-4) 10%, transparent);     /* Indicates active page link */
+    outline-offset: 2px;
+    font-weight: 700;
+}
+
+.logo{
+  display: flex;                /* Centers XM inside */
+  justify-content: center;
+  align-items: center;
+  
+  width: 60px;                  /* Circle size */
+  height: 60px;                 /* Circle size */
+  border-radius: 50%;           /* Makes it a circle */
+
+  background: var(--brand);                     /* Red background */
+  color: white;                               /* White text */
+  font-weight: 900;                             /* Bold letters */
+  font-size: 20px;                              /* Adjust text size */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);     /* Subtle shadow */
+  border: 3px solid #B61621;                  /* Red border */
+}
+
+
+@media (max-width: 640px){
+  nav .container {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    text-align: center;
+  }
+  .nav-left, .nav-right { justify-self: center; }
+  nav ul { flex-wrap: wrap; gap: 10px; justify-content: center; }
+}
+
+/* ---------- 7) Sections ---------------- */
+
+
+/* Hero and Professional Summary */
+  
+.hero-container{ 
+    position: relative;
+    padding: 1.5rem 0 1.5rem; 
+    display:grid; 
+    grid-template-columns: 40% 15.5% 40%;
+    gap: clamp(1rem, 2vw, 2rem); 
+    align-items: start; 
+    justify-items: start;
+}
+
+.hero-container > .eyebrow,
+.hero-container > .hero-title,
+.hero-container > .hero-paragraph,
+.hero-container > .cta,
+.hero-container > .button {
+  grid-column: 1;
+}
+
+.eyebrow { 
+    letter-spacing: .2em; 
+    font-weight: 800; 
+    color: var(--muted); 
+    margin-bottom:.2rem; 
+}
+
+.hero-title { 
+    text-align: left;
+    margin-right: auto;
+}
+
+.hero-title span { 
+    color: var(--brand-7);
+}
+
+.hero-paragraph { 
+    font-size: clamp(1.05rem, .6vw + 1rem, 1.25rem); 
+}
+
+.button {
+    display:inline-block; 
+    background: var(--brand); 
+    color: var(--brand-6);
+    border-radius: 999px; 
+    padding:.7rem 1rem; 
+    font-weight: 800;
+    box-shadow: var(--shadow); 
+    border: 0;
+}
+
+.btn-ghost { 
+    background: #ffffff; 
+    color: var(--text); 
+    outline: 1px solid #e6e6e6; 
+}
+
+
+.hero-figure { 
+    grid-column: 2;          /* Puts it in the middle column */
+    display: grid; 
+    place-items: center;
+    grid-row: 1;            /* first row */
+    align-self: start;      /* top of its grid cell */
+    justify-self:center;
+    
+}
+.hero-figure img { 
+    width: 100px;
+    height: 400px; 
+    
+}
+
+.summary-container{
+    grid-column: 3;
+    grid-row: 1; 
+}
+
+.summary-list {
+    font-size: (0.9rem, 0.5vw + 8rem, 1.qrem); 
+}
+
