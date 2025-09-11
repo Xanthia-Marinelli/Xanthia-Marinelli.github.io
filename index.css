@@ -14,25 +14,25 @@ img {
 
 /* ---------- 2) Core Theme Tokens ----------- */
 :root {
-  --brand: #B41620;        /* primary colour */
-  --brand-2: #020659;      /* accent colour 1 */
-  --brand-3: #5D768C;         /* accent colour 2 */
-  --brand-4: #6B6B6B;         /* accent colour 3 */
-  --brand-5: #D6D6D6;         /* accent colour 4 */
-  --brand-6: #F6F8FB;         /* accent colour 5 */
-  --brand-7: #0D0D0D;         /* accent colour 6 */
-  --bg: #f6f6f6;           /* page background */
-  --head: #b41620;         /* main header colour */
-  --head-1: #020659;         /* secondary header colour */
-  --head-2: #0D0D0D;         /* 3rd header colour */
-  --text: #161616;         /* default text */
-  --muted: #6b6b6b;        /* secondary text */
-  --surface: #f6f8fb;      /* card/section bg */
-  --radius: 18px;          /* rounded corners */
+  --brand: #B41620;           /* Primary colour */
+  --brand-2: #020659;         /* Accent colour 1 */
+  --brand-3: #5D768C;         /* Accent colour 2 */
+  --brand-4: #6B6B6B;         /* Accent colour 3 */
+  --brand-5: #D6D6D6;         /* Accent colour 4 */
+  --brand-6: #F6F8FB;         /* Accent colour 5 */
+  --brand-7: #0D0D0D;         /* Accent colour 6 */
+  --bg: #f6f6f6;              /* Page background */
+  --head: #b41620;            /* Main header colour */
+  --head-1: #020659;          /* Secondary header colour */
+  --head-2: #0D0D0D;          /* 3rd header colour */
+  --text: #161616;            /* Default text */
+  --muted: #6b6b6b;           /* Secondary text */
+  --surface: #f6f8fb;         /* Card/section bg */
+  --radius: 18px;               /* Rounded corners */
   --shadow: 0 4px 12px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
-  --spacing: 16px;         /* base spacing unit */
-  --maxw: 1100px;          /* content width */
-  --header-h: 100px;        /* Header height */
+  --spacing: 16px;              /* Base spacing unit */
+  --maxw: 1100px;               /* Content width */
+  --header-h: 100px;            /* Header height */
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;     /* Body font */
   --font-head: "Outfit", 'Playfair Display', Georgia, 'Times New Roman', serif;   /* Headings font */
 }
@@ -44,21 +44,21 @@ body{
   font-family: var(--font-body);                                                                 /* Sets font */
   color: var(--text);                                                                            /* Sets text colour */
   background: radial-gradient(1000px 600px at 50% -200px, #ffffff, #f3f3f3 60%, #f0f0f0);  /* Sets soft page gradient */
-  line-height: 1.6;  
-  padding-top: var(--header-h);                                                                  /* Prevent content overlap */                                                                            /* Improves readability by spacing out lines */
+  line-height: 1.6;                                                                              /* Improves readability by spacing out lines */
+  padding-top: var(--header-h);                                                                  /* Prevent content overlap */
 }
 
 /* Full-page vertical stripe centered; sits behind content */
 body::before{
-  content: "";
-  position: fixed;
-  inset: 0 auto 0 50%;
-  transform: translateX(-50%);
-  width: clamp(80px, 8vw, 140px);
-  background: radial-gradient(1000px 600px at 50% -200px, #ffffff, var(--brand) 55%, var(--brand));
-  z-index: 0;                     /* behind header/nav content */
-  pointer-events: none;
-  opacity: .97;
+  content: "";                     /* Creates an extra empty box*/
+  position: fixed;                 /* Stripe wont scroll with the page*/
+  inset: 0 auto 0 50%;             /* Stripe goes the entire length of the page and anchors on the midpoint of the screen */
+  transform: translateX(-50%);     /* Makes stripe perfectly centred*/
+  width: clamp(80px, 8vw, 140px);  /* Makes stripe responsive to width page*/
+  background: radial-gradient(1000px 600px at 50% -200px, #ffffff, var(--brand) 55%, var(--brand)); /* Gives a radial gradient so the fade is gentle toward the top*/
+  z-index: -1;                     /* Puts stripe behind every other layer*/
+  pointer-events: none;            /* Makes it un-clickable*/
+  opacity: .97;                    /* Makes it slight transparency*/
 }
 
 .site-title { 
@@ -77,44 +77,44 @@ h1 {
   margin: 0 0 .5rem 0;              /* Space below headings */
   color: var(--brand);              /* Brand colour */
   letter-spacing: .2px;             /* Spacing between letters*/
-  font-size: clamp(2rem, 3.4vw + 1rem, 3.8rem); 
-  font-weight: 900;
+  font-size: clamp(2rem, 3.4vw + 1rem, 3.8rem); /* Font size*/
+  font-weight: 900;                 /* Font thickness*/
 }
 
 h2 {
   font-family: var(--font-head);    /* Uses heading font */
   line-height: 1.15;                /* Tight line spacing for headings */
   margin: 0 0 .5rem 0;              /* Space below headings */
-  color: var(--brand-7);              /* Brand colour */
+  color: var(--brand-7);            /* Brand colour */
   letter-spacing: .2px;             /* Spacing between letters*/
-  font-size: clamp(1.7rem, 1.8vw + 1rem, 2.4rem); 
-  font-weight: 900;
+  font-size: clamp(1.7rem, 1.8vw + 1rem, 2.4rem);  /* Font size*/
+  font-weight: 900;                 /* Font thickness*/
 }
 
 h3 {
   font-family: var(--font-head);    /* Uses heading font */
   line-height: 1.15;                /* Tight line spacing for headings */
   margin: 0 0 .5rem 0;              /* Space below headings */
-  color: var(--brand-2);              /* Brand colour */
+  color: var(--brand-2);            /* Brand colour */
   letter-spacing: .2px;             /* Spacing between letters*/
-  font-size: 1.25rem; 
-  font-weight: 800;
+  font-size: 1.25rem;               /* Font size*/
+  font-weight: 800;                 /* Font thickness*/
 }
 
 h3 {
   font-family: var(--font-head);    /* Uses heading font */
   line-height: 1.15;                /* Tight line spacing for headings */
   margin: 0 0 .5rem 0;              /* Space below headings */
-  color: var(--brand-2);              /* Brand colour */
+  color: var(--brand-2);            /* Brand colour */
   letter-spacing: .2px;             /* Spacing between letters*/
-  font-size: 1rem; 
-  font-weight: 800;
+  font-size: 1rem;                  /* Font size*/
+  font-weight: 800;                 /* Font thickness*/
 }
 
 p { 
   margin: 0 0 1rem 0;             /* Space below paragraphs */
   color: var(--text);             /* Standard text colour */
-  font-size: 0.95rem;             /* Slightly smaller than default font size */
+  font-size: 0.95rem;             /* Font size*/
 }
 
 small { 
@@ -133,100 +133,101 @@ a:hover, a:focus {
 /* ---------- 6) Header / Nav ---------------- */
 
 .header {
-    background: color-mix(in oklab, white 80%, transparent);    /* Mostly transparent background */
-    color: #161616;                                             /* Black text */
-    padding: 4px 0;                                               /* Vertical spacing */
-    box-shadow: none;                                             /* No shadow for a cleaner look */
-    margin-bottom: 0;                                             /* Removes gap under header */
-    position: fixed;                                              /* Moves header with website scrolling */
-    top: 0;                                                       /* Keep nav bar at top of page always */
-    z-index: 10;                                                  /* stay above content */
-    width: 100%;                                                  /* avoid layout shifts */
-    backdrop-filter: blur(6px);                                   /* Blurs everything under the nav bar */
-    border-bottom: none                                           /* Gives nav bar a line underneith */
+  background: color-mix(in oklab, white 80%, transparent);    /* Mostly transparent background */
+  color: #161616;                                             /* Black text */
+  padding: 4px 0;                                               /* Vertical spacing */
+  box-shadow: none;                                             /* No shadow for a cleaner look */
+  margin-bottom: 0;                                             /* Removes gap under header */
+  position: fixed;                                              /* Moves header with website scrolling */
+  top: 0;                                                       /* Keep nav bar at top of page always */
+  z-index: 10;                                                  /* stay above content */
+  width: 100%;                                                  /* avoid layout shifts */
+  backdrop-filter: blur(6px);                                   /* Blurs everything under the nav bar */
+  border-bottom: none                                           /* Gives nav bar a line underneith */
 }
 
 header .container {
-    width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive width */
-    margin: 0 auto;                                     /* Centers horizontally */
-    display: flex;                                      /* Aligns children horizontally */
-    gap: var(--spacing);                                /* Space between flex items */
-    align-items: center;                                /* Vertically centers items */
-    justify-content: space-between;                     /* Pushes items apart */
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive width */
+  margin: 0 auto;                                     /* Centers horizontally */
+  display: flex;                                      /* Aligns children horizontally */
+  gap: var(--spacing);                                /* Space between flex items */
+  align-items: center;                                /* Vertically centers items */
+  justify-content: space-between;                     /* Pushes items apart */
 }
 
 header h1 {
-    width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive heading width */
-    margin: 32px auto;                                  /* Centers heading */
-    color: var(--head);                                 /* Special header colour */
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive heading */
+  margin: 32px auto;                                  /* Centers heading */
+  color: var(--head);                                 /* Special header colour */
 }
 
 nav {
-    background: transparent;             /* Transparent background for nav bar */
-    font-size: 0.95rem;                  /* Slightly smaller font in navigation */
-    width: 100%;                         /* Spans full width */
-    margin: 0;                           /* Space above page content; no top gap */
-    margin-top: 0;                       /* Removes top gap above nav */
-    position: relative;
-    z-index: 6;                          /* Above the header & stripe */
-    padding: 8px 0;                      /* Vertical breathing room */
-    box-shadow: none;                    /* Depth for the bar area */
+  background: transparent;             /* Transparent background for nav bar */
+  font-size: 0.95rem;                  /* Slightly smaller font in navigation */
+  width: 100%;                         /* Spans full width */
+  margin: 0;                           /* Space above page content; no top gap */
+  margin-top: 0;                       /* Removes top gap above nav */
+  position: relative;
+  z-index: 6;                          /* Above the header & stripe */
+  padding: 8px 0;                      /* Vertical breathing room */
+  box-shadow: none;                    /* Depth for the bar area */
 }
 
 /* Three-column layout: left nav | center badge | right nav */
 nav .container {
-    width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive container width */
-    margin: 0 auto;                                     /* Centers content horizontally */
-    display: grid;                                      /* Layout: colums */
-    grid-template-columns: 1fr auto 1fr;                /* Makes left colum flexible, middle colum auto (fit content) and right colum flexible */
-    align-items: center;                                /* Centers nav items */
-    gap: var(--spacing);                                /* Space between flex items */
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive container width */
+  margin: 0 auto;                                     /* Centers content horizontally */
+  display: grid;                                      /* Layout: colums */
+  grid-template-columns: 1fr auto 1fr;                /* Makes left colum flexible, middle colum auto (fit content) and right colum flexible */
+  align-items: center;                                /* Centers nav items */
+  gap: var(--spacing);                                /* Space between flex items */
 }
 
 /* Push first 3 buttons towards middle and end 3 buttons towards the middle */
-.nav-left { justify-self: end; }
-.nav-right { justify-self: start; }
+.nav-left { 
+  justify-self: end; 
+}
+.nav-right { 
+  justify-self: start; 
+}
 
 nav ul {
-    list-style: none;   /* Removes bullets */
-    display: flex;      /* Horizontal layout */
-    gap: 14px;          /* Space between links */
-    margin: 0;          /* Removes margin */
-    padding: 0;         /* Removes padding */
+  list-style: none;   /* Removes bullets */
+  display: flex;      /* Horizontal layout */
+  gap: 14px;          /* Space between links */
+  margin: 0;          /* Removes margin */
+  padding: 0;         /* Removes padding */
 }
 
 nav a {
-    display: block;         /* Larger click target */
-    color: var(--text);     /* White link text */
-    text-decoration: none;  /* Remove underline/other decorations from text/links */
-    padding: 10px 12px;     /* Space inside link area */
-    border-radius: 8px;     /* Slightly rounded corners */
+  display: block;         /* Larger click target */
+  color: var(--text);     /* White link text */
+  text-decoration: none;  /* Remove underline/other decorations from text/links */
+  padding: 10px 12px;     /* Space inside link area */
+  border-radius: 8px;     /* Slightly rounded corners */
 }
 
 nav a:hover { 
-    background: #e8e8e8;   /* Grey tint background on hover */
+  background: #e8e8e8;   /* Grey tint background on hover */
 }
 
 nav a:focus-visible {     
-    outline: 2px solid var(--brand-5);        /* Off white outline for increased accessibility keyboard-focus styling */
-    outline-offset: 2px;                    /* Outline offset for increased accessibility keyboard-focus styling */
+  outline: 2px solid var(--brand-5);      /* Off white outline for increased accessibility keyboard-focus styling */
+  outline-offset: 2px;                    /* Outline offset for increased accessibility keyboard-focus styling */
 }
 
 .active {
-    background-color: color-mix(in oklab, var(--brand-4) 10%, transparent);     /* Indicates active page link */
-    outline-offset: 2px;
-    font-weight: 700;
+  background-color: color-mix(in oklab, var(--brand-4) 10%, transparent);     /* Indicates active page link */
+  font-weight: 700;                                                           /* Font is bolder when on active page*/
 }
 
 .logo{
-  display: flex;                /* Centers XM inside */
-  justify-content: center;
-  align-items: center;
-  
+  display: flex;                /* Centers XM */
+  justify-content: center;      /* Centers XM */
+  align-items: center;          /* Centers XM */
   width: 60px;                  /* Circle size */
   height: 60px;                 /* Circle size */
   border-radius: 50%;           /* Makes it a circle */
-
   background: var(--brand);                     /* Red background */
   color: white;                               /* White text */
   font-weight: 900;                             /* Bold letters */
@@ -236,11 +237,11 @@ nav a:focus-visible {
 }
 
 
-@media (max-width: 640px){
+@media (max-width: 640px){                      /* responsiveness for viewing on mobile */
   nav .container {
-    grid-template-columns: 1fr;
-    row-gap: 8px;
-    text-align: center;
+  grid-template-columns: 1fr;
+  row-gap: 8px;
+  text-align: center;
   }
   .nav-left, .nav-right { justify-self: center; }
   nav ul { flex-wrap: wrap; gap: 10px; justify-content: center; }
@@ -248,86 +249,449 @@ nav a:focus-visible {
 
 /* ---------- 7) Sections ---------------- */
 
+/* Sections */
 
-/* Hero and Professional Summary */
+.section {                          /* Section for 3 columns */
+  position: relative;               /* Anchors position */
+  background: #fff;               /* Background colour */
+  border-radius: 24px;              /* Soft curved edges */
+  padding: 2rem;                    /* Breathing space inside */
+  display:grid;                     /* Orgainsed in grid layout */
+  grid-template-columns: 40% 15.5% 40%;   /* 3 columns in grid */
+  margin: 2rem auto;                /* Spacing outside the section */
+  max-width: 1200px;                /* Keeps it neat on big screens */
+  box-shadow: 0 8px 24px rgba(0,0,0,.06); /* Soft card-like shadow */
+  z-index: 1;                       /* In front of stripe */
+}
+
+.section-2{                         /* Section for 2 columns */
+  position: relative;               /* Anchors position */
+  background: #fff;               /* Background colour */
+  border-radius: 24px;              /* Soft curved edges */
+  padding: 2rem;                    /* Breathing space inside */
+  display:grid;                     /* Orgainsed in grid layout */
+  grid-template-columns: 50% 50%;   /* 2 columns in grid */
+  margin: 2rem auto;                /* Spacing outside the section */
+  max-width: 1200px;                /* Keeps it neat on big screens */
+  box-shadow: 0 8px 24px rgba(0,0,0,.06); /* Soft card-like shadow */
+  z-index: 1;                       /* In front of stripe */
+}
+
+.section-3{                         /* Section for no columns*/
+  position: relative;               /* Anchors position */
+  background: #fff;               /* Background colour */
+  border-radius: 24px;              /* Soft curved edges */
+  padding: 2rem;                    /* Breathing space inside */
+  margin: 2rem auto;                /* Spacing outside the section */
+  max-width: 1200px;                /* Keeps it neat on big screens */
+  box-shadow: 0 8px 24px rgba(0,0,0,.06); /* Soft card-like shadow */
+  z-index: 1;                       /* In front of stripe */
+}
+
+/* Section intro text */
+.section-intro {
+  color: var(--muted);              /* Muted text colour*/
+  margin-bottom: 1.25rem;           /* Spacing outside the section */
+  text-align: center;               /* Align in centre */
+  z-index: 1;                       /* In front of stripe */
+  position: relative;               /* Anchors position */
+}
+
+.schools {
+  margin-bottom: 1.25rem;            /* Spacing outside the section */
+  text-align: center;                /* Align in centre */
+  z-index: 1;                        /* In front of stripe */
+  position: relative;                /* Anchors position */
+  transform: translate(8.5px, 10px); /* left 10px, up 12px (Make sure completely centre)*/
+}
   
-.hero-container{ 
-    position: relative;
-    padding: 1.5rem 0 1.5rem; 
-    display:grid; 
-    grid-template-columns: 40% 15.5% 40%;
-    gap: clamp(1rem, 2vw, 2rem); 
-    align-items: start; 
-    justify-items: start;
+.open-container{                   /* Section with no background (3 columns) */
+  position: relative;              /* Anchors position */
+  padding: 1.5rem 0 1.5rem;        /* Breathing space inside */
+  display:grid;                    /* Orgainsed in grid layout */
+  grid-template-columns: 40% 15.5% 40%;  /* 3 columns in grid */
+  gap: clamp(1rem, 2vw, 2rem);     /* Spaces columns */
 }
 
-.hero-container > .eyebrow,
-.hero-container > .hero-title,
-.hero-container > .hero-paragraph,
-.hero-container > .cta,
-.hero-container > .button {
-  grid-column: 1;
+.container-left{                    /* Container in left column */
+  background: #fff;               /* Background colour */
+  border-radius: 24px;              /* Soft curved edges */
+  padding: 2rem;                    /* Breathing space inside */
+  margin: 2rem auto;                /* Spacing outside the section */
+  max-width: 1200px;                /* Keeps it neat on big screens */
+  box-shadow: 0 8px 24px rgba(0,0,0,.06); /* Soft card-like shadow */
+  grid-column: 1;                   /* Puts in column 1*/
+  grid-row: 1;                      /* Positions at the top of column */
 }
 
-.eyebrow { 
-    letter-spacing: .2em; 
-    font-weight: 800; 
-    color: var(--muted); 
-    margin-bottom:.2rem; 
+.container-right{                   /* Items in right column */
+  background: #fff;               /* Background colour */
+  border-radius: 24px;              /* Soft curved edges */
+  padding: 1.065rem;                /* Breathing space inside */
+  margin: 2rem auto;                /* Spacing outside the section */
+  max-width: 1200px;                /* Keeps it neat on big screens */
+  box-shadow: 0 8px 24px rgba(0,0,0,.06); /* Soft card-like shadow */
+  grid-column: 3;                   /* Puts in column 3*/
+  grid-row: 1;                      /* Positions at the top of column */
+}
+
+.container-right-2{                 /* Items in right column for section-2*/
+  padding: 1rem;                    /* Breathing space inside */
+  margin: 0rem auto;                /* Spacing outside the section */
+  max-width: 1200px;                /* Keeps it neat on big screens */
+  grid-column: 2;                   /* Puts in column 2*/
+  grid-row: 1;                      /* Positions at the top of column */
+}
+
+/* Images */
+
+.image-middle {                     /* Image in midde column */
+  grid-column: 2;                   /* Puts it in the middle column */
+  place-items: center;              /* Centres image in middle of stripe*/
+  grid-row: 1;                      /* Positions at the top of column */
+}
+
+.image-middle img {                  /* Image size */
+  width: 100px;
+  height: 400px;  
+}
+
+.image-left {
+  grid-column: 1;                 /* Puts it in the left column */
+  place-items: center;            /* Centres image in middle of column*/
+  grid-row: 1;                    /* Positions at the top of column */
+  height: 500px;                  /* Image size */
+  width: auto;                    /* Image size */
+} 
+
+.image-right {
+  grid-column: 2;          /* Puts it in the right column */
+  place-items: center;     /* Centres image in middle of column*/
+  grid-row: 1;             /* Positions at the top of column */
+}
+
+/* Other Text */
+
+.eyebrow {                      /* Muted text above title */
+  letter-spacing: .2em;         /* Letter spacing */
+  font-weight: 800;             /* Font boldness */
+  color: var(--muted);          /* Font colour */
+  margin-bottom:.2rem;          /* Space under */
 }
 
 .hero-title { 
-    text-align: left;
-    margin-right: auto;
+  text-align: left;             /* Align title left */
 }
 
 .hero-title span { 
-    color: var(--brand-7);
+  color: var(--brand-7);      /* Makes part of tilte black */
 }
 
 .hero-paragraph { 
-    font-size: clamp(1.05rem, .6vw + 1rem, 1.25rem); 
+  font-size: clamp(1.05rem, .6vw + 1rem, 1.25rem); /* Font size */
 }
 
-.button {
-    display:inline-block; 
-    background: var(--brand); 
-    color: var(--brand-6);
-    border-radius: 999px; 
-    padding:.7rem 1rem; 
-    font-weight: 800;
-    box-shadow: var(--shadow); 
-    border: 0;
+/* ===== Tables ===== */
+
+table {
+  width: 100%;                        /* Table spans full width */
+  border-collapse: collapse;          /* Removes double borders */
+  margin-top: 10px;                   /* Space above table */
+  font-family: Arial, sans-serif;     /* Table font */
+}
+th, td {
+  border: 1px solid #ccc;           /* Light grey cell borders */
+  padding: 10px 12px;                 /* Space inside cells */
+  text-align: left;                   /* Aligns text to the left */
+}
+thead {
+  background-color: var(--brand-3);   /* Light blue/grey header background */
+}
+th {
+  color: #333;                      /* Dark grey header text */
+  font-weight: bold;                  /* Bold header text */
+}
+tr:nth-child(even) {
+  background-color: #fafafa;        /* Zebra stripe effect for even rows */
 }
 
-.btn-ghost { 
-    background: #ffffff; 
-    color: var(--text); 
-    outline: 1px solid #e6e6e6; 
+/* Mobile tweaks */
+@media (max-width: 700px){
+  .table{ min-width: 540px; }         /* encourage scrolling instead of squishing */
 }
 
+/* ---------- 8) Buttons / Cards / Gallery ------------- */
 
-.hero-figure { 
-    grid-column: 2;          /* Puts it in the middle column */
-    display: grid; 
-    place-items: center;
-    grid-row: 1;            /* first row */
-    align-self: start;      /* top of its grid cell */
-    justify-self:center;
+/* Buttons */
+
+.button {                          
+  display:inline-block;            /* Anchor position*/
+  background: var(--brand);        /* Red background colour */
+  color: var(--brand-6);           /* White text colour */
+  outline: 1px solid #991e1e;    /* Darker red outline */
+  border-radius: 999px;            /* Rounded edges */
+  padding:.7rem 1rem;              /* Space around text */
+  font-weight: 800;                /* Font boldness */
+  box-shadow: var(--shadow);       /* Shadow around button */
+}
+
+.btn-2 { 
+  background: #ffffff;           /* White background colour */
+  color: var(--text);              /* Black text colour */
+  outline: 1px solid #e6e6e6;    /* Light grey outline */
+}
+
+.btn-3 { 
+  background: var(--brand-2);      /* Blue background colour */
+  color: var(--brand-6);           /* White text colour */
+  outline: 1px solid #000000;    /* Dark blue outline */
+}
+
+/* Card grid */
+.project-row {  
+  display: grid;                            /* Orgainsed in grid layout */
+  grid-template-columns: repeat(3, 1fr);    /* 3 columns across */
+  gap: 1.2rem;                              /* Gap between columns */
+}
+
+.projects-wrapper {
+  display: grid;                           /* Orgainsed in grid layout */
+  grid-template-columns: 40% 14% 40%;      /* 3 columns across */
+  gap: 2rem;                               /* Gap between columns */
+  align-items: start;                      /* Align containers at the top of screen */
+  max-width: 1200px;                       /* Max width */
+  padding: 2rem 2rem;                      /* Space around container */
+}
+
+/* Individual card */
+.project-card {                                               /* Used for My Teaching Areas, Project Showcase and Samples of Work */
+  background: var(--brand-6);                                 /* White background */
+  border-radius: var(--radius, 12px);                         /* Rounded corners */
+  overflow: hidden;                                           /* Keeps content in container */
+  box-shadow: var(--shadow, 0 4px 18px rgba(0,0,0,.06));    /* Shadow around container */
+  flex: 1 1 350px;                                            /* Responsive card width */
+}
+
+.project-card a {
+  text-decoration: none;                                      /* No underline at rest */
+  color: inherit;                                             /* Keep the card text color */
+}
+
+.project-card:hover {
+  text-decoration: none;                                       /* No underline on hover */
+  transform: translateY(-2px);                                 /* Lift on hover */
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);                   /* Shadow on hover to look more lifted */
+}
+
+.project-card-2 {                                              /* Used for Project Showcase (Textiles, Industrial, Design & Tec, Food, Comp & Engineering) */
+  background: var(--brand-6);                                  /* White background */
+  border-radius: var(--radius, 12px);                          /* Rounded corners */
+  overflow: hidden;                                            /* Keeps content in container */
+  box-shadow: var(--shadow, 0 4px 18px rgba(0,0,0,.06));     /* Shadow around container */
+  padding: 1rem 1.25rem;                                       /* Spacing around text*/
+  flex: 1 1 350px;                                             /* Responsive card width */
+}
+
+.project-card-2 a {
+  text-decoration: none;                                        /* No underline at rest */
+  color: var(--brand);                                          /* Keep the card text color */
+}
+
+.project-card-2:hover {
+  text-decoration: none;                                       /* No underline on hover */
+  transform: translateY(-2px);                                 /* Lift on hover */
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);                   /* Shadow on hover to look more lifted */
+
+}
+
+/* Card image */
+
+.project-card img {
+  width: 100%;                    /* Width */
+  height: 220px;                  /* Height */
+  object-fit: cover;              /* Image to fill the box (may crop)*/
+}
+
+.project-card-2 img {
+  width: 100%;                   /* Width */
+  height: 220px;                 /* Height */
+  object-fit: contain;           /* Image to fit the box (no crop) */
+}
+
+/* Card body (text area) */
+.project-card-body {
+  padding: 1rem 1rem 1.1rem;     /* Provides spacing around card text */
+}
+
+.project-card-2 {
+  padding: 1rem 1rem 1.1rem;     /* Provides spacing around card text */
+}
+
+.project-card h3 {
+  font-size: 1.1rem;             /* Sets size of h3 in card*/
+  color: var(--brand);            /* Sets colour of h3 in card to red */
+}
+
+.project-card-2 h3 {
+  font-size: 1.1rem;             /* Sets size of h3 in card*/
+  color: var(--brand-2);         /* Sets colour of h3 in card to blue */
+}
+
+/* Columns use grid to space cards */
+.column-left,
+.column-right{
+  display:grid;           /* Sets up grid display */
+  gap: 1.75rem;           /* Space between cards */
+}
+
+.column-left {
+    grid-column: 1;          /* Puts projects in left coloumn */
+    grid-row: 1;             /* Positions at the top of column */
     
 }
-.hero-figure img { 
-    width: 100px;
-    height: 400px; 
-    
+
+.column-right {
+    grid-column: 3;          /* Puts projects in right coloumn */
+    grid-row: 1;             /* Positions at the top of column */
 }
 
-.summary-container{
-    grid-column: 3;
-    grid-row: 1; 
+/* ---------- 9) Forms ----------------------- */
+
+form {
+  display: grid;    /* Grid layout for form elements */
+  gap: 12px;        /* Space between form items */
 }
 
-.summary-list {
-    font-size: (0.9rem, 0.5vw + 8rem, 1.qrem); 
+label {
+  font-weight: 600;     /* Semi-bold labels */
 }
 
+input[type="text"], input[type="email"], textarea {
+  width: 100%;                    /* Full width fields */
+  padding: 10px 12px;             /* Internal spacing */
+  border: 1px solid #d4d7dd;    /* Light border */
+  border-radius: 10px;            /* Rounded corners */
+  background: #fff;             /* White background */
+  transition: border-color 0.2s, box-shadow 0.2s;     /* Smooth focus effect */
+}
+
+input:focus, textarea:focus {
+  outline: none;                                  /* Removes default outline */
+  border-color: var(--brand);                     /* Brand border on focus */
+  box-shadow: 0 0 0 3px rgba(28,76,150,0.15);   /* Glow on focus */
+}
+
+textarea { 
+  min-height: 140px;        /* Minimum height */
+  resize: vertical;         /* Only resize vertically */
+}
+
+button, input[type="submit"] {
+  background: var(--brand);   /* Brand colour */
+  color: white;             /* White text */
+  border: none;               /* No border */
+  padding: 10px 16px;         /* Internal spacing */
+  border-radius: 10px;        /* Rounded corners */
+  cursor: pointer;            /* Pointer on hover */
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #163d79;          /* Darker brand colour on hover */
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ---------- 10) Footer --------------------- */
+footer {
+  margin-top: 40px;                             /* Space above footer */
+  padding: 22px 0;                              /* Vertical spacing */
+  background: var(--brand-7);                   /* Black background */
+  color: #cfd7ff;                             /* Light text colour */
+  z-index: 1;                                   /* make sure it stays above the stripe */
+  overflow: hidden;                             /* Hide overflow from pseudo-element */
+}
+
+footer p {
+  color: white;                                /* White paragraph text */
+}
+.footer-container {
+  width: min(100% - 2*var(--spacing), var(--maxw));      /* Responsive width */
+  margin: 0 auto;                                        /* Centered container */
+  display: grid;                                         /* Grid layout */
+  grid-template-columns: 40% 20% 20% 20%;                /* 4 columns */
+  justify-content: space-between;                        /* Space between items */
+  gap: var(--spacing);                                   /* Gap between items */
+  align-items: start;                                    /* Allows wrapping on smaller screens */
+}
+
+.footer-about {
+  grid-column: 1;                             /* Positions my information in coloumn 1 */
+  grid-row: 1;                                /* Positions top of cell*/
+}
+
+.footer-links {
+  grid-column: 3;                             /* Positions nav links in coloumn 3 */
+  grid-row: 1;                                /* Positions top of cell*/
+}
+
+.quick-links ul{
+  padding-left: 0;                            /* Aligns left of the cell */
+  list-style: none;                           /* Removes dote points */
+}
+
+.footer-contact {
+  grid-column: 4;                             /* Positions nav links in coloumn 4 */
+  grid-row: 1;                                /* Positions top of cell*/
+}
+
+.branding {
+    display: flex;                           /* Lays logo and name in a row */
+    gap: 0.5rem;                             /* Space between logo and name */
+}
+
+.footer-note {
+    font-weight: lighter;                   /* Makes it not bold */
+    color: var(--muted);                    /* Light grey, adjust if needed */
+    font-size: 0.9rem;                      /* Slightly smaller text */
+}
+
+footer a { 
+color: var(--brand-6);                       /* Makes link text white */
+}
+
+/* ---------- 11) Utilities ------------------ */
+.text-center {                  /* Utility class: centers text */
+  text-align: center;           /* Centers text horizontally */
+}
+.img-center {                   /* Utility class: centers an image and scales it */
+  display: block;               /* Make the image a block element so margins can take effect */
+  margin-left: auto;            /* Auto left margin helps center horizontally */
+  margin-right: auto;           /* Auto right margin completes horizontal centering */
+  width: 40%;                   /* Scale image to 40% of its container’s width */
+}
+.m-0 { 
+  margin: 0 !important;         /* Removes margin */
+}
+.mt-1 { 
+  margin-top: 8px !important;   /* Small top margin */
+}
+.mt-2 { 
+  margin-top: 16px !important;  /* Medium top margin */
+}
+.mt-3 { 
+  margin-top: 24px !important;  /* Large top margin */
+}
+.p-1 { 
+  padding: 8px !important;      /* Small padding */
+}
+.p-2 { 
+  padding: 16px !important;     /* Medium padding */
+}
+.p-3 { 
+  padding: 24px !important;     /* Large padding */
+}

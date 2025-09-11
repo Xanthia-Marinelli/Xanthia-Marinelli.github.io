@@ -3,20 +3,125 @@
 <head>
     <meta charset="UTF-8" />
     <title>Xanthia's Teaching Portfolio - Contact Me Page</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- Navigation menu section -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="teaching.html">Teaching Practice</a></li>
-            <li><a href="projects.html">Project Showcase</a></li>
-            <li><a href="worksamples.html">Samples of Work</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-    </nav>
+<!-- Fixed vertical accent stripe spanning the page -->
+    <div aria-hidden="true" class="center-stripe"></div>
     
+<!-- This is the main header navigation for my page -->
+    <header class="header">
+            <nav>   
+                <div class="container">
+                    <ul class="nav-left">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="teaching.html">Teaching Practice</a></li>
+                    </ul>
+                
+                        <div class="logo">XM</div>
+
+                    <ul class="nav-right">
+                        <li><a href="projects.html">Project Showcase</a></li>
+                        <li><a href="worksamples.html">Samples of Work</a></li>
+                        <li><a class="active" href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+
+ <main>
+    <section class="section-3">
+        <div class="contact-inner">
+            <h1 class="hero-title text-center"><span>Lets Work</span> Together</h1>
+            <p class="hero-paragraph">Contact me here by filling out your details. I'm available for casual blocks and roles across TAS in 2026.</p>
+        </div>
+
+        <div class="contact-card">
+            <!-- This is a contact form -->
+            <form id="contact-form" action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Your Details</legend>
+
+                    <!-- Space to fill in full name -->
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="Matt Smith" required minlength="5" autocomplete="name">
+
+                    <!-- Space to fill in email -->
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="name@mail.com" required autocomple="email">
+
+                    <!-- Reason for contact checkboxes -->
+                     <div class="checkbox-group">
+                        <legend>Reason for Contact</legend>
+                        
+                        <input id="reason-opportunities" name="reason" type="checkbox" value="opportunities">
+                        <label for="reason-opportunities">Employment Opportunities</label>
+
+                        <input id="reason-collab" name="reason" type="checkbox" value="collaboration">
+                        <label for="reason-collab">Professional Collaboration</label>
+
+                        <input id="reason-other" name="reason" type="checkbox" value="other">
+                        <label for="reason-other">Other</label>   
+                    </div>
+
+                    <!-- Space to write inquiry -->
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" type="message" placeholder="Write your enquiry here" required minlength="10"></textarea>
+
+                    <input type="text" name="honey" tableindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;">
+
+                    <!-- Button to send information -->
+                    <button type="submit">Send</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+ </main>   
+    
+<!-- This is the footer of my website -->
+<footer>
+    <section class="footer-container">
+
+        <!-- Left Section: About -->
+        <div class="footer-about">
+            <div class="branding">
+                <div class="logo">XM</div>
+                <h4>Xanthia Marinelli</h4>
+            </div>
+                <p>3rd Year University Student at ACU: BEdSec/BA(DesignInnovTech) | NSW TAS Educator | ACU Elite Athlete and Performer Program 2025 | Australian Stunt Performer and Actor</p>
+                <h5 class="footer-note">© 2025 Xanthia Marinelli. All rights reserved.</h5>
+        </div>
+
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <div class="quick-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="teaching.html">Teaching Practice</a></li>
+                    <li><a href="projects.html">Project Showcase</a></li>
+                    <li><a href="worksamples.html">Samples of Work</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Section: Contact & Social -->
+        <div class="footer-contact">
+            <h4>Socials</h4>
+
+            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank">LinkedIn</a> |
+            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank">Instagram</a> |
+            <a href="https://www.imdb.com/name/nm10903038/" target="_blank">IMDB</a> |
+            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank">Stunt Book Australia</a>      
+        </div>
+    </section>
+</footer>
+
+
 </body>
 </html>
