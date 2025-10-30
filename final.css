@@ -1,0 +1,1124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;   /* Include padding & border in total size for all elements + pseudo-elements */
+}
+
+html, body { height: 100%; }
+
+img { 
+  max-width: 100%;  /* Ensures images never exceed container width */
+  height: auto;     /* Maintains image aspect ratio */
+  display: block;   /* Removes small gap under images by making them block-level */
+}
+
+/* ---------- 2) Core Theme Tokens ----------- */
+
+/* --- Light Mode --- */
+
+:root {
+  --brand: #8c0303;           /* Primary colour */
+  --brand-2: #020659;         /* Accent colour 1 */
+  --brand-3: #cfe4ff;         /* Accent colour 2 */
+  --brand-4: #6B6B6B;         /* Accent colour 3 */
+  --brand-5: #CeD4DB;           /* Accent colour 4 */
+  --brand-6: #D6D6D6;           /* Accent colour 5 */
+  --bg: #f2f3f5;              /* Page background */
+  --title: #8c0303;           /* Main header colour */
+  --title-1: #0D0D0D;         /* Secondary header colour */
+  --text: #161616;            /* Default text */
+  --muted: #6b6b6b;           /* Secondary text */
+  --surface: #f6f8fb;         /* Card/section bg */
+  --radius: 18px;               /* Rounded corners */
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
+  --spacing: 16px;              /* Base spacing unit */
+  --maxw: 1200px;               /* Content width */
+  --header-h: 100px;            /* Header height */
+  --gutter: 12px;               /* tweak to taste */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;     /* Body font */
+  --font-head: "Outfit", sans-serif;   /* Headings font */
+}
+
+/* --- Dark Mode Overrides --- */
+body.dark-mode {
+  --brand: #8c0303;           /* Primary colour */
+  --brand-2: #0B1E3F;         /* Accent colour 1 */
+  --brand-3: #cfe4ff;         /* Accent colour 2 */
+  --brand-4: #6B6B6B;         /* Accent colour 3 */
+  --brand-5: #4B5A66;           /* Accent colour 4 */
+  --brand-6: #D6D6D6;         /* Accent colour 5 */
+  --bg: #1e1e1e;              /* Page background */
+  --title: #8c0303;           /* Main header colour */
+  --title-1: #f5f5f5;         /* Secondary header colour */
+  --text: #cccccc;            /* Default text */
+  --muted: #6b6b6b;           /* Secondary text */
+  --surface: #000000;         /* Card/section bg */
+  --radius: 18px;               /* Rounded corners */
+  --shadow: 0 6px 20px rgba(0,0,0,0.45);    /* Subtle shadow for depth */
+  --spacing: 8px;              /* Base spacing unit */
+  --maxw: 1200px;               /* Content width */
+  --header-h: 100px;            /* Header height */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;     /* Body font */
+  --font-head: "Outfit", 'Playfair Display', Georgia, 'Times New Roman', serif;   /* Headings font */
+}
+
+/* ---------- 3) Page Defaults --------------- */
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh; /* ensures full page height */
+  overflow-x: hidden; /* prevents stripe overflow on sides */
+}
+
+
+body{
+  margin: 0;                                                                                     /* Removes default browser margin */
+  padding: 0;                                                                                    /* Removes default browser padding */
+  font-family: var(--font-body);                                                                 /* Sets font */
+  color: var(--text);                                                                            /* Sets text colour */
+  background: radial-gradient(1000px 600px at 50% -200px, color-mix(in oklab, var(--bg) 98%, white 2%), var(--bg) 60%,
+  color-mix(in oklab, var(--bg) 96%, black 4%));                                               /* Sets soft page gradient */
+  line-height: 1.6;                                                                              /* Improves readability by spacing out lines */                                                                           
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 32px auto;                /* still centered */
+  padding-inline: var(--gutter);    /* guaranteed side space */
+  padding-block: 24px;              /* restores top/bottom breathing room */
+  box-sizing: border-box;           /* make padding not blow out width */
+}
+
+/* ---------- 4) Typography ------------------ */
+h1 {
+  font-family: var(--font-head);    /* Uses heading font */
+  line-height: 1.15;                /* Tight line spacing for headings */
+  margin: 0 0 .5rem 0;              /* Space below headings */
+  color: var(--title);              /* Brand colour */
+  letter-spacing: 1px;             /* Spacing between letters*/
+  font-size: clamp(1.8rem, 3vw + 2rem, 3.4rem); /* Font size*/
+  font-weight: 700;                 /* Font thickness*/
+  text-transform: uppercase;  
+}
+
+h2 {
+  font-family: var(--font-head);    /* Uses heading font */
+  line-height: 1.15;                /* Tight line spacing for headings */
+  margin: 1.5rem 0 2rem 0;          /* Space below headings */
+  color: var(--title);              /* Brand colour */
+  letter-spacing: .2px;             /* Spacing between letters*/
+  font-size: clamp(1.7rem, 1.8vw + 0.3rem, 2.4rem);  /* Font size*/
+  font-weight: 700;                 /* Font thickness*/
+  text-transform: uppercase;  
+}
+
+h3 {
+  font-family: var(--font-head);    /* Uses heading font */
+  line-height: 1.15;                /* Tight line spacing for headings */
+  margin: 0 0 .5rem 0;              /* Space below headings */
+  color: var(--title-1);            /* Brand colour */
+  letter-spacing: .2px;             /* Spacing between letters*/
+  font-size: 1.25rem;               /* Font size*/
+  font-weight: 800;                 /* Font thickness*/
+}
+
+.tagline {
+  letter-spacing: .1em;         /* Letter spacing */
+  font-weight: 400;             /* Font boldness */
+  color: var(--muted);          /* Font colour */
+  font-size: 1.25rem;           /* Font size*/
+  margin-bottom:.2rem;          /* Space under */
+  text-transform: uppercase;  
+}
+
+.small-tagline {
+  letter-spacing: .1em;         /* Letter spacing */
+  font-weight: 400;             /* Font boldness */
+  color: var(--muted);          /* Font colour */
+  font-size: 1rem;           /* Font size*/
+  margin-top: .1rem;
+  margin-bottom:.2rem;          /* Space under */
+   text-transform: uppercase; 
+}
+
+h2 + .small-tagline {
+  margin-top: -1rem;   /* gently pulls tagline upward */
+}
+
+h1 span {
+  color: var(--title-1);      /* Makes part of tilte black */
+}
+
+h2 span {
+  color: var(--title-1);      /* Makes part of tilte black */
+}
+
+p {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.1rem;            /* Base readable size */
+  line-height: 1.6;             /* Comfortable spacing */
+  color: var(--text);           /* Uses theme color */
+  margin-top: 0;                /* Remove browser default spacing */
+  margin-bottom: 1rem;          /* Add consistent paragraph gap */
+  max-width: 65ch;              /* Keeps line lengths readable */
+  text-align: left;             /* Ensures left alignment */
+}
+
+
+/* ---------- 6) Header / Nav ---------------- */
+
+.header {
+  background: color-mix(in oklab, var(--surface) 80%, transparent);    /* Mostly transparent background */
+  color: var(--text);                                            /* Black text */
+  padding: 4px 0;                                               /* Vertical spacing */
+  box-shadow: none;                                             /* No shadow for a cleaner look */
+  margin-bottom: 0;                                             /* Removes gap under header */
+  position: fixed;                                              /* Moves header with website scrolling */
+  top: 0;                                                       /* Keep nav bar at top of page always */
+  z-index: 10;                                                  /* stay above content */
+  width: 100%;                                                  /* avoid layout shifts */
+  backdrop-filter: blur(6px);                                   /* Blurs everything under the nav bar */
+  border-bottom: 1px solid color-mix(in oklab, var(--text) 10%, transparent);                                           /* Gives nav bar a line underneith */
+}
+
+header .container {
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive width */
+  margin: 0 auto;                                     /* Centers horizontally */
+  display: flex;                                      /* Aligns children horizontally */
+  gap: var(--spacing);                                /* Space between flex items */
+  align-items: flex-start;                                /* Vertically centers items */
+  justify-content: space-between;                     /* Pushes items apart */
+}
+
+header h1 {
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive heading */
+  margin: 32px auto;                                  /* Centers heading */
+  color: var(--title);                                /* Special header colour */
+}
+
+nav {
+  background: transparent;             /* Transparent background for nav bar */
+  font-size: 0.95rem;                  /* Slightly smaller font in navigation */
+  width: 100%;                         /* Spans full width */
+  margin: 0;                           /* Space above page content; no top gap */
+  margin-top: 0;                       /* Removes top gap above nav */
+  position: relative;
+  z-index: 6;                          /* Above the header & stripe */
+  padding: 8px 0;                      /* Vertical breathing room */
+  box-shadow: none;                    /* Depth for the bar area */
+}
+
+/* Three-column layout: left nav | center badge | right nav */
+nav .container {
+  width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive container width */
+  margin: 0 auto;                                     /* Centers content horizontally */
+  display: grid;                                      /* Layout: colums */
+  grid-template-columns: 1fr auto 1fr;                /* Makes left colum flexible, middle colum auto (fit content) and right colum flexible */
+  align-items: center;                                /* Centers nav items */
+  gap: var(--spacing);                                /* Space between flex items */
+}
+
+/* Push first 3 buttons towards middle and end 3 buttons towards the middle */
+.nav-left { 
+  justify-self: end; 
+}
+.nav-right { 
+  justify-self: start; 
+}
+
+nav ul {
+  list-style: none;   /* Removes bullets */
+  display: flex;      /* Horizontal layout */
+  gap: 14px;          /* Space between links */
+  margin: 0;          /* Removes margin */
+  padding: 0;         /* Removes padding */
+}
+
+nav a {
+  display: block;         /* Larger click target */
+  color: var(--text);     /* White link text */
+  text-decoration: none;  /* Remove underline/other decorations from text/links */
+  padding: 10px 12px;     /* Space inside link area */
+  border-radius: 8px;     /* Slightly rounded corners */
+}
+
+nav a:hover { 
+  background: color-mix(in oklab, var(--text) 10%, transparent);   /* Grey tint background on hover */
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+nav a:focus-visible {     
+  outline: 2px solid var(--brand-6);      /* Off white outline for increased accessibility keyboard-focus styling */
+  outline-offset: 2px;                    /* Outline offset for increased accessibility keyboard-focus styling */
+}
+
+.active {
+  background-color: color-mix(in oklab, var(--brand-4) 10%, transparent);     /* Indicates active page link */
+  font-weight: 700;                                                           /* Font is bolder when on active page*/
+}
+
+.logo{
+  display: flex;                /* Centers XM */
+  justify-content: center;      /* Centers XM */
+  align-items: center;          /* Centers XM */
+  width: 60px;                  /* Circle size */
+  height: 60px;                 /* Circle size */
+  border-radius: 50%;           /* Makes it a circle */
+  background: var(--brand);                     /* Red background */
+  color: white;                               /* White text */
+  font-weight: 900;                             /* Bold letters */
+  font-size: 20px;                              /* Adjust text size */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);     /* Subtle shadow */
+  border: 3px solid var(--brand);               /* Red border */
+}
+
+/* Light Mode Hover */
+body:not(.dark-mode) .logo:hover {
+  background: black;
+  color: var(--brand);
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+/* Dark Mode Hover */
+body.dark-mode .logo:hover {
+  background: white; /* a softer white for dark mode */
+  color: var(--brand);
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+/* ---------- 7) Sections ---------------- */
+
+/* Sections */
+
+.page-container {
+  min-height: calc(100vh - var(--header-h)); /* fill the page minus header height */
+  max-width: var(--maxw);
+  margin: 165px auto 0 auto;    /* adds more top margin (80px), auto centers horizontally */
+  padding-inline: 0.2rem;        /* slightly less side padding */
+  box-sizing: border-box;
+}
+
+.open-container {
+  display: flex;
+  align-items: flex-start;     /* top-align both sides */
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  padding-bottom: 120px;        /* keeps space at bottom */
+  z-index: 2;
+}
+
+.section {
+  position: relative;
+  background: #fff;               /* or var(--surface) */
+  border-radius: 24px;              /* softer curved edges */
+  padding: 2rem;                    /* breathing space inside */
+  margin: 2rem auto;                /* spacing outside the section */
+  max-width: 1200px;                /* keeps it neat on big screens */
+  box-shadow: 0 8px 24px rgba(0,0,0,.06); /* soft card-like shadow */
+  z-index: 1;
+}
+
+/* Left side container */
+.container-left {
+  flex: 1 1 520px;
+  max-width: 530px;
+  min-width: 0;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.left-paragraph { 
+  font-size: clamp(1.05rem, .6vw + 1rem, 1.25rem); /* Font size */
+}
+
+/* Right side container */
+.container-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;     /* top-align image */
+  min-width: 0;
+}
+
+
+/* ---------- 8) Buttons / Cards / Gallery ------------- */
+
+/* Buttons */
+
+/* Red Button - White text */
+
+.button {                          
+  display:inline-block;            /* Anchor position*/
+  background: var(--brand);        /* Red background colour */
+  color: white;           /* White text colour */
+  outline: 1px solid #8a0303;    /* Darker red outline */
+  border-radius: 999px;            /* Rounded edges */
+  padding:.7rem 1rem;              /* Space around text */
+  font-weight: 800;                /* Font boldness */
+  box-shadow: var(--shadow);       /* Shadow around button */
+  text-decoration: none;             /* Remove link underline */
+  transition: all 0.25s ease;        /* Smooth hover transition */
+  cursor: pointer;
+}
+
+/* Hover state */
+.button:not(.btn-2):not(.btn-3):hover {
+  background: #a10404;               /* Slightly brighter red */
+  transform: translateY(-2px);       /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* White Button - Black Text */
+
+.btn-2 { 
+  background: #ffffff;           /* White background colour */
+  color: black;              /* Black text colour */
+  outline: 1px solid #e6e6e6;    /* Light grey outline */
+}
+
+.btn-2:hover {
+  background: #eeeeee;     /* soft grey on hover */
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Blue Button - White text */
+
+.btn-3 { 
+  background: var(--brand-2);      /* Blue background colour */
+  color: var(--brand-6);           /* White text colour */
+  outline: 1px solid #09122A;    /* Dark blue outline */
+}
+
+.btn-3:hover {
+  background: #041080;    /* slightly darker blue */
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Active (when clicked) */
+.button:active {
+  transform: translateY(0);          /* Pressed-down effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Images */
+
+/* ---------- 9) Forms ----------------------- */
+ 
+
+.contact-inner {
+    text-align: center;
+}
+
+form{ 
+    display:grid;                    /* Grid layout for form elements */
+    gap:12px;                        /* Space between form items */
+}
+
+label{
+  font-weight:700;                   /* Semi-bold labels */
+  font-size:.78rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  width:100%;                                       /* Full width fields */
+  padding:10px 12px;                                /* Internal spacing */
+  border:1px solid #d4d7dd;                       /* Light border */
+  border-radius:var(--radius);                      /* Rounded corners */
+  background:#fff;                                /* White background */
+  transition:border-color .2s, box-shadow .2s;      /* Smooth focus effect */
+}
+
+input:focus,
+textarea:focus{
+  outline:none;                                     /* Removes default outline */
+  border-color:var(--brand);                        /* Brand border on focus */
+  box-shadow:0 6px 20px rgba(0,0,0,.06);          /* Glow on focus */
+}
+
+textarea { 
+  min-height: 140px;        /* Minimum height */
+  resize: vertical;         /* Only resize vertically */
+}
+
+.checkbox-group {
+   font-weight: 700;
+   font-size: .9rem;
+   color: var(--muted);
+   margin-bottom: .25rem;
+   text-transform: uppercase;
+   letter-spacing: .08em;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--brand)        /* Check boxes turn red on selection) */
+}
+
+button,
+input[type="submit"]{
+  background:var(--brand);                                                  /* Brand colour */
+  color:#fff;                                                             /* White text */
+  border:none;                                                              /* No border */
+  padding:12px 16px;                                                        /* Internal spacing */
+  border-radius:var(--radius);                                              /* Rounded corners */
+  cursor:pointer;                                                           /* Pointer on hover */
+  transition:transform .15s ease, box-shadow .15s ease, background .2s;
+}
+
+button:hover,
+input[type="submit"]:hover{
+  background:var(--brand-2);                                /* Darker brand colour on hover */
+  transform:translateY(-1px);
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Error text can match the micro-title sizing */
+.error{
+  color:#e11d48;
+  font-size:.85rem;
+  display:block;
+  margin-top:6px;
+}
+
+/* ---------- 10) Footer --------------------- */
+footer {
+  margin-top: 0;                             /* Space above footer */
+  padding: 22px 0;                              /* Vertical spacing */
+  background: color-mix(in oklab, var(--surface) 80%, transparent);   /* White background */
+  color: var(--brand-2);                             /* Light text colour */
+  z-index: 1;                                   /* make sure it stays above the stripe */
+  overflow: hidden;                             /* Hide overflow from pseudo-element */
+}
+
+footer h4 {
+  font-size: 1.1rem;                 /* adjust to taste */
+  font-weight: 700;                  /* bold for emphasis */
+  color: var(--title);               /* your red brand colour (#8c0303) */
+  text-transform: uppercase;         /* optional: makes them consistent in style */
+  letter-spacing: 0.05em;            /* subtle spacing for polish */
+  text-align: left;                  /* aligns text neatly with links */
+}
+
+footer p {
+  color: var(--text);                                /* Black paragraph text */
+}
+.footer-container {
+  width: min(100% - 2*var(--spacing), var(--maxw));      /* Responsive width */
+  margin: 0 auto;                                        /* Centered container */
+  display: grid;                                         /* Grid layout */
+  grid-template-columns: 40% 20% 20% 20%;                /* 4 columns */
+  justify-content: space-between;                        /* Space between items */
+  gap: var(--spacing);                                   /* Gap between items */
+  align-items: start;                                    /* Allows wrapping on smaller screens */
+}
+
+.footer-about {
+  grid-column: 1;                             /* Positions my information in coloumn 1 */
+  grid-row: 1;                                /* Positions top of cell*/
+}
+
+.footer-links {
+  grid-column: 3;                             /* Positions nav links in coloumn 3 */
+  grid-row: 1;                                /* Positions top of cell*/
+}
+
+.quick-links ul{
+  padding-left: 0;                            /* Aligns left of the cell */
+  list-style: none;                           /* Removes dote points */
+}
+
+/* Footer link styling */
+.footer-links a {
+  text-decoration: none;           /* removes underline */
+  color: var(--text);              
+  font-weight: 500;                /* medium weight for readability */
+  transition: transform 0.25s ease, color 0.25s ease; /* smooth hover animation */
+  display: inline-block;           /* needed for transform to work properly */
+}
+
+/* Hover effect */
+.footer-links a:hover {
+  transform: scale(1.08);          /* slightly enlarges the link */
+  color: var(--brand);             /* changes colour to red accent */
+}
+
+footer .socials {
+  grid-column: 4;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+}
+
+footer .socials {
+  display: grid;
+  grid-template-columns: repeat(2, 42px); /* match icon size */
+  grid-auto-rows: 42px;                   /* match icon size */
+  gap: 14px 16px;                         /* row gap / column gap */
+  margin-top: 1.5rem;
+}
+
+footer .socials h4 {
+  grid-column: 1 / -1;   /* title stretches across all columns */
+  margin: 0 0 0.3rem 0;  
+}
+
+.socials a img {
+  width: 42px;
+  height: 42px;
+  transition: transform 0.25s ease, color 0.25s ease; /* smooth hover animation */
+}
+
+.socials a:hover img {
+  transform: scale(1.10); /* gentle zoom-in */
+}
+
+.branding {
+    display: flex;                           /* Lays logo and name in a row */
+    gap: 0.5rem;                             /* Space between logo and name */
+}
+
+.footer-note {
+    font-weight: lighter;                   /* Makes it not bold */
+    color: var(--muted);                    /* Light grey, adjust if needed */
+    font-size: 0.9rem;                      /* Slightly smaller text */
+}
+
+footer a { 
+color: var(--brand-6);                       /* Makes link text white */
+}
+
+
+/* ---------- Index Page --------------------- */
+
+/* give the highlights block bottom clearance so content after it sits lower */
+.home-page .open-container.highlights {
+  padding-bottom: 220px;  
+}
+
+/* ALSO push the footer back down on the home page */
+.home-page footer {
+  margin-top: 80px;       /* creates a buffer so footer doesn't ride up into the portrait */
+}
+
+/* Stripe background positioned under the header */
+.stripe-section-index {
+  position: relative;
+  z-index: 0;
+  isolation: isolate; /* keeps the pseudo-element scoped to this section */
+  padding-top: 2rem;  /* space for hero content */
+}
+
+/* Create the red stripe */
+.stripe-section-index::before {
+  content: "";
+  position: absolute;
+  top: 0;               /* start directly under the header */
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(100px, 10vw, 180px);  /* responsive width */
+  height: 150vh;          /* ends halfway down hero image*/
+  background: var(--brand);
+  z-index: -1;           /* behind content */
+  opacity: 0.97;
+}
+
+/* ---------- Java Script Pop Up (only happens once on index page ---------------- */
+/* Tip base (only visible in light mode) */
+.theme-tip {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  max-width: 280px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #222;
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  font: 500 0.9rem/1.3 var(--font-body, system-ui);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  z-index: 1000;
+}
+
+/* Show state */
+.theme-tip.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hide entirely in dark mode */
+body.dark-mode .theme-tip { display: none; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .theme-tip { transition: none; }
+}
+
+/* -- Sections --*/
+
+/* two columns: left + right */
+.open-container.highlights{
+  position: relative;     /* for the absolute middle image */
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;      /* keeps right column from dropping */
+}
+
+.title-image {
+  width: 100%;
+  max-width: 560px;       
+  height: auto;
+  border-radius: 40px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  position: relative;
+  margin-right: -1rem;
+  transform: translateX(-2rem); /* subtle overlap without breaking layout */
+}
+
+/* left: bullets + image inline */
+.hl-content{
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.highlights{
+  position: relative;    
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: nowrap;     /* ⬅️ prevents the right column from wrapping under */
+}
+
+.hl-content {
+  display: flex;
+  align-items: flex-start;  /* aligns image and list at the top */
+  gap: 1.5rem;              /* space between image and list */
+}
+
+.hl-left {
+  padding-right: calc(clamp(220px, 18vw, 300px) / 2 + 1rem);
+}
+
+.hl-right {
+  padding-left:  calc(clamp(220px, 18vw, 300px) / 2 + 1rem);
+  text-align: right;         /* makes all inline text (headings, links, etc.) right-aligned */
+  margin-left: auto;         /* pushes the entire column to the right edge */
+  align-items: flex-end;     /* aligns any flex children (if they exist) to the right */
+  transform: translateX(-.8rem);
+}
+
+.hl-list-right {
+  list-style-position: inside;  /* bullets follow text alignment */
+  padding: 0;                   /* remove default browser padding */
+  margin: 0;                    /* remove unwanted spacing */
+}
+
+.hl-photo {
+  margin: 1rem 0; /* space above & below image */
+  flex: 0 0 220px;          /* fixed image width */
+  transform: translateY(-16px); /* nudges image up slightly */
+}
+
+.hl-photo img {
+  width: 100%;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hl-list {
+  flex: 1 1 auto;
+  margin: 0;
+  padding-left: 0;
+}
+
+.hl-list li {
+  list-style: disc inside;
+  margin-bottom: 1.8rem;
+  padding-left: 1.45rem;
+  text-indent: -1.35rem;
+}
+
+.highlights-right {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+/* Let left & right columns share the row evenly */
+.hl-left,
+.hl-right {
+  flex: 1 1 0;           /* split available width */
+  min-width: 0;          /* prevent overflow pushing to next line */
+  max-width: none;       
+}
+
+.hl-right a,
+.hl-left a {
+  color: var(--brand);          /* uses red theme variable (#8c0303) */
+  text-decoration: none;        /* removes underline (optional) */
+}
+
+.hl-right a:hover,
+.hl-left a:hover {
+  color: #a10404;               /* slightly brighter red on hover */
+  text-decoration: underline;   /* optional: underline on hover */
+}
+
+/* Right side of Community section: stacked images */
+.hl-gallery {
+  display: flex;
+  flex-direction: column;   /* stack vertical */
+  gap: 1rem;                /* space between the two images */
+  flex: 0 0 220px;          /* keeps a nice fixed column width */
+  transform: translateY(20px); /* align visually with top of list */
+}
+
+/* first image style is already .hl-photo {...} */
+.hl-photo {
+  margin: 0;
+}
+
+.hl-photo img {
+  width: 100%;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.hl-photo img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* second image under it */
+.h2-photo {
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.h2-photo img {
+  width: 90%;
+  height: 150px;           /* keep the height you like */
+  object-fit: cover;       /* crops instead of squishing */
+  object-position: center; /* centers the visible part */
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.h2-photo img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.title-image-2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-59%);
+  top: 0;
+  width: clamp(450px, 30vw, 750px);  /* wider responsive range */
+  z-index: 3;
+}
+
+.title-image-2 img {
+  width: 100%;
+  height: 1000px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ---------- About Page --------------------- */
+
+/* Stripe background positioned under the header */
+.stripe-section-about {
+  position: relative;
+  z-index: 0;
+  isolation: isolate; /* keeps the pseudo-element scoped to this section */
+  padding-top: 2rem;  /* space for hero content */
+}
+
+/* Create the red stripe */
+.stripe-section-about::before {
+  content: "";
+  position: absolute;
+  top: 0;               /* start directly under the header */
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(100px, 10vw, 180px);  /* responsive width */
+  height: 100%;
+  background: var(--brand);
+  z-index: -1;           /* behind content */
+  opacity: 0.97;
+}
+
+/* Left side container */
+.about-container-left {
+  position: relative;   
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.about-media-1 {
+  width: 100%;
+  max-width: 650px;       
+  height: auto;
+  border-radius: 40px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  position: relative;
+  margin-right: -1rem;
+  margin-top: 12px;
+  overflow: hidden;           /* keeps rounded corners clean */
+}
+
+/* Right side container */
+.about-container-right {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;     /* top-align image */
+  max-width: 650px;            /* Keeps text column narrow and readable */
+  padding-right: 2rem;         /* Keeps text from touching right edge */
+  box-sizing: border-box;      /* Ensures padding doesn’t blow out width */
+  margin-left: 1.9rem;
+}
+
+.teaching-areas {
+  display: flex;
+  flex-direction: column;    /* stack title then scroller */
+  align-items: flex-start;   /* keep the title left aligned */
+  gap: 1rem;                 /* space between title and scroller */
+  width: 100%;
+}
+
+/* Left side title */
+.about-title-left {
+  max-width: 530px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.scroller {
+  display:grid; 
+  grid-auto-flow: column; 
+  grid-auto-columns: clamp(260px, 28%, 340px);
+  overflow-x: auto; 
+  gap: 1rem; 
+  padding: 1rem 0 1.5rem 0; 
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.chip { 
+  scroll-snap-align: start; 
+  background: var(--brand-5); 
+  border-radius: var(--radius); 
+  box-shadow: var(--shadow); 
+  padding: 1rem; 
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* keep text color consistent */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip img { 
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: .8rem;
+  border: 8px solid #fff;
+  box-shadow: var(--shadow);
+}
+
+.chip:hover, .chip:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.chip h3 { 
+  margin-bottom: .1rem; 
+}
+
+
+/* ---------- Teaching Page --------------------- */
+
+.open-container.teaching-row {
+  display: flex;
+  flex-wrap: nowrap;                /* keep them on one line on desktop */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+
+/* Left side: text column */
+.open-container.teaching-row .teaching-container-left {
+  flex: 0 0 65%;
+  max-width: 65%;
+  min-width: 0;                     /* prevents it from forcing wrap */
+}
+
+/* Right side: media column */
+.open-container.teaching-row .teaching-media {
+  flex: 0 0 35%;
+  max-width: 35%;
+  min-width: 0;                     /* prevents overflow that would push it down */
+  display: flex;
+  justify-content: flex-end;
+  margin-left: -40px;
+  margin-top: 12px;
+}
+
+.open-container.teaching-row .teaching-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.open-container.table-section {
+  padding-bottom: 0;
+  margin-bottom: 20px;
+} 
+
+.table-wrap{
+  margin: .25rem 0;
+  border-radius: var(--radius);
+  overflow: auto;                 /* horizontal scroll on small screens */
+  box-shadow: var(--shadow);
+  background: var(--bg);               /* keeps the table readable over the page bg */
+  margin-top: -40px
+}
+
+table.table{
+  width: 100%;
+  border-collapse: separate;      /* so radius works */
+  border-spacing: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  min-width: 640px;               /* let it scroll if content is wide */
+}
+
+/* Caption */
+.table caption{
+  caption-side: top;
+  text-align: left;
+  font-weight: 800;
+  color: var(--muted);
+  padding: 0.75rem 1rem;
+}
+
+/* Head */
+.table thead th{
+  position: sticky; top: 0; z-index: 1;
+  background: var(--brand);     /* navy header */
+  color: #fff;
+  text-align: left;
+  font-weight: 800;
+  letter-spacing: .02em;
+  padding: 0.9rem 1rem;
+  border-bottom: 2px solid color-mix(in oklab, white 20%, transparent);
+}
+
+/* Cells */
+.table th,
+.table td{
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--brand-5); /* light divider */
+  vertical-align: middle;
+}
+
+/* Zebra + hover */
+.table tbody tr:nth-child(even){ 
+  background: var(--surface); 
+}
+
+.table tbody tr:hover{ 
+  background: color-mix(in oklab, var(--surface) 70%, white); 
+}
+
+/* First/last cell rounding */
+.table thead th:first-child { 
+  border-top-left-radius: var(--radius); 
+}
+
+.table thead th:last-child  { 
+  border-top-right-radius: var(--radius); 
+}
+
+.table tbody tr:last-child td:first-child { 
+  border-bottom-left-radius: var(--radius); 
+}
+
+.table tbody tr:last-child td:last-child  { 
+  border-bottom-right-radius: var(--radius); 
+}
+
+/* Numeric / tight columns */
+.table .num{ text-align: right; font-variant-numeric: tabular-nums; }
+.table .muted{ color: var(--muted); }
+
+/* Compact variant (optional) */
+.table--compact td, .table--compact th{ padding: 0.55rem 0.75rem; }
+.table--compact{ font-size: 0.92rem; }
+
+/* Mobile tweaks */
+@media (max-width: 700px){
+  .table{ min-width: 540px; } /* encourage scrolling instead of squishing */
+}
+
+.schools {
+  text-align: center;             /* centers the heading */
+  display: flex;
+  flex-direction: column;
+  align-items: center;            /* centers everything horizontally */
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  transform: none;
+}
+
+/* Center the buttons inside */
+.schools .cta {
+  display: flex;
+  justify-content: center;        /* centers the buttons horizontally */
+  align-items: center;            /* aligns them vertically */
+  gap: 1rem;                      /* even spacing between buttons */
+  flex-wrap: wrap;                /* stack on small screens */
+  margin-top: 1rem;
+  width: 100%;
+}

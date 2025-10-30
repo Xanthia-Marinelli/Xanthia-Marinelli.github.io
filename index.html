@@ -4,67 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xanthia's Teaching Portfolio - Home Page</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="final.css">
 
 </head>
-<body>
+<body class="home-page">
 
-    
+
 <!-- This is the main header navigation for my page -->
     <header class="header">
             <nav>   
                 <div class="container">
                     <ul class="nav-left">
                         <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="teaching.html">Teaching Practice</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
                     </ul>
                 
-                        <div class="logo">XM</div>
+                        <div class="logo" id="themeToggle">XM</div>
 
                     <ul class="nav-right">
-                        <li><a href="projects.html">Project Showcase</a></li>
-                        <li><a href="worksamples.html">Samples of Work</a></li>
-                        <li><a href="contact.html">Contact Me</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="worksamples.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
     </header>
 
-<!-- Hero section to indroduce myself -->
-<main>
-    <section class="open-container">
-        <section class="container-left">
-            <p class="eyebrow">HI! I'M XANTHIA MARINELLI</p>
-            <h1 class="hero-title"><span>Welcome To</span> My Teaching Portfolio</h1>
-            <p class="hero-paragraph">
-                I’m a Secondary Technology teacher-in-training driven by creativity, sustainability, and innovation. I inspire learning through practical projects with real-world purpose.</p>
+<section class="stripe-section-index">
 
-            <div class="cta">
-                <a class="button" href="Documents/Xanthia Marinelli Education CV.pdf" download>Download CV</a>
-                <a class="button btn-2" href="Documents/Xanthia Marinelli Academic Transcript.pdf" download>Download Transcript</a>
-            </div> 
+    <div id="themeTip" class="theme-tip" role="status" aria-live="polite"> 🌙 Tip: Click the XM button to switch to Dark Mode.</div>
+
+    <section class="page-container">
+        <section class="open-container">
+            <section class="container-left">
+                <p class="tagline">HI! I'M XANTHIA MARINELLI</p>
+                <h1><span>Welcome to my</span> teaching folio</h1>
+                <p> I’m a Secondary Technology teacher-in-training driven by creativity, sustainability, and innovation. 
+                I inspire learning through practical projects with real-world purpose.</p>
+
+                <div class="cta">
+                    <a class="button" href="Documents/Xanthia Marinelli Education CV.pdf" download>DOWNLOAD CV</a>
+                    <a class="button btn-2" href="Documents/Xanthia Marinelli Academic Transcript.pdf" download>DOWNLOAD TRANSCRIPT</a>
+                </div> 
+            </section>
+
+            <section class="container-right"> 
+                <img class="title-image" src="Images/Title-profile.JPG" alt="Portrait of myself" />
+            </section>
         </section>
-        
-        <div class="image-middle">
-            <img src="Images/New-profile.png" alt="Portrait of myself" />
-        </div>  
 
-    <!-- This is a list of unordered attributes I am known for as a teacher -->
-        <section class="container-right">
-            <h4> Professional Summary</h4>
+        <section class="open-container">
+            <!-- LEFT -->
+            <div class="hl-left">
+                <h2><span>Community</span> Highlights</h2>
 
-                <ul>
+                <div class="hl-content">
+                    
+                <!-- Left Side - dot points -->
+                    <ul class="hl-list">
+                        <li><strong>Interview for ACU</strong> — featured in <a href="https://www.impact.acu.edu.au/" target="_blank" rel="noopener noreferrer">ACU’s Impact Magazine</a> discussing how the Elite Athlete and Performer helps nurture the next generation of students.</li>
+                        <li><strong>Panel Speaker, ACU Elite Athlete & Performer Awards Night 2023</strong> — shared insights on the stunt industry and balancing professional film work with university study.</li>
+                        <li><strong>Guest Speaker at Canterbury Girls High School</strong> — delivered a talk on pathways and opportunities after high school.</li>
+                    </ul>
+
+                    <!-- Right Side - image stack -->
+
+                    <div class="hl-gallery">
+
+                        <figure class="hl-photo">
+                            <a href="https://www.impact.acu.edu.au/study/nurturing-the-next-generation-of-creatives" target="_blank" rel="noopener noreferrer">
+                            <img class="hl-person" src="Images/Nurturing.png" alt="Xanthia Marinelli featured in ACU Impact Magazine">
+                            </a>
+                        </figure>
+                        
+                        <figure class="h2-photo">
+                            <a href="https://www.youtube.com/watch?v=Alhp1TCXh1Y" target="_blank" rel="noopener noreferrer">
+                            <img class="hl-person" src="Images/Panel-interview.png" alt="Xanthia Marinelli on the panel at the 2023 ACU Elite Athlete and Performer Programe Awards Night.">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Image -->
+            <div class="title-image-2">
+                <img src="Images/Profile-O2.png" alt="Portrait in ACU uniform holding books">
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hl-right">
+                <h2><span>Professional</span> Highlights</h2>
+                <div class="hl-content-right">
+                <ul class="hl-list-right">
                     <li>Pre-service secondary teacher specialising in Textiles, Timber, and Design & Technology.</li>
-                    <li>Completing a  <a href="https://www.acu.edu.au/course/bachelor-of-education-secondarybachelor-of-arts-design-innovation-and-technologies" target="_blank">Bachelor of Education (Secondary) / Bachelor of Arts (Design Innovation and Technologies)</a> at <a href="https://www.acu.edu.au/" target="_blank">Australian Catholic University.</a></li>
+                    <li>Completing a <a href="https://www.acu.edu.au/course/bachelor-of-education-secondarybachelor-of-arts-design-innovation-and-technologies" target="_blank" rel="noopener noreferrer">Bachelor of Education (Secondary) / Bachelor of Arts (Design Innovation and Technologies)</a> at <a href="https://www.acu.edu.au/" target="_blank" rel="noopener noreferrer">Australian Catholic University</a>.</li>
                     <li>Experienced in delivering engaging, hands-on learning experiences underpinned by sustainability, design thinking, and creativity.</li>
                     <li>Skilled in differentiation, classroom management, and fostering inclusive learning environments.</li>
                     <li>Committed to real-world application of skills to inspire student engagement and achievement.</li>
                     <li>Passionate about developing students’ critical thinking, problem-solving, and creative skills for the future.</li>
-                </u>
+                </ul>
+                </div>
+            </div>
         </section>
     </section>
-</main>
+</section>
 
 <!-- This is the footer of my website -->
 <footer>
@@ -96,17 +140,25 @@
         </div>
 
         <!-- Right Section: Contact & Social -->
-        <div class="footer-contact">
+        <div class="socials">
             <h4>Socials</h4>
 
-            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank">Instagram</a> |
-            <a href="https://www.imdb.com/name/nm10903038/" target="_blank">IMDB</a> |
-            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank">Stunt Book Australia</a>      
+            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener noreferrer">
+                <img src="Images/LinkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/IMDB.png" alt="IMDB" />
+            </a>
+            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener noreferrer">
+                <img src="Images/SBAus.png" alt="Stunt Book Australia" />
+            </a>     
         </div>
     </section>
 </footer>
 
+<script src="themes.js"></script>
 </body>
 </html>
-
