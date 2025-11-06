@@ -4,300 +4,436 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xanthia's Teaching Portfolio - Industrial Projects Page</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="final.css">
+
 </head>
 
-<body>
-    
+
 <!-- This is the main header navigation for my page -->
     <header class="header">
             <nav>   
                 <div class="container">
                     <ul class="nav-left">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="teaching.html">Teaching Practice</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
                     </ul>
                 
-                        <div class="logo">XM</div>
+                        <div class="logo" id="themeToggle">XM</div>
 
                     <ul class="nav-right">
-                        <li><a href="projects.html">Project Showcase</a></li>
-                        <li><a href="worksamples.html">Samples of Work</a></li>
-                        <li><a href="contact.html">Contact Me</a></li>
+                        <li><a class="active" href="projects.html">Projects</a></li>
+                        <li><a href="worksamples.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
     </header>
 
-<main>
+<section class="stripe-section-inner-projects">
 
-    <!-- This Section will house all my textiles projects -->
-<section class="projects-wrapper">
-    <!-- Left Column - Projects -->
-    <div class="column-left">
-        <h2>Woodworking Projects</h2>
-            
-        <div class="project-card-2">
-            <img src="Images/Phone-box.png" alt="A rectangular wooden storage box with a clear acrylic top engraved with a dog and geometric designs.">
-            <h3>Project Title:</h3>
-            <h4>Phone or Storage Box</h4>
-            <h3>Brief Description:</h3>
-            <p>A rectangular handcrafted wooden storage box, made from pine wood. It has a a clear acrylic top that slides on and off, engraved with a dog and geometric designs. </p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Practical Woodworking Skills: measuring, marking out, sawing, sanding, planing, drilling, and assembling timber components.</li>
-                <li>Safe Tool and Machine use: correct operation of hand tools (tenon saw, hammer, plane, try square, vice) and power tools (disc sander, drill press, table saw, laser cutter) with appropriate PPE.</li>
-                <li>Technical Accuracy: ensuring precise dimensions, flush joins, square edges, correct pilot holes, and smooth finishes.</li>
-                <li>Problem-solving: making adjustments (e.g., removing lips, sanding to flush, filling gaps) to ensure proper fit and finish.</li>
-                <li>Digital Design & Technology skills: using Fusion 360 and Adobe Illustrator to design and decorate the lid, preparing files for the laser cutter.</li>
-                <li>Assembly and Finishing Techniques: gluing, nailing, using putty, and sanding through progressive grits to achieve a professional outcome.</li>
-            </ul>
+    <section class="page-container">
+        <section class="open-container">
+            <section class="container-left">
+                <div class="industrial-c-left">
+                    <h1><span>Industrial Project</span> Showcase</h1>
+                </div>
+                    <p> A collection of projects undertaken as assignments for different industrial units spaning through Tech104 (Product Design), Tech205 (Design in Timber) and Tech206 (Design in Metal).
+                    </p>
+            </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 4 (Year 7 or 8)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/cypsz837v6zebo49ow6sc/Iphone-Case-Explicit-Instructions-copy.pdf?rlkey=jkui9vz7pjsxyxcs7gpcyplfb&st=t53dndv4&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/58pskxuypjnnvi21yvfmu/MASTER-Phone-Safe-Workbook-2022-copy.pdf?rlkey=8cfh5j7r0bw7dj82e08ize61t&st=yjq9gjxl&dl=0" target="_blank" rel="noopener"> Workbook</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/ix3a1ef6vo4jjtyemrzni/Phone-Safe-Box-Drawing-v4-copy.pdf?rlkey=r7my0oq20ppj4cm10sfre1sdg&st=rl2eooh9&dl=0"target="_blank" rel="noopener"> Technical Drawings</a></p>
+            <section class="container-right"> 
+                <img class="title-image-projects-industrial" src="Images/projects-industrial.png" alt="A photo of a student building a wooden box using clamps and tools in a workshop, highlighting craftsmanship, construction, and industrial design skills." />
+            </section>
+        </section>
 
+        <div class="hl-right">
+                <h2><span>Woodwork</span> Projects</h2>
         </div>
 
-        <div class="project-card-2">
-            <img src="Images/Froggy.png" alt="A small wooden figurine with a rectangular head, circular eyes, and flexible cord arms and legs with wooden block hands and feet.">
-            <h3>Project Title:</h3>
-            <h4>Froggy Toy</h4>
-            <h3>Brief Description:</h3>
-            <p>A handcrafted small wooden figurine with a rectangular head, circular eyes, and flexible cord arms and legs with wooden block hands and feet. This toy works in part with the Rubber-Band Racer Project from Design & Technology. </p>
-            <h3>Skills Showcased:</h3>
+        <!-- ===== CAROUSEL 1: Woodwork Projects ===== -->
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-w1">
                     
-            <ul style="font-size: medium;">
-                <li>Measuring and Marking out: accuracy in sizing wooden pieces.</li>
-                <li>Cutting and Shaping: sawing, sanding, and drilling timber to form body parts.</li>
-                <li>Assembly Skills: joining components using dowels and cord.</li>
-                <li>Hand Tool Use: safe operation of saws, drills, sandpaper, clamps, and a drill press.</li>
-                <li>Creativity and Design: giving the figure personality through proportions, angles, and finishing touches.</li>
-                <li>Finishing Techniques: sanding smooth edges, applying optional finishes (oil, paint, or sealant).</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Phone-box.png" alt="A rectangular wooden storage box with a clear acrylic top engraved with a dog and geometric designs.">
+                            <h3>Phone or Storage Box</h3>
+                            <p class="muted">Stage 4 (Year 7 or 8)</p> 
+                            <p>A rectangular handcrafted wooden storage box, made from pine wood. It has a a clear acrylic top that slides on and off, engraved with a dog and geometric designs.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-w1b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 4 (Year 7 or 8)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/6nh257od4u6hdarp8fjje/Robot-guy-procedure-copy.pdf?rlkey=bna7uy940kcix65sxh1ctpwde&st=4bepsxhu&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
-            
-        </div>
-        
-        <div class="project-card-2">
-            <img src="Images/Chopping-board.png" alt="A rectangular wooden chopping board with a lighter wood strip running lengthwise through the center.">
-            <h3>Project Title:</h3>
-            <h4>Chopping Board</h4>
-            <h3>Brief Description:</h3>
-            <p>A handcrafted chopping board utilising Tasmanian Blackwood and White Oak with a laser engraved makers mark. The shape of the board is rectangular with four rounded edges that never intersect.</p>
-            <h3>Skills Showcased:</h3>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-w1b" aria-hidden="true" hidden>
+                            <img src="Images/Phone-box.png" alt="A rectangular wooden storage box with a clear acrylic top engraved with a dog and geometric designs.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Practical Woodworking Skills: measuring, marking out, sawing, sanding, planing, drilling, and assembling timber components.</li>
+                                    <li>Safe Tool and Machine use: correct operation of hand tools (tenon saw, hammer, plane, try square, vice) and power tools (disc sander, drill press, table saw, laser cutter) with appropriate PPE.</li>
+                                    <li>Technical Accuracy: ensuring precise dimensions, flush joins, square edges, correct pilot holes, and smooth finishes.</li>
+                                    <li>Problem-solving: making adjustments (e.g., removing lips, sanding to flush, filling gaps) to ensure proper fit and finish.</li>
+                                    <li>Digital Design & Technology skills: using Fusion 360 and Adobe Illustrator to design and decorate the lid, preparing files for the laser cutter.</li>
+                                    <li>Assembly and Finishing Techniques: gluing, nailing, using putty, and sanding through progressive grits to achieve a professional outcome.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/cypsz837v6zebo49ow6sc/Iphone-Case-Explicit-Instructions-copy.pdf?rlkey=jkui9vz7pjsxyxcs7gpcyplfb&st=t53dndv4&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/58pskxuypjnnvi21yvfmu/MASTER-Phone-Safe-Workbook-2022-copy.pdf?rlkey=8cfh5j7r0bw7dj82e08ize61t&st=yjq9gjxl&dl=0" target="_blank" rel="noopener"> Workbook</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/ix3a1ef6vo4jjtyemrzni/Phone-Safe-Box-Drawing-v4-copy.pdf?rlkey=r7my0oq20ppj4cm10sfre1sdg&st=rl2eooh9&dl=0"target="_blank" rel="noopener"> Technical Drawings</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-w2">
                     
-            <ul style="font-size: medium;">
-                <li>Measuring and Marking out.</li>
-                <li>Cutting and Jointing: safely cutting timber and joining contrasting woods (lamination).</li>
-                <li>Squaring and Planning: achieving flat, even surfaces before rounding.</li>
-                <li>Surface preparation: sanding progressively for a smooth finish.</li>
-                <li>Finishing Techniques: applying oil/sealant to protect and highlight the timber grain.</li>
-                <li>Tool Use: safe use of saws, clamps, planers, sanders.</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Froggy.png" alt="A small wooden figurine with a rectangular head, circular eyes, and flexible cord arms and legs with wooden block hands and feet.">
+                            <h3>Froggy Toy</h3>
+                            <p class="muted">Stage 4 (Year 7 or 8)</p> 
+                            <p>A handcrafted small wooden figurine with a rectangular head, circular eyes, and flexible cord arms and legs with wooden block hands and feet. This toy works in part with the Rubber-Band Racer Project from Design & Technology.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-w2b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/olh0zv82ec2riiu846ceh/XM-Timber-Board-Drawing-v4-copy.pdf?rlkey=tuhhvlyr7aw3v4cvjrgo4upar&st=gs2rlfha&dl=0" target="_blank" rel="noopener"> Technical Drawings</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-w2b" aria-hidden="true" hidden>
+                            <img src="Images/Froggy.png" alt="A small wooden figurine with a rectangular head, circular eyes, and flexible cord arms and legs with wooden block hands and feet.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Measuring and Marking out: accuracy in sizing wooden pieces.</li>
+                                    <li>Cutting and Shaping: sawing, sanding, and drilling timber to form body parts.</li>
+                                    <li>Assembly Skills: joining components using dowels and cord.</li>
+                                    <li>Hand Tool Use: safe operation of saws, drills, sandpaper, clamps, and a drill press.</li>
+                                    <li>Creativity and Design: giving the figure personality through proportions, angles, and finishing touches.</li>
+                                    <li>Finishing Techniques: sanding smooth edges, applying optional finishes (oil, paint, or sealant).</li>
+                                </ul>
 
-        <div class="project-card-2">
-            <img src="Images/Box.png" alt="A handcrafted wooden box with a lifting lid featuring an inlaid checkerboard pattern in contrasting vaneer wood.">
-            <h3>Project Title:</h3>
-            <h4>Heirloom Box</h4>
-            <h3>Brief Description:</h3>
-            <p>A handcrafted wooden box made of Mahogany and White Oak wood. It features Keyed Mitre joints and a decorative inlaid checkerboard pattern in contrasting vaneer wood.</p>
-            <h3>Skills Showcased:</h3>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/6nh257od4u6hdarp8fjje/Robot-guy-procedure-copy.pdf?rlkey=bna7uy940kcix65sxh1ctpwde&st=4bepsxhu&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-w3">
                     
-            <ul style="font-size: medium;">
-                <li>Measuring and Marking</li>
-                <li>Cutting and Joinery (Keyed Mitre joints)</li>
-                <li>Vaneer Lamination and Pattern work</li>
-                <li>Planing and Squaring</li>
-                <li>Assembly Skills</li>
-                <li>Finishing Techniques</li>
-                <li>Tool use: safe operation of saws, chisels, clamps, sanders, drop saw and table saw.</li>
-                
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Chopping-board.png" alt="A rectangular wooden chopping board with a lighter wood strip running lengthwise through the center.">
+                            <h3>Chopping Board</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A handcrafted chopping board utilising Tasmanian Blackwood and White Oak with a laser engraved makers mark. The shape of the board is rectangular with four rounded edges that never intersect.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-w3b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/tl0qpy29xzxnqqz36h1yg/Decorative-Heirloom-Box-copy.pdf?rlkey=i01vwqtx8bgnlqp29oied2my5&st=b1jow02x&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-w3b" aria-hidden="true" hidden>
+                            <img src="Images/Chopping-board.png" alt="A rectangular wooden chopping board with a lighter wood strip running lengthwise through the center.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Measuring and Marking out.</li>
+                                    <li>Cutting and Jointing: safely cutting timber and joining contrasting woods (lamination).</li>
+                                    <li>Squaring and Planning: achieving flat, even surfaces before rounding.</li>
+                                    <li>Surface preparation: sanding progressively for a smooth finish.</li>
+                                    <li>Finishing Techniques: applying oil/sealant to protect and highlight the timber grain.</li>
+                                    <li>Tool Use: safe use of saws, clamps, planers, sanders.</li>
+                                </ul>
 
-        <div class="project-card-2">
-            <img src="Images/Stool.png" alt="A round wooden stool with a curved backrest, showcasing natural wood grain.">
-            <h3>Project Title:</h3>
-            <h4>Foot Stool</h4>
-            <h3>Brief Description:</h3>
-            <p>A low wooden stool, crafted from solid Tasmanian Blackwood, with a circular seat and a curved leg support. It showcases both functional, multipurpose furniture-making and refined craftsmanship. Can be used as a coffee table, foot stool, side table or seat.</p>
-            <h3>Skills Showcased:</h3>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/olh0zv82ec2riiu846ceh/XM-Timber-Board-Drawing-v4-copy.pdf?rlkey=tuhhvlyr7aw3v4cvjrgo4upar&st=gs2rlfha&dl=0" target="_blank" rel="noopener"> Technical Drawings</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-w4">
                     
-            <ul style="font-size: medium;">
-                <li>Timber selection & Preparation</li>
-                <li>Joinery techniques: Mirtice and Tenon, Domino, half-lap and Parnham.</li>
-                <li>Shaping & Planing</li>
-                <li>Finishing Skills</li>
-                <li>Design & Problem-solving</li>
-                <li>Workshop Safety & Tool Use: Drop saw, thicknesser, bandsaw, mortiser, router, plane, orbital power sander, festool domino joiner, drill press, electric knife and epoxy.</li>
-            
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Box.png" alt="A handcrafted wooden box with a lifting lid featuring an inlaid checkerboard pattern in contrasting vaneer wood.">
+                            <h3>Heirloom Box</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A handcrafted wooden box made of Mahogany and White Oak wood. It features Keyed Mitre joints and a decorative inlaid checkerboard pattern in contrasting vaneer wood.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-w4b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 6 (Year 11 or 12)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/ya4agc835jstqwn33eh5z/Upholstered-Stool-Report-copy.pdf?rlkey=utx8el17hnsiyfvmxr9mib0k0&st=god5myg3&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/6uc5cerz0n7am4ey1x5qo/Low-Stool-Process-Diary-copy.pdf?rlkey=pig038rdvzmketf88h64y7omr&st=vi6q5gz8&dl=0" target="_blank" rel="noopener"> Process Diary</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-w4b" aria-hidden="true" hidden>
+                            <img src="Images/Box.png" alt="A handcrafted wooden box with a lifting lid featuring an inlaid checkerboard pattern in contrasting vaneer wood.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Measuring and Marking</li>
+                                    <li>Cutting and Joinery (Keyed Mitre joints)</li>
+                                    <li>Vaneer Lamination and Pattern work</li>
+                                    <li>Planing and Squaring</li>
+                                    <li>Assembly Skills</li>
+                                    <li>Finishing Techniques</li>
+                                    <li>Tool use: safe operation of saws, chisels, clamps, sanders, drop saw and table saw.</li>
+                                </ul>
 
-        <h2>Case Study</h2>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/tl0qpy29xzxnqqz36h1yg/Decorative-Heirloom-Box-copy.pdf?rlkey=i01vwqtx8bgnlqp29oied2my5&st=b1jow02x&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
 
-        <div class="project-card-2">
-            <img src="Images/Bridging-time.jpg" alt="A modern wooden armchair with a curved frame and intricate structural supports beneath, featuring a smooth timber finish and a flat leather seat.">
-            <h3>Project Title:</h3>
-            <h4>Bridging Time and Design: Interpreting Historical and Cultural Details into Contemporary Furniture</h4>
-            <h3>Brief Description:</h3>
-            <p>A report that explores how historical and cultural influences from periods such as the Renaissance, Baroque, and Art Nouveau continue to shape contemporary furniture. It examines the shift from handcrafted, ornate pieces to mass-produced, trend-driven designs, and highlights how modern designers merge traditional craftsmanship with new technologies and consumer needs to create functional yet timeless furniture.</p>
-            <h3>Skills Showcased:</h3>
+                <!-- Card 5 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-w5">
                     
-            <ul style="font-size: medium;">
-                <li>Investigating historical and cultural design influences.</li>
-                <li>Comparing past and present design movements.</li>
-                <li>Linking historical styles to modern design practices.</li>
-                <li>Clearly expressing complex ideas in writing.</li>
-                <li>Using correct terminology, structure, and referencing.</li>
-                <li>Drawing connections between tradition, technology, and innovation.</li>
-            
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Stool.png" alt="A round wooden stool with a curved backrest, showcasing natural wood grain.">
+                            <h3>Foot Stool</h3>
+                            <p class="muted">Stage 6 (Year 11 or 12)</p> 
+                            <p>A low wooden stool, crafted from solid Tasmanian Blackwood, with a circular seat and a curved leg support. It showcases both functional, multipurpose furniture-making and refined craftsmanship. Can be used as a coffee table, foot stool, side table or seat.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-w5b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/icbfc5z2lnmfmj6hkiq6w/A1-Bridging-Time-and-Design-Xanthia-Marinelli-copy.pdf?rlkey=m12a0lvn1emnxp9pnov5mv8qs&st=61pwldn4&dl=0" target="_blank" rel="noopener">Report</a></p>
-            
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-w5b" aria-hidden="true" hidden>
+                            <img src="Images/Stool.png" alt="A round wooden stool with a curved backrest, showcasing natural wood grain.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Timber selection & Preparation</li>
+                                    <li>Joinery techniques: Mirtice and Tenon, Domino, half-lap and Parnham.</li>
+                                    <li>Shaping & Planing</li>
+                                    <li>Finishing Skills</li>
+                                    <li>Design & Problem-solving</li>
+                                    <li>Workshop Safety & Tool Use: Drop saw, thicknesser, bandsaw, mortiser, router, plane, orbital power sander, festool domino joiner, drill press, electric knife and epoxy.</li>
+                                </ul>
 
-    </div>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/ya4agc835jstqwn33eh5z/Upholstered-Stool-Report-copy.pdf?rlkey=utx8el17hnsiyfvmxr9mib0k0&st=god5myg3&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/6uc5cerz0n7am4ey1x5qo/Low-Stool-Process-Diary-copy.pdf?rlkey=pig038rdvzmketf88h64y7omr&st=vi6q5gz8&dl=0" target="_blank" rel="noopener"> Process Diary</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
 
-<!-- Right Column - Case Studies -->
-    <div class="column-right">
-        <h2>Metalworking Projects</h2>
-        
-        <div class="project-card-2">
-            <img src="Images/Spoon.png" alt="A handcrafted metal spoon with a curved bowl and smooth handle.">
-            <h3>Project Title:</h3>
-            <h4>Metal Spoon</h4>
-            <h3>Brief Description:</h3>
-            <p>A metal spoon involving the shaping of copper into a laddle shape through forming and finishing processes. Bending and curving brass to form a handle which is riveted onto the rounded metal. </p>
-            <h3>Skills Showcased:</h3>
+                <!-- Card 6 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-w6">
                     
-            <ul style="font-size: medium;">
-                <li>Metal forming and shaping (curving and dishing).</li>
-                <li>Filing and smoothing edges for safe use.</li>
-                <li>Understanding material malleability.</li>
-                <li>Quenching.</li>
-                <li>Attention to finish and aesthetics.</li>
-                
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Bridging-time.jpg" alt="A modern wooden armchair with a curved frame and intricate structural supports beneath, featuring a smooth timber finish and a flat leather seat.">
+                            <h3>Bridging Time and Design: Interpreting Historical and Cultural Details into Contemporary Furniture</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A report that explores how historical and cultural influences from periods such as the Renaissance, Baroque, and Art Nouveau continue to shape contemporary furniture. It examines the shift from handcrafted, ornate pieces to mass-produced, trend-driven designs, and highlights how modern designers merge traditional craftsmanship with new technologies and consumer needs to create functional yet timeless furniture.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-w6b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 4 (Year 7 or 8)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/1ydy80r4wo0h9j8n6vi4v/Brass-1-copy.pdf?rlkey=59sxhv1gcynfzs1f84e2y1aju&st=0wz64t7i&dl=0" target="_blank" rel="noopener"> Presentation Drawing</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/uowgyd8gx8t1ppw26r6p3/Hand-Files-Poster-copy.pdf?rlkey=brmnr0wx02ow9zps2047a5ka5&st=kwhdmalm&dl=0" target="_blank" rel="noopener"> Skills Poster</a></p>
-            
+                        <!-- Back -->
+                        <section class="face face-back" id="card-w6b" aria-hidden="true" hidden>
+                            <img src="Images/Bridging-time.jpg" alt="A modern wooden armchair with a curved frame and intricate structural supports beneath, featuring a smooth timber finish and a flat leather seat.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Investigating historical and cultural design influences.</li>
+                                    <li>Comparing past and present design movements.</li>
+                                    <li>Linking historical styles to modern design practices.</li>
+                                    <li>Clearly expressing complex ideas in writing.</li>
+                                    <li>Using correct terminology, structure, and referencing.</li>
+                                    <li>Drawing connections between tradition, technology, and innovation.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/icbfc5z2lnmfmj6hkiq6w/A1-Bridging-Time-and-Design-Xanthia-Marinelli-copy.pdf?rlkey=m12a0lvn1emnxp9pnov5mv8qs&st=61pwldn4&dl=0" target="_blank" rel="noopener">Report</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="hl-left">
+            <h2><span>Metal</span> Projects</h2>
         </div>
 
-        <div class="project-card-2">
-            <img src="Images/Tool-box.png" alt="A student-constructed sheet metal toolbox with a handle and riveted joints.">
-            <h3>Project Title:</h3>
-            <h4>Tool Box</h4>
-            <h3>Brief Description:</h3>
-            <p> A sheet metal toolbox designed and fabricated through cutting, folding, drilling, and riveting. This project develops accuracy, planning, and assembly skills to produce a durable, functional product. </p>
-            <h3>Skills Showcased:</h3>
+         <!-- ===== CAROUSEL 2: Metal Projects ===== -->
+
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-m1">
                     
-            <ul style="font-size: medium;">
-                <li>Breaking down sheet metal using guillotine and shears.</li>
-                <li>Marking, centre punching, drilling relief and rivet holes.</li>
-                <li>Folding and bending with pan brake and Magnabend.</li>
-                <li>Riveting and assembly with accuracy and squareness.</li>
-                <li>Planning and sequencing processes.</li>
-            
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Spoon.png" alt="A handcrafted metal spoon with a curved bowl and smooth handle.">
+                            <h3>Metal Spoon</h3>
+                            <p class="muted">Stage 4 (Year 7 or 8)</p> 
+                            <p>A metal spoon involving the shaping of copper into a laddle shape through forming and finishing processes. Bending and curving brass to form a handle which is riveted onto the rounded metal.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-m1b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/20z3ie8joupoafajosj8c/TECH206-Toolbox-Procedure-copy.pdf?rlkey=lan31kzdsl6uvfhkiw7ybzfh9&st=e73odja2&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/m4ljers04ptkyepkwwmk0/Xanthia-Marinelli-A2-Tool-Box-CAD-Drawings-copy.pdf?rlkey=q4an6qd4ev4jm60hvnwzjm82n&st=r4igzrzz&dl=0" target="_blank" rel="noopener"> Technical Drawings</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-m1b" aria-hidden="true" hidden>
+                            <img src="Images/Spoon.png" alt="A handcrafted metal spoon with a curved bowl and smooth handle.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Metal forming and shaping (curving and dishing).</li>
+                                    <li>Filing and smoothing edges for safe use.</li>
+                                    <li>Understanding material malleability.</li>
+                                    <li>Quenching.</li>
+                                    <li>Attention to finish and aesthetics.</li>
+                                </ul>
 
-        <div class="project-card-2">
-            <img src="Images/Hacksaw.png" alt="A blue metal hacksaw with a flat steel frame, handle, and mounted orange blade.">
-            <h3>Project Title:</h3>
-            <h4>Hacksaw</h4>
-            <h3>Brief Description:</h3>
-            <p> A silver-blue steel hacksaw with a flat, rectangular frame and a dark contrasting handle. The contrasting orange blade is secured with drilled holes and bolts, showcasing precise cutting, filing, and assembly of metal components. </p>
-            <h3>Skills Showcased:</h3>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/1ydy80r4wo0h9j8n6vi4v/Brass-1-copy.pdf?rlkey=59sxhv1gcynfzs1f84e2y1aju&st=0wz64t7i&dl=0" target="_blank" rel="noopener"> Presentation Drawing</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/uowgyd8gx8t1ppw26r6p3/Hand-Files-Poster-copy.pdf?rlkey=brmnr0wx02ow9zps2047a5ka5&st=kwhdmalm&dl=0" target="_blank" rel="noopener"> Skills Poster</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-m2">
                     
-            <ul style="font-size: medium;">
-                <li>Measuring, marking, and cutting steel.</li>
-                <li>Drilling and filing for blade fitting.</li>
-                <li>Assembling components with correct alignment.</li>
-                <li>Safe hand tool and workshop practice.</li>
-                <li>Surface finishing for safety, function, and appearance.</li>
-                <li>Drilling and tapping to create accurate threaded holes.</li>
-                <li>Cutting steel safely and efficiently with a hacksaw.</li>
-                <li>Welding and grinding.</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Tool-box.png" alt="A student-constructed sheet metal toolbox with a handle and riveted joints.">
+                            <h3>Tool Box</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A sheet metal toolbox designed and fabricated through cutting, folding, drilling, and riveting. This project develops accuracy, planning, and assembly skills to produce a durable, functional product.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-m2b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/hry2li5twqncvwzvhume8/TECH206-Hacksaw-Procedure-copy.pdf?rlkey=emwd1w2dhzcvg7cdmyn61hf6e&st=quwn8pgm&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/e8lhygzoxy6uivqj0zk7m/Safe-Work-Method-Statement-Hacksaw-copy.pdf?rlkey=rq51xgiuy8l8zhi5hdacjf67l&st=wkba5t94&dl=0" target="_blank" rel="noopener">Safe Work Method Statement</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-m2b" aria-hidden="true" hidden>
+                            <img src="Images/Tool-box.png" alt="A student-constructed sheet metal toolbox with a handle and riveted joints.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Breaking down sheet metal using guillotine and shears.</li>
+                                    <li>Marking, centre punching, drilling relief and rivet holes.</li>
+                                    <li>Folding and bending with pan brake and Magnabend.</li>
+                                    <li>Riveting and assembly with accuracy and squareness.</li>
+                                    <li>Planning and sequencing processes.</li>
+                                </ul>
 
-        <div class="project-card-2">
-            <img src="Images/Hammer.png" alt="A jewellers hammer with a one side brass and one side aluminium. The handle made out of blue red and clear acyrilic with a steel mide componets.">
-            <h3>Project Title:</h3>
-            <h4>Jewellers Hammer</h4>
-            <h3>Brief Description:</h3>
-            <p>A jeweller’s hammer with a dual-metal head, featuring one brass striking face and one aluminium face for versatile use. Its blue, red, and clear layered acrylic handle, reinforced with steel components, is shaped and polished to be both durable and visually striking. </p>
-            <h3>Skills Showcased:</h3>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/20z3ie8joupoafajosj8c/TECH206-Toolbox-Procedure-copy.pdf?rlkey=lan31kzdsl6uvfhkiw7ybzfh9&st=e73odja2&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/m4ljers04ptkyepkwwmk0/Xanthia-Marinelli-A2-Tool-Box-CAD-Drawings-copy.pdf?rlkey=q4an6qd4ev4jm60hvnwzjm82n&st=r4igzrzz&dl=0" target="_blank" rel="noopener"> Technical Drawings</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-m3">
                     
-            <ul style="font-size: medium;">
-                <li>Cutting and shaping brass, aluminium and steel using a cold saw and lathe.</li>
-                <li>Drilling precise holes for fitting the head using the lathe and drill mill machine.</li>
-                <li>Polishing metal surfaces for durability and function.</li>
-                <li>Bonding layered acrylic sheets with epoxy.</li>
-                <li>Shaping the handle to an ergonomic form the lathe.</li>
-                <li>Creating threads with hand taps.</li>
-                <li>Communicates ideas effectively with accurate terminology.</li>
-                <li>Applying finishing techniques for both function and aesthetics.</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Hacksaw.png" alt="A blue metal hacksaw with a flat steel frame, handle, and mounted orange blade.">
+                            <h3>Hacksaw</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A silver-blue steel hacksaw with a flat, rectangular frame and a dark contrasting handle. The contrasting orange blade is secured with drilled holes and bolts, showcasing precise cutting, filing, and assembly of metal components.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-m3b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/t1fif5dmavydabcb7t1t0/TECH206-Hammer-Procedure-copy.pdf?rlkey=wqc3l7v803ttl7rcf0e1rz4h7&st=fctkf50t&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/toft605xtzpsdtfrckbh1/Xanthia-Marinelli-A2-Jewellers-Hammer-CAD-Drawings-copy.pdf?rlkey=l3g0w11l7eza3m6jtfz6kxxx5&st=o9qspts2&dl=0"target="_blank" rel="noopener">Technical Drawings</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/xagu07okl1hxu7fs7a54t/Xanthia-Marinelli-Safe-Work-Method-Statement-Hammer-copy.pdf?rlkey=e86w4akamldfd9i6evxa0d6my&st=j73kq7cj&dl=0" target="_blank" rel="noopener"> Safe Work Method Statement</a></p>
-        </div>
-    </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-m3b" aria-hidden="true" hidden>
+                            <img src="Images/Hacksaw.png" alt="A blue metal hacksaw with a flat steel frame, handle, and mounted orange blade.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Measuring, marking, and cutting steel.</li>
+                                    <li>Drilling and filing for blade fitting.</li>
+                                    <li>Assembling components with correct alignment.</li>
+                                    <li>Safe hand tool and workshop practice.</li>
+                                    <li>Surface finishing for safety, function, and appearance.</li>
+                                    <li>Drilling and tapping to create accurate threaded holes.</li>
+                                    <li>Cutting steel safely and efficiently with a hacksaw.</li>
+                                    <li>Welding and grinding.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/hry2li5twqncvwzvhume8/TECH206-Hacksaw-Procedure-copy.pdf?rlkey=emwd1w2dhzcvg7cdmyn61hf6e&st=quwn8pgm&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/e8lhygzoxy6uivqj0zk7m/Safe-Work-Method-Statement-Hacksaw-copy.pdf?rlkey=rq51xgiuy8l8zhi5hdacjf67l&st=wkba5t94&dl=0" target="_blank" rel="noopener">Safe Work Method Statement</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-m4">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Hammer.png" alt="A jewellers hammer with a one side brass and one side aluminium. The handle made out of blue red and clear acyrilic with a steel mide componets.">
+                            <h3>Jewellers Hammer</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A jeweller’s hammer with a dual-metal head, featuring one brass striking face and one aluminium face for versatile use. Its blue, red, and clear layered acrylic handle, reinforced with steel components, is shaped and polished to be both durable and visually striking.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-m4b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-m4b" aria-hidden="true" hidden>
+                            <img src="Images/Hammer.png" alt="A jewellers hammer with a one side brass and one side aluminium. The handle made out of blue red and clear acyrilic with a steel mide componets.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Cutting and shaping brass, aluminium and steel using a cold saw and lathe.</li>
+                                    <li>Drilling precise holes for fitting the head using the lathe and drill mill machine.</li>
+                                    <li>Polishing metal surfaces for durability and function.</li>
+                                    <li>Bonding layered acrylic sheets with epoxy.</li>
+                                    <li>Shaping the handle to an ergonomic form the lathe.</li>
+                                    <li>Creating threads with hand taps.</li>
+                                    <li>Communicates ideas effectively with accurate terminology.</li>
+                                    <li>Applying finishing techniques for both function and aesthetics.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/t1fif5dmavydabcb7t1t0/TECH206-Hammer-Procedure-copy.pdf?rlkey=wqc3l7v803ttl7rcf0e1rz4h7&st=fctkf50t&dl=0" target="_blank" rel="noopener"> Instructions</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/toft605xtzpsdtfrckbh1/Xanthia-Marinelli-A2-Jewellers-Hammer-CAD-Drawings-copy.pdf?rlkey=l3g0w11l7eza3m6jtfz6kxxx5&st=o9qspts2&dl=0"target="_blank" rel="noopener">Technical Drawings</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/xagu07okl1hxu7fs7a54t/Xanthia-Marinelli-Safe-Work-Method-Statement-Hammer-copy.pdf?rlkey=e86w4akamldfd9i6evxa0d6my&st=j73kq7cj&dl=0" target="_blank" rel="noopener"> Safe Work Method Statement</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects">
+            <p class="small-tagline">Check out my other projects here:</p>
+
+            <div class="projects-cta">
+                <div class="projects-row-top">
+                    <a class="button btn-3" href="textiles.html">Textiles Technology</a>
+                    <a class="button btn-3" href="d&t.html">Design & Technology</a>
+                    <a class="button btn-3" href="food.html">Food Technology</a>
+                </div>
+
+                <div class="projects-row-bottom">
+                    <a class="button btn-3" href="engineering.html">Engineering Technology</a>
+                    <a class="button btn-3" href="computing.html">Digital Technology</a>
+                </div>
+            </div>
+        </section>  
+    </section>  
 </section>
-</main>
+
 
 <!-- This is the footer of my website -->
 <footer>
@@ -319,26 +455,35 @@
             <div class="quick-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="teaching.html">Teaching Practice</a></li>
-                    <li><a href="projects.html">Project Showcase</a></li>
-                    <li><a href="worksamples.html">Samples of Work</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="worksamples.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Right Section: Contact & Social -->
-        <div class="footer-contact">
+        <div class="socials">
             <h4>Socials</h4>
 
-            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener">LinkedIn</a> |
-            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener">Instagram</a> |
-            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener">IMDB</a> |
-            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener">Stunt Book Australia</a>      
+            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener noreferrer">
+                <img src="Images/LinkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/IMDB.png" alt="IMDB" />
+            </a>
+            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener noreferrer">
+                <img src="Images/SBAus.png" alt="Stunt Book Australia" />
+            </a>     
         </div>
     </section>
 </footer>
 
+<script src="themes.js"></script>
 </body>
 </html>

@@ -1,118 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Xanthia's Teaching Portfolio - Projects Home Page</title>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xanthia's Teaching Portfolio - Project Showcase Page</title>
+    <link rel="stylesheet" href="final.css">
+
 </head>
 <body>
-    
-<!-- Fixed vertical accent stripe spanning the page -->
-    <div aria-hidden="true" class="center-stripe"></div>
-    
+
+
 <!-- This is the main header navigation for my page -->
     <header class="header">
             <nav>   
                 <div class="container">
                     <ul class="nav-left">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="teaching.html">Teaching Practice</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
                     </ul>
                 
-                        <div class="logo">XM</div>
+                        <div class="logo" id="themeToggle">XM</div>
 
                     <ul class="nav-right">
-                        <li><a class="active"href="projects.html">Project Showcase</a></li>
-                        <li><a href="worksamples.html">Samples of Work</a></li>
-                        <li><a href="contact.html">Contact Me</a></li>
+                        <li><a class="active" href="projects.html">Projects</a></li>
+                        <li><a href="worksamples.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
     </header>
 
-
-<!-- This Section will contain boxes of my teaching areas that I've completed projects in -->
-
-<main>
-
-    <section class="section-3">
-        <div class="section-intro">
-            <h1 class="hero-title text-center">Project <span>Showcase</span></h1>
-            <p class="section-intro">A showcase of my recent work. Click on the subject area to see the projects within.</p>
+<section class="stripe-section-projects">
+        
+    <section class="page-container">
+        <div class="projects-container">
+            <h1><span>Project</span> Showcase</h1>
+            <p class="tagline">A showcase of my recent work. Click on the subject area to see the projects within.</p>
         </div>
 
-        <div class="project-row">
-            <div class="project-card">
-                <a href="textiles.html" target="_blank">
-                    <img src="Images/Textiles.jpg" alt="Photo of colourful sewing stacked upon each other">
+            <div class="project-row">
+                <div class="project-card">
+                    <a href="textiles.html" target="_blank">
+                        <img src="Images/projects-textiles.png" alt="A photo of a young woman sewing fabric on an industrial sewing machine with spools of thread nearby, showcasing textile production and garment construction skills.">
+                            
+                        <div class="project-card-body">
+                            <h3>Textiles Technology</h3>
+                            <p>Creative explorations in fabric design, sustainability, and wearable innovation.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="industrial.html" target="_blank">
+                        <img src="Images/projects-industrial.png" alt="A photo of a student building a wooden box using clamps and tools in a workshop, highlighting craftsmanship, construction, and industrial design skills.">
                         
-                    <div class="project-card-body">
-                        <h3>Textiles Technology</h3>
-                        <p>Creative explorations in fabric design, sustainability, and wearable innovation.</p>
-                    </div>
-                </a>
+                        <div class="project-card-body">
+                            <h3>Industrial</h3>
+                            <p>Practical projects in timber and metalwork, highlighting craftsmanship and function.</p>
+                        </div>
+                    </a>
+                </div>  
+
+                <div class="project-card">
+                    <a href="d&t.html" target="_blank">
+                        <img src="Images/projects-d&t.png" alt="Photo of a student concentrating while working in a technology workshop, representing hands-on learning and precision in design and technology.">
+                        
+                        <div class="project-card-body">
+                            <h3>Design & Technology</h3>
+                            <p>Human-centred design projects combining creativity, problem-solving, and innovation.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="food.html" target="_blank">
+                        <img src="Images/projects-food.png" alt="Photo of a person cooking colourful vegetables in a saucepan on a stovetop, representing practical learning in food technology and healthy meal preparation.">
+                        
+                        <div class="project-card-body">
+                            <h3>Food Technology</h3>
+                            <p>Innovative recipes and nutritional projects exploring culture, health and taste.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="engineering.html" target="_blank">
+                        <img src="Images/projects-engineering.png" alt="Photo of two students collaborating on a circuit board project in a classroom, connecting wires and using lab equipment to explore engineering and electronics concepts.">
+                        
+                        <div class="project-card-body">
+                            <h3>Engeneering Technology</h3>
+                            <p>Applied engineering concepts through design, analysis, and hands-on problem-solving.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="computing.html" target="_blank">
+                        <img src="Images/projects-comp.png" alt="Photo of a person using a stylus near a laptop with floating digital checklists and glowing blue tick icons, symbolising technology, digital systems, and computational design.">
+                        
+                        <div class="project-card-body">
+                            <h3>Computing</h3>
+                            <p>Interactive coding and digital projects developing skills in logic, design, and creativity.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
 
-            <div class="project-card">
-                <a href="industrial.html" target="_blank">
-                    <img src="Images/Industrial.jpg" alt="Photo of chopping wood logs stacked upon each other">
-                    
-                    <div class="project-card-body">
-                        <h3>Industrial</h3>
-                        <p>Practical projects in timber and metalwork, highlighting craftsmanship and function.</p>
-                    </div>
-                </a>
-            </div>  
-
-            <div class="project-card">
-                <a href="design-technology.html" target="_blank">
-                    <img src="Images/Design-Technology.jpg" alt="Photo of someone drawing design plans for a chair using coloured pencils">
-                    
-                    <div class="project-card-body">
-                        <h3>Design & Technology</h3>
-                        <p>Human-centred design projects combining creativity, problem-solving, and innovation.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <a href="food.html" target="_blank">
-                    <img src="Images/Food.jpg" alt="Photo of a spread of different foods from the 5 food areas">
-                    
-                    <div class="project-card-body">
-                        <h3>Food Technology</h3>
-                        <p>Innovative recipes and nutritional projects exploring culture, health and taste.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <a href="engineering.html" target="_blank">
-                    <img src="Images/Engeneering.png" alt="Photo of a city with construction ideas sourrounding it">
-                    
-                    <div class="project-card-body">
-                        <h3>Engeneering Technology</h3>
-                        <p>Applied engineering concepts through design, analysis, and hands-on problem-solving.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <a href="computing.html" target="_blank">
-                    <img src="Images/Computing.jpg" alt="Photo of a blue graphics chip">
-                    
-                    <div class="project-card-body">
-                        <h3>Computing</h3>
-                        <p>Interactive coding and digital projects developing skills in logic, design, and creativity.</p>
-                    </div>
-                </a>
-            </div>
-
-        </div>
     </section>
+</section>
 
-</main>
+
+
+
 
 <!-- This is the footer of my website -->
 <footer>
@@ -134,26 +134,35 @@
             <div class="quick-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="teaching.html">Teaching Practice</a></li>
-                    <li><a href="projects.html">Project Showcase</a></li>
-                    <li><a href="worksamples.html">Samples of Work</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="worksamples.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Right Section: Contact & Social -->
-        <div class="footer-contact">
+        <div class="socials">
             <h4>Socials</h4>
 
-            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank">Instagram</a> |
-            <a href="https://www.imdb.com/name/nm10903038/" target="_blank">IMDB</a> |
-            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank">Stunt Book Australia</a>      
+            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener noreferrer">
+                <img src="Images/LinkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/IMDB.png" alt="IMDB" />
+            </a>
+            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener noreferrer">
+                <img src="Images/SBAus.png" alt="Stunt Book Australia" />
+            </a>     
         </div>
     </section>
 </footer>
 
+<script src="themes.js"></script>
 </body>
 </html>

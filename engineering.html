@@ -3,96 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xanthia's Teaching Portfolio - Engineering Project Page</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Xanthia's Teaching Portfolio - Textiles Projects Page</title>
+    <link rel="stylesheet" href="final.css">
+
 </head>
 
-<body>
-    
+
 <!-- This is the main header navigation for my page -->
     <header class="header">
             <nav>   
                 <div class="container">
                     <ul class="nav-left">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="teaching.html">Teaching Practice</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
                     </ul>
                 
-                        <div class="logo">XM</div>
+                        <div class="logo" id="themeToggle">XM</div>
 
                     <ul class="nav-right">
-                        <li><a href="projects.html">Project Showcase</a></li>
-                        <li><a href="worksamples.html">Samples of Work</a></li>
-                        <li><a href="contact.html">Contact Me</a></li>
+                        <li><a class="active" href="projects.html">Projects</a></li>
+                        <li><a href="worksamples.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
     </header>
 
-<main>
+<section class="stripe-section-inner-projects">
 
-    <!-- This Section will house all my textiles projects -->
-<section class="projects-wrapper">
-    <!-- Left Column - Projects -->
-    <div class="column-left">
-        <h2>Engineering Projects</h2>
-            
-        <div class="project-card-2">
-            <img src="Images/Plant.png" alt="A wooden rubber band-powered race car with layered timber components, a rear spoiler, and a carved wooden driver figure sitting in the cockpit.">
-            <h3>Project Title:</h3>
-            <h4>Automated Pot Plant</h4>
-            <h3>Brief Description:</h3>
-            <p>An automatic self-watering pot plant using Arduino and sensors and 3D printing. The system was created to help people who forget to water their plants or are away from home, by making sure the soil always has the right moisture level. The project aimed to combine technology, sustainability, and design to solve a real-world problem in a creative way.</p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Research & problem solving: investigating plant care challenges and smart irrigation solutions.</li>
-                <li>Electronics & coding: wiring sensors, pump, and LEDs, and programming the Arduino.</li>
-                <li>3D design & fabrication: modelling, 3D printing, waterproofing, and assembling the pot.</li>
-                <li>Testing & troubleshooting: calibrating sensors, fixing wiring, and adjusting code.</li>
-                <li>Creativity & innovation: designing a futuristic, functional planter with hidden electronics that looks aesthetically pleasing.</li>
-                <li>Evaluation: reflecting on what worked, what failed, and suggesting improvements.</li>
-            </ul>
+    <section class="page-container">
+        <section class="open-container">
+            <section class="container-left">
+                <div class="industrial-c-left">
+                    <h1><span>Engineering Project</span> Showcase</h1>
+                </div>
+                <p> A collection of projects undertaken as assignments for engineering unit TECH211 (Electromechanical Technologies).</p>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/fo3a0w0xhkqgejp0oohbw/Xanthia-Marinelli-Automatic-pot-plant-copy.pdf?rlkey=57oaws4i8zjphf5r7k7c9iz77&st=32gniffj&dl=0" target="_blank" rel="noopener"> Design Documentation Part 1</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/cp9pwq04xto6wn16z2w5h/Part-B-Report-copy.pdf?rlkey=y657ubfxivof3eg2t3qdyhxkd&st=p8lsge4x&dl=0" target="_blank" rel="noopener"> Design Documentation Part 2</a></p>
+            </section>
 
+            <section class="container-right"> 
+                <img class="title-image-projects-engineering" src="Images/projects-engineering.png" alt="A photo of a student building a wooden box using clamps and tools in a workshop, highlighting craftsmanship, construction, and industrial design skills." />
+            </section>
+        </section>
+
+        <div class="hl-right">
+                <h2><span>Engineering</span> Projects</h2>
         </div>
-    </div>
 
-<!-- Right Column - Case Studies -->
-    <div class="column-right">
-        <h2>Engineering Case Study</h2>
-        
-        <div class="project-card-2">
-            <img src="Images/Circuit-report.png" alt="A page from a circuit report showing a modern electric kettle and a labeled diagram of its internal components. The text explains how an electric kettle works, including the heating coil, thermostat, and steam-triggered shutoff mechanism. A process flow diagram outlines how the thermostat senses rising temperature and shuts off power when boiling is reached">
-            <h3>Project Title:</h3>
-            <h4>Circuit Report</h4>
-            <h3>Brief Description:</h3>
-            <p>This case study focused on understanding how electrical circuits and sensors work. The first part was a case study on an electric kettle, explaining how a thermostat sensor detects steam pressure and shuts off the heating element once the water boils. The second part involved analysing a light-dependent resistor (LDR) circuit using Ohm’s Law to calculate current, voltage, resistance, and power under different lighting conditions. Finally, the project applied this knowledge to predict when an LED would light up in a circuit, depending on light intensity. </p>
-            <h3>Skills Showcased:</h3>
+        <!-- ===== CAROUSEL 1: Engineering Projects ===== -->
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-ep1">
                     
-            <ul style="font-size: medium;">
-                <li>Research: investigating how everyday devices like kettles use sensors.</li>
-                <li>Electronics knowledge: understanding resistors, sensors, and how current flows.</li>
-                <li>Mathematical skills: applying Ohm’s Law to calculate voltage, current, and power.</li>
-                <li>Problem solving: predicting how circuits behave under different conditions.</li>
-                <li>Critical thinking: explaining why current takes the path of least resistance..</li>
-                <li>Communication: presenting findings clearly with diagrams, explanations, and summaries.</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Plant.png" alt="A 3D printed white and black, hourglass shaped pot plant housing a basil plant.">
+                            <h3>Automated Pot Plant</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>An automatic self-watering pot plant using Arduino and sensors and 3D printing. The system was created to help people who forget to water their plants or are away from home, by making sure the soil always has the right moisture level. The project aimed to combine technology, sustainability, and design to solve a real-world problem in a creative way.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-ep1b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/bmkhx90e760osqstuxee5/A1-Circuit-Report-Xanthia-Marinelli-copy.pdf?rlkey=3xy92wea6eqlrzvmi465osqyk&st=sv74opr6&dl=0" target="_blank" rel="noopener"> Report</a></p>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-ep1b" aria-hidden="true" hidden>
+                            <img src="Images/Plant.png" alt="A 3D printed white and black, hourglass shaped pot plant housing a basil plant.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Research & problem solving: investigating plant care challenges and smart irrigation solutions.</li>
+                                    <li>Electronics & coding: wiring sensors, pump, and LEDs, and programming the Arduino.</li>
+                                    <li>3D design & fabrication: modelling, 3D printing, waterproofing, and assembling the pot.</li>
+                                    <li>Testing & troubleshooting: calibrating sensors, fixing wiring, and adjusting code.</li>
+                                    <li>Creativity & innovation: designing a futuristic, functional planter with hidden electronics that looks aesthetically pleasing.</li>
+                                    <li>Evaluation: reflecting on what worked, what failed, and suggesting improvements.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/fo3a0w0xhkqgejp0oohbw/Xanthia-Marinelli-Automatic-pot-plant-copy.pdf?rlkey=57oaws4i8zjphf5r7k7c9iz77&st=32gniffj&dl=0" target="_blank" rel="noopener"> Design Documentation Part 1</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/cp9pwq04xto6wn16z2w5h/Part-B-Report-copy.pdf?rlkey=y657ubfxivof3eg2t3qdyhxkd&st=p8lsge4x&dl=0" target="_blank" rel="noopener"> Design Documentation Part 2</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="hl-left">
+            <h2><span>Engineering Case</span> Studies</h2>
         </div>
-    </div>
+
+         <!-- ===== CAROUSEL 2: Textiles Case Studies ===== -->
+
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-es1">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Circuit-report.png" alt="A page from a circuit report showing a modern electric kettle and a labeled diagram of its internal components. The text explains how an electric kettle works, including the heating coil, thermostat, and steam-triggered shutoff mechanism. A process flow diagram outlines how the thermostat senses rising temperature and shuts off power when boiling is reached.">
+                            <h3>Circuit Report</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>This case study focused on understanding how electrical circuits and sensors work. The first part was a case study on an electric kettle, explaining how a thermostat sensor detects steam pressure and shuts off the heating element once the water boils. The second part involved analysing a light-dependent resistor (LDR) circuit using Ohm’s Law to calculate current, voltage, resistance, and power under different lighting conditions. Finally, the project applied this knowledge to predict when an LED would light up in a circuit, depending on light intensity.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-es1b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-es1b" aria-hidden="true" hidden>
+                            <img src="Images/Circuit-report.png" alt="A page from a circuit report showing a modern electric kettle and a labeled diagram of its internal components. The text explains how an electric kettle works, including the heating coil, thermostat, and steam-triggered shutoff mechanism. A process flow diagram outlines how the thermostat senses rising temperature and shuts off power when boiling is reached.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Research: investigating how everyday devices like kettles use sensors.</li>
+                                    <li>Electronics knowledge: understanding resistors, sensors, and how current flows.</li>
+                                    <li>Mathematical skills: applying Ohm’s Law to calculate voltage, current, and power.</li>
+                                    <li>Problem solving: predicting how circuits behave under different conditions.</li>
+                                    <li>Critical thinking: explaining why current takes the path of least resistance..</li>
+                                    <li>Communication: presenting findings clearly with diagrams, explanations, and summaries.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/bmkhx90e760osqstuxee5/A1-Circuit-Report-Xanthia-Marinelli-copy.pdf?rlkey=3xy92wea6eqlrzvmi465osqyk&st=sv74opr6&dl=0" target="_blank" rel="noopener"> Report</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects">
+            <p class="small-tagline">Check out my other projects here:</p>
+
+            <div class="projects-cta">
+                <div class="projects-row-top">
+                    <a class="button btn-3" href="textiles.html">Textiles Technology</a>
+                    <a class="button btn-3" href="industrial.html">Industrial Technology</a>
+                    <a class="button btn-3" href="d&t.html">Design & Technology</a>
+                </div>
+
+                <div class="projects-row-bottom">
+                    <a class="button btn-3" href="food.html">Food Technology</a>
+                    <a class="button btn-3" href="computing.html">Digital Technology</a>
+                </div>
+            </div>
+        </section>  
+    </section>  
 </section>
-</main>
+
 
 <!-- This is the footer of my website -->
 <footer>
@@ -114,26 +181,35 @@
             <div class="quick-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="teaching.html">Teaching Practice</a></li>
-                    <li><a href="projects.html">Project Showcase</a></li>
-                    <li><a href="worksamples.html">Samples of Work</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="worksamples.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Right Section: Contact & Social -->
-        <div class="footer-contact">
+        <div class="socials">
             <h4>Socials</h4>
 
-            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener">LinkedIn</a> |
-            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener">Instagram</a> |
-            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener">IMDB</a> |
-            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener">Stunt Book Australia</a>      
+            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener noreferrer">
+                <img src="Images/LinkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/IMDB.png" alt="IMDB" />
+            </a>
+            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener noreferrer">
+                <img src="Images/SBAus.png" alt="Stunt Book Australia" />
+            </a>     
         </div>
     </section>
 </footer>
 
+<script src="themes.js"></script>
 </body>
 </html>

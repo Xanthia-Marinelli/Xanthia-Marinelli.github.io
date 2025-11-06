@@ -4,292 +4,437 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xanthia's Teaching Portfolio - Textiles Projects Page</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="final.css">
+
 </head>
 
-<body>
-    
+
 <!-- This is the main header navigation for my page -->
     <header class="header">
             <nav>   
                 <div class="container">
                     <ul class="nav-left">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="teaching.html">Teaching Practice</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
                     </ul>
                 
-                        <div class="logo">XM</div>
+                        <div class="logo" id="themeToggle">XM</div>
 
                     <ul class="nav-right">
-                        <li><a href="projects.html">Project Showcase</a></li>
-                        <li><a href="worksamples.html">Samples of Work</a></li>
-                        <li><a href="contact.html">Contact Me</a></li>
+                        <li><a class="active" href="projects.html">Projects</a></li>
+                        <li><a href="worksamples.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
     </header>
 
-<main>
+<section class="stripe-section-inner-projects">
 
-    <!-- This Section will house all my textiles projects -->
-<section class="projects-wrapper">
-    <!-- Left Column - Projects -->
-    <div class="column-left">
-        <h2>Textiles Projects</h2>
-            
-        <div class="project-card-2">
-            <img src="Images/Cover-me-in-pups.png" alt="Photo of two mannequins dressed in casual loungewear outfits featuring a dog-themed design and matching tote bag.">
-            <h3>Project Title:</h3>
-            <h4>Cover Me in Pups - Sleepwear</h4>
-            <h3>Brief Description:</h3>
-            <p>Sleep wear featuring a white T-shirt with 2 small navy and orange paw prints on the chest and shorts patterned with various dog illustrations. The outfit is accessorised with a reversable tote bag in complementary colours. The entire ensemble follows a navy, orange and white colour scheme. </p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Following a Pattern</li>
-                <li>Sewing with a Sewing Machine</li>
-                <li>Screen Printing</li>
-                <li>Chromoblast via the use of a digitally transferred image</li>
-            </ul>
+    <section class="page-container">
+        <section class="open-container">
+            <section class="container-left">
+                <h1><span>Textiles Project</span> Showcase</h1>
+                <p> A collection of projects undertaken as assignments for different textiles units spaning through SCIT101 (Stem Principles), Tech108 (Design in Textiles), Tech209 (Textiles Industries), Tech212 (Textiles Innovation), Tech306 (Product Design Innovation) and Tech307 (Technologies Professional Experience).</p>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 4 (Year 7 or 8)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/ix0dxxm6892zrwvakwgso/COVER-ME-IN-PUPS-copy.pdf?rlkey=ffhtuwcds3cqrghxyk0qv5sle&st=q42ms0px&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
+            </section>
 
+            <section class="container-right"> 
+                <img class="title-image-projects" src="Images/projects-textiles.png" alt="A photo of a young woman sewing fabric on an industrial sewing machine with spools of thread nearby, showcasing textile production and garment construction skills." />
+            </section>
+        </section>
+
+        <div class="hl-right">
+                <h2><span>Textiles</span> Projects</h2>
         </div>
 
-        <div class="project-card-2">
-            <img src="Images/E-textiles.png" alt="Photo of an E-textile wall hanging, featuring a mostly blue colour theme on geometric shapes.">
-            <h3>Project Title:</h3>
-            <h4>E-Textiles Wall Hanging</h4>
-            <h3>Brief Description:</h3>
-            <p>Blue felted E-textiles wall art featureing stitched geometric shapes (circles and a triangle) in various shades of blue and some reflective or metallic details. The circular elements have small embedded LEDs which light up blue when on. </p>
-            <h3>Skills Showcased:</h3>
+        <!-- ===== CAROUSEL 1: Textiles Projects ===== -->
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-tp1">
                     
-            <ul style="font-size: medium;">
-                <li>Felting</li>
-                <li>Hand Embroidary</li>
-                <li>Sewing with Conductor Thread</li>
-                 <li>Pattern Making</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Cover-me-in-pups.png" alt="Photo of two mannequins dressed in casual loungewear outfits featuring a dog-themed design and matching tote bag.">
+                            <h3>Cover Me in Pups – Sleepwear</h3>
+                            <p class="muted">Stage 4 (Year 7 or 8)</p> 
+                            <p>Sleep wear featuring a white T-shirt with 2 small navy and orange paw prints on the chest and shorts patterned with various dog illustrations. The outfit is accessorised with a reversable tote bag in complementary colours. The entire ensemble follows a navy, orange and white colour scheme.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-tp1b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 4 (Year 7 or 8)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/3d89jg12lhrjlaz5tu3z2/TECH108-2022-E-Textiles-Portfolio-Xanthia-Marinelli-S00316355-LEO-Portfolio-copy.pdf?rlkey=776wqdtafvukdjae0b9bicwlh&st=fmuwda8k&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
-        </div>
-        
-        <div class="project-card-2">
-            <img src="Images/Medieval.png" alt="Photo of a person dressed in medieval-style clothing, wearing a blue and yellow hooded cloak over a simple tunic and yellow pants. A leather flask is hanging at their side">
-            <h3>Project Title:</h3>
-            <h4>Medieval Costume</h4>
-            <h3>Brief Description:</h3>
-            <p>A person dressed in a vibrant medieval-inspired ensemble. They wear a deep blue cloak with a bright yellow lining, secured at the chest with a matching yellow tie. Beneath the cloak is a tunic with intricate embroidered designs which is paired with yellow trousers and simple leather shoes. Underneath the ensumbal is handstitched undergarments made from a linen. Hanging from their belt is the a leather flask and other leather accessories, adding an authentic and functional items to the costume.</p>
-            <h3>Skills Showcased:</h3>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-tp1b" aria-hidden="true" hidden>
+                            <img src="Images/Cover-me-in-pups.png" alt="Photo of two mannequins dressed in casual loungewear outfits featuring a dog-themed design and matching tote bag.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Following a Pattern</li>
+                                    <li>Sewing with a Sewing Machine</li>
+                                    <li>Screen Printing</li>
+                                    <li>Chromoblast via the use of a digitally transferred image</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/ix0dxxm6892zrwvakwgso/COVER-ME-IN-PUPS-copy.pdf?rlkey=ffhtuwcds3cqrghxyk0qv5sle&st=q42ms0px&dl=0" target="_blank" rel="noopener">Design Documentation</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-tp2">
                     
-            <ul style="font-size: medium;">
-                <li>Historic Textiles Knowledge</li>
-                <li>Properties and Performance of Fabric and Fibres</li>
-                <li>Leather Skills</li>
-                <li>Pattern Making</li>
-                <li>Sewing Skills - both hand and machine</li>
-                <li>Hand Embroidary</li>
-                <li>Natural Dying</li>
-                <li>Shoe Making</li>
-                <li>Leather Lacing</li>
-                <li>Pattern Altering</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/E-textiles.png" alt="Photo of an E-textile wall hanging, featuring a mostly blue colour theme on geometric shapes.">
+                            <h3>E-Textiles Wall Hanging</h3>
+                            <p class="muted">Stage 4 (Year 7 or 8)</p> 
+                            <p>Blue felted E-textiles wall art featureing stitched geometric shapes (circles and a triangle) in various shades of blue and some reflective or metallic details. The circular elements have small embedded LEDs which light up blue when on.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-tp2b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/3p76hd9gd8aaq9l4pgxfe/Medieval-Costume_-Steph-Naomi-Xanthia-copy.pdf?rlkey=ec220btu0av71q2o8z5ygou1p&st=iyd9iwqq&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-tp2b" aria-hidden="true" hidden>
+                            <img src="Images/E-textiles.png" alt="Photo of an E-textile wall hanging, featuring a mostly blue colour theme on geometric shapes.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Felting</li>
+                                    <li>Hand Embroidary</li>
+                                    <li>Sewing with Conductor Thread</li>
+                                    <li>Pattern Making</li>
+                                </ul>
 
-        <div class="project-card-2">
-            <img src="Images/Costral.png" alt="Photo of a handcrafted leather flask with a cork stopper, decorated with a tooled tree design and laced leather strap.">
-            <h3>Project Title:</h3>
-            <h4>Leather Costral</h4>
-            <h3>Brief Description:</h3>
-            <p>A traditional leather costral or flask, hand-stitched and shaped via leather wet moulding to create a rounded body and narrow neck. The surface is decorated with a tooled tree of life design enclosed in a circular border of leaf motifs, giving it a rustic, artisanal look. It has a cork stopper secured by laced leather cords, with a braided strap for carrying over the shoulder. Its finished inside and out with bees wax for water-proofing and protection. Its ideal for medieval reenactments, fantasy costumes, or rustic outdoor use.</p>
-            <h3>Skills Showcased:</h3>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/3d89jg12lhrjlaz5tu3z2/TECH108-2022-E-Textiles-Portfolio-Xanthia-Marinelli-S00316355-LEO-Portfolio-copy.pdf?rlkey=776wqdtafvukdjae0b9bicwlh&st=fmuwda8k&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-tp3">
                     
-            <ul style="font-size: medium;">
-                <li>Historic Textiles Knowledge</li>
-                <li>Properties and Performance of Fabric and Fibres</li>
-                <li>Leather Skills</li>
-                <li>Pattern Making</li>
-                <li>Hand Sewing (Saddle Stitch)</li>
-                <li>Wet Moulding</li>
-                <li>Leather Tooling</li>
-                <li>Natural Dying</li>
-                <li>Water-proofing</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Medieval.png" alt="Photo of a person dressed in medieval-style clothing, wearing a blue and yellow hooded cloak over a simple tunic and yellow pants. A leather flask is hanging at their side.">
+                            <h3>Medieval Costume</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A person dressed in a vibrant medieval-inspired ensemble. They wear a deep blue cloak with a bright yellow lining, secured at the chest with a matching yellow tie. Beneath the cloak is a tunic with intricate embroidered designs which is paired with yellow trousers and simple leather shoes. Underneath the ensumbal is handstitched undergarments made from a linen. Hanging from their belt is the a leather flask and other leather accessories, adding an authentic and functional items to the costume.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-tp3b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/049gr5kkd31oeazf2sjoh/Process-Diary-Leather-Work-copy.pdf?rlkey=614uuvnz7f0r1i3qk7mqwjm6m&st=9l9kzff7&dl=0" target="_blank" rel="noopener"> Process Diary</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-tp3b" aria-hidden="true" hidden>
+                            <img src="Images/Medieval.png" alt="Photo of a person dressed in medieval-style clothing, wearing a blue and yellow hooded cloak over a simple tunic and yellow pants. A leather flask is hanging at their side.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Historic Textiles Knowledge</li>
+                                    <li>Properties and Performance of Fabric and Fibres</li>
+                                    <li>Leather Skills</li>
+                                    <li>Pattern Making</li>
+                                    <li>Sewing Skills - both hand and machine</li>
+                                    <li>Hand Embroidary</li>
+                                    <li>Natural Dying</li>
+                                    <li>Shoe Making</li>
+                                    <li>Leather Lacing</li>
+                                    <li>Pattern Altering</li>
+                                </ul>
 
-        <div class="project-card-2">
-            <img src="Images/Quilt.png" alt="Photo of two quilt blocks, each made with a patchwork technique. One features abstract geometric patterns, and the other depicts stylised trees in different seasonal colours.">
-            <h3>Project Title:</h3>
-            <h4>Quilts</h4>
-            <h3>Brief Description:</h3>
-            <p>Two hand-crafted quilt blocks showcasing different design styles and colour palettes. The left quilt was a mix of differnet peoples dying samples and features a geometric arrangement with tie-dye fabric in green, with liquid radiance in tones of blue, yellow, and gray and with a small palm tree motif in the middle. The right quilt block is bordered in teal and includes four panels of stylized tree done with screen printing with green leafy canopies and two with bare branches—symbolizing seasonal change. Both pieces display detailed fabric work and a mix of quilting and dying techniques.</p>
-            <h3>Skills Showcased:</h3>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/3p76hd9gd8aaq9l4pgxfe/Medieval-Costume_-Steph-Naomi-Xanthia-copy.pdf?rlkey=ec220btu0av71q2o8z5ygou1p&st=iyd9iwqq&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-tp4">
                     
-            <ul style="font-size: medium;">
-                <li>9 Patch Quilting</li>
-                <li>Creating Quilting Patterns</li>
-                <li>Screen Printing</li>
-                <li>Crackle Wax Dying</li>
-                <li>Hand Embroidary</li>
-                <li>Liquid Radiance Dying</li>
-                <li>Tie-dying</li>
-                <li>Machine Sewing</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Costral.png" alt="Photo of a handcrafted leather flask with a cork stopper, decorated with a tooled tree design and laced leather strap.">
+                            <h3>Leather Costral</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A traditional leather costral or flask, hand-stitched and shaped via leather wet moulding to create a rounded body and narrow neck. The surface is decorated with a tooled tree of life design enclosed in a circular border of leaf motifs, giving it a rustic, artisanal look. It has a cork stopper secured by laced leather cords, with a braided strap for carrying over the shoulder. Its finished inside and out with bees wax for water-proofing and protection. Its ideal for medieval reenactments, fantasy costumes, or rustic outdoor use.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-tp4b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/5e2ijklnd2gppc7054x5c/Quilt-Documentation-Xanthia-Marinelli-S00316355-copy.pdf?rlkey=u67mfbhylms0kidlbg5uv5ned&st=czl4qli3&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
-            <p><a href="https://www.dropbox.com/scl/fi/3eyu1sssixry60rmyptha/A2-part-B-copy.pdf?rlkey=zzz1zadjt2dilxqw9abz3f314&st=jb4704o9&dl=0" target="_blank" rel="noopener"> Dyeing Resource</a></p>
-        </div>
-    </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-tp4b" aria-hidden="true" hidden>
+                            <img src="Images/Costral.png" alt="Photo of a handcrafted leather flask with a cork stopper, decorated with a tooled tree design and laced leather strap.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Historic Textiles Knowledge</li>
+                                    <li>Properties and Performance of Fabric and Fibres</li>
+                                    <li>Leather Skills</li>
+                                    <li>Pattern Making</li>
+                                    <li>Hand Sewing (Saddle Stitch)</li>
+                                    <li>Wet Moulding</li>
+                                    <li>Leather Tooling</li>
+                                    <li>Natural Dying</li>
+                                    <li>Water-proofing</li>
+                                </ul>
 
-<!-- Right Column - Case Studies -->
-    <div class="column-right">
-        <h2>Textiles Case Studies</h2>
-        
-        <div class="project-card-2">
-            <img src="Images/Alone.png" alt="Dark, textured background with a silhouette of a lone person walking toward a bright horizon. Large white text in the center reads “ALONE.">
-            <h3>Project Title:</h3>
-            <h4>Alone Task Gear Case Study</h4>
-            <h3>Brief Description:</h3>
-            <p>This “Alone” Case Study is about survival gear and textiles, focusing on how specific materials such as merino wool, paracord, and leather are used to support human survival in harsh environments. It explores their properties, performance, and sustainability, highlighting how these materials provide warmth, strength, durability, and functionality in situations like arctic climates or wilderness survival. It connects material science and textiles to real-world survival applications. </p>
-            <h3>Skills Showcased:</h3>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/049gr5kkd31oeazf2sjoh/Process-Diary-Leather-Work-copy.pdf?rlkey=614uuvnz7f0r1i3qk7mqwjm6m&st=9l9kzff7&dl=0" target="_blank" rel="noopener"> Process Diary</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-tp5">
                     
-            <ul style="font-size: medium;">
-                <li>Analyse & evaluate textiles for specific uses based on properties and performance.</li>
-                <li>Describe textiles in detail using correct terminology (functional vs aesthetic).</li>
-                <li>Recognise value of textiles to individuals and society (social, cultural, philosophical).</li>
-                <li>Apply technical knowledge (fibres, yarns, fabric construction, finishes)</li>
-                <li>Apply design principles to textiles in hypothetical scenarios.</li>
-                <li>Support ideas with evidence and clear examples.</li>
-                <li>Research & organise information effectively.</li>
-            </ul>
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Quilt.png" alt="Photo of two quilt blocks, each made with a patchwork technique. One features abstract geometric patterns, and the other depicts stylised trees in different seasonal colours.">
+                            <h3>Quilts</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>Two hand-crafted quilt blocks showcasing different design styles and colour palettes. The left quilt was a mix of differnet peoples dying samples and features a geometric arrangement with tie-dye fabric in green, with liquid radiance in tones of blue, yellow, and gray and with a small palm tree motif in the middle. The right quilt block is bordered in teal and includes four panels of stylized tree done with screen printing with green leafy canopies and two with bare branches—symbolizing seasonal change. Both pieces display detailed fabric work and a mix of quilting and dying techniques.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-tp5b" type="button">More</button>
+                        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 4 (Year 7 or 8)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/amkqd8psy6kd4ce804ky5/Alone-copy.pdf?rlkey=bzhxzcknymsp5es7wckb6adn1&st=rsbzb2ow&dl=0" target="_blank" rel="noopener"> Documentation (Posters)</a></p>
-        </div>
+                        <!-- Back -->
+                        <section class="face face-back" id="card-tp5b" aria-hidden="true" hidden>
+                            <img src="Images/Quilt.png" alt="Photo of two quilt blocks, each made with a patchwork technique. One features abstract geometric patterns, and the other depicts stylised trees in different seasonal colours.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>9 Patch Quilting</li>
+                                    <li>Creating Quilting Patterns</li>
+                                    <li>Screen Printing</li>
+                                    <li>Crackle Wax Dying</li>
+                                    <li>Hand Embroidary</li>
+                                    <li>Liquid Radiance Dying</li>
+                                    <li>Tie-dying</li>
+                                    <li>Machine Sewing</li>
+                                </ul>
 
-        <div class="project-card-2">
-            <img src="Images/Thermal-conductivity.png" alt="Infographic showing factors that influence thermal conductivity. Categories include material composition (chemical compositions, moisture content), physical properties (density, bulk density, phase), environmental conditions (airflow velocity, pressure), and structural characteristics (thickness, material aging, thermal anisotropy, crystal lattice length, edge termination state).">
-            <h3>Project Title:</h3>
-            <h4>Investigating the Thermal Conductivity of Textiles</h4>
-            <h3>Brief Description:</h3>
-            <p> A scientific laboratory report investigating the thermal conductivity of textiles. It explores how thickness (neoprene) and humidity (wool) affect the rate at which heat is transferred. The experiment measures how quickly water cools when insulated with different textile samples. Results showed that thicker neoprene slowed heat loss, while wool with higher humidity (wet wool) conducted heat faster than dry wool. </p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Formulates hypotheses and makes predictions.</li>
-                <li>Follows scientific method and conducts experiments.</li>
-                <li>Collects and records data accurately across trials.</li>
-                <li>Analyses results using tables, graphs, and averages.</li>
-                <li>Applies theory (heat transfer, textile properties) to findings.</li>
-                <li>Evaluates limitations and suggests improvements.</li>
-                <li>Uses correct terminology for textiles and science.</li>
-                <li>Communicates clearly with structured explanations and visuals.</li>
-                <li>Writes in academic format (aim, method, results, discussion, conclusion).</li>
-                <li>Researches and references credible academic sources.</li>
-            </ul>
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/5e2ijklnd2gppc7054x5c/Quilt-Documentation-Xanthia-Marinelli-S00316355-copy.pdf?rlkey=u67mfbhylms0kidlbg5uv5ned&st=czl4qli3&dl=0" target="_blank" rel="noopener"> Design Documentation</a></p>
+                            <p><a href="https://www.dropbox.com/scl/fi/3eyu1sssixry60rmyptha/A2-part-B-copy.pdf?rlkey=zzz1zadjt2dilxqw9abz3f314&st=jb4704o9&dl=0" target="_blank" rel="noopener"> Dyeing Resource</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/kxz16qnc4q5dmwveuqmcp/A2.1-Laboratory-Report-S00316355-copy.pdf?rlkey=1d6ri08k2valqos0sy4wudqtj&st=tc6tkn5w&dl=0" target="_blank" rel="noopener"> Laboratory Report</a></p>
-        </div>
-
-        <div class="project-card-2">
-            <img src="Images/Future.png" alt="Illustration of a person dressed as an archer in medieval-inspired attire, holding a bow with a quiver of arrows on their back. The costume includes a green hooded top, beige pants with decorative bone-like straps, a wide belt with pouches, and dark boots.">
-            <h3>Project Title:</h3>
-            <h4>Futuristic Textiles Case Study</h4>
-            <h3>Brief Description:</h3>
-            <p> A speculative exploration of how innovative textiles like gelatin fibres and AeroMorph inflatable fabrics could be adapted for survival in a dystopian, post-apocalyptic world. It examines both their practical applications for protection and comfort, and the ethical challenges of using such materials. </p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Applies creative and speculative thinking to future scenarios.</li>
-                <li>Demonstrates textile knowledge (properties, innovations, applications).</li>
-                <li>Evaluates ethical and social implications of textile use.</li>
-                <li>Communicates ideas clearly with structured writing and visual examples.</li>
-                <li>Supports discussion with research and correct referencing.</li>
-                <li>Integrates design principles into hypothetical survival contexts.</li>
-            </ul>
-
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/1qflme9emkw3e6l267shx/Futuristic-Textiles-Case-Study-copy.pdf?rlkey=djka9zihwxzusu7qqbckk4riu&st=ytac7b8g&dl=0" target="_blank" rel="noopener"> Case Study Report</a></p>
-        </div>
-
-        <div class="project-card-2">
-            <img src="Images/R.M-Williams.jpg" alt="A pair of brown leather Chelsea boots and a matching leather belt with a brass buckle displayed on a wooden post, with a scenic lake and hills in the background.">
-            <h3>Project Title:</h3>
-            <h4>Textiles Industry Report</h4>
-            <h3>Brief Description:</h3>
-            <p> This report provides a detailed comparison of two leather shoe and goods manufacturers, R.M.Williams and Wootten, offering a comprehensive analysis of how their manufacturing processes and sustainability practices affect their market appeal. </p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Researches industry context and company histories.</li>
-                <li>Analyses and compares manufacturing processes and techniques.</li>
-                <li>Evaluates sustainability practices of different businesses.</li>
-                <li>Applies subject knowledge of textiles, leather, and production methods.</li>
-                <li>Uses evidence and examples to support analysis.</li>
-                <li>Organises and structures information clearly in report format.</li>
-                <li>Communicates ideas effectively with accurate terminology.</li>
-                <li>Uses correct academic referencing for sources and images.</li>
-            </ul>
-
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/iuyqpq65355mnp2xf55tg/Industry-Report-A1-copy.pdf?rlkey=xhv3wpcn2fjj50nua8q73paxz&st=ajgkk550&dl=0" target="_blank" rel="noopener"> Industry Report</a></p>
+        <div class="hl-left">
+            <h2><span>Textiles Case</span> Studies</h2>
         </div>
 
-        <div class="project-card-2">
-            <img src="Images/Properties-performance.png" alt="Close-up of six fabric swatches arranged side by side in a gradient from light to dark shades of blue, showing the texture and weave of the textile samples.">
-            <h3>Project Title:</h3>
-            <h4>Textile Properties & Performance Test Report</h4>
-            <h3>Brief Description:</h3>
-            <p> This report provides a detailed report on fibre identification, dye affinity, fabric care, yarn identification, and fabric/dye/finish identification. </p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Conduct textile experiments safely and accurately.</li>
-                <li>Record and organise results in tables and reports.</li>
-                <li>Analyse and interpret findings using textile theory.</li>
-                <li>Differentiate fibres, yarns, fabrics, dyes, and finishes with correct terminology.</li>
-                <li>Link practical outcomes to theoretical knowledge through conclusions.</li>
-                <li>Use academic research and referencing to support claims.</li>
-                <li>Communicate clearly in lab report format (aim, method, results, conclusion).</li>
-            </ul>
+         <!-- ===== CAROUSEL 2: Textiles Case Studies ===== -->
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 5 (Year 9 or 10)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/2lf5r87v33hio00zixc33/A2-c-Lab-Reports-Textile-Properties-Performance-Tests-copy.pdf?rlkey=ok8xzm27yvqwwjvsrsfvynw4c&st=2zulpd7f&dl=0" target="_blank" rel="noopener"> Laboratory Report</a></p>
-        </div>
-    </div>
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-ts1">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Alone.png" alt="Dark, textured background with a silhouette of a lone person walking toward a bright horizon. Large white text in the center reads “ALONE.">
+                            <h3>Alone Task Gear Case Study</h3>
+                            <p class="muted">Stage 4 (Year 7 or 8)</p> 
+                            <p>This “Alone” Case Study is about survival gear and textiles, focusing on how specific materials such as merino wool, paracord, and leather are used to support human survival in harsh environments. It explores their properties, performance, and sustainability, highlighting how these materials provide warmth, strength, durability, and functionality in situations like arctic climates or wilderness survival. It connects material science and textiles to real-world survival applications.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-ts1b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-ts1b" aria-hidden="true" hidden>
+                            <img src="Images/Alone.png" alt="Dark, textured background with a silhouette of a lone person walking toward a bright horizon. Large white text in the center reads “ALONE.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Analyse & evaluate textiles for specific uses based on properties and performance.</li>
+                                    <li>Describe textiles in detail using correct terminology (functional vs aesthetic).</li>
+                                    <li>Recognise value of textiles to individuals and society (social, cultural, philosophical).</li>
+                                    <li>Apply technical knowledge (fibres, yarns, fabric construction, finishes)</li>
+                                    <li>Apply design principles to textiles in hypothetical scenarios.</li>
+                                    <li>Support ideas with evidence and clear examples.</li>
+                                    <li>Research & organise information effectively.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/amkqd8psy6kd4ce804ky5/Alone-copy.pdf?rlkey=bzhxzcknymsp5es7wckb6adn1&st=rsbzb2ow&dl=0" target="_blank" rel="noopener"> Documentation (Posters)</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-ts2">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Thermal-conductivity.png" alt="Infographic showing factors that influence thermal conductivity. Categories include material composition (chemical compositions, moisture content), physical properties (density, bulk density, phase), environmental conditions (airflow velocity, pressure), and structural characteristics (thickness, material aging, thermal anisotropy, crystal lattice length, edge termination state).">
+                            <h3>Investigating the Thermal Conductivity of Textiles</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A scientific laboratory report investigating the thermal conductivity of textiles. It explores how thickness (neoprene) and humidity (wool) affect the rate at which heat is transferred. The experiment measures how quickly water cools when insulated with different textile samples. Results showed that thicker neoprene slowed heat loss, while wool with higher humidity (wet wool) conducted heat faster than dry wool.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-ts2b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-ts2b" aria-hidden="true" hidden>
+                            <img src="Images/Thermal-conductivity.png" alt="Infographic showing factors that influence thermal conductivity. Categories include material composition (chemical compositions, moisture content), physical properties (density, bulk density, phase), environmental conditions (airflow velocity, pressure), and structural characteristics (thickness, material aging, thermal anisotropy, crystal lattice length, edge termination state).">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Formulates hypotheses and makes predictions.</li>
+                                    <li>Follows scientific method and conducts experiments.</li>
+                                    <li>Collects and records data accurately across trials.</li>
+                                    <li>Analyses results using tables, graphs, and averages.</li>
+                                    <li>Applies theory (heat transfer, textile properties) to findings.</li>
+                                    <li>Evaluates limitations and suggests improvements.</li>
+                                    <li>Uses correct terminology for textiles and science.</li>
+                                    <li>Communicates clearly with structured explanations and visuals.</li>
+                                    <li>Writes in academic format (aim, method, results, discussion, conclusion).</li>
+                                    <li>Researches and references credible academic sources.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/kxz16qnc4q5dmwveuqmcp/A2.1-Laboratory-Report-S00316355-copy.pdf?rlkey=1d6ri08k2valqos0sy4wudqtj&st=tc6tkn5w&dl=0" target="_blank" rel="noopener"> Laboratory Report</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-ts3">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Future.png" alt="Illustration of a person dressed as an archer in medieval-inspired attire, holding a bow with a quiver of arrows on their back. The costume includes a green hooded top, beige pants with decorative bone-like straps, a wide belt with pouches, and dark boots.">
+                            <h3>Futuristic Textiles Case Study</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>A speculative exploration of how innovative textiles like gelatin fibres and AeroMorph inflatable fabrics could be adapted for survival in a dystopian, post-apocalyptic world. It examines both their practical applications for protection and comfort, and the ethical challenges of using such materials.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-ts3b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-ts3b" aria-hidden="true" hidden>
+                            <img src="Images/Future.png" alt="Illustration of a person dressed as an archer in medieval-inspired attire, holding a bow with a quiver of arrows on their back. The costume includes a green hooded top, beige pants with decorative bone-like straps, a wide belt with pouches, and dark boots.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Applies creative and speculative thinking to future scenarios.</li>
+                                    <li>Demonstrates textile knowledge (properties, innovations, applications).</li>
+                                    <li>Evaluates ethical and social implications of textile use.</li>
+                                    <li>Communicates ideas clearly with structured writing and visual examples.</li>
+                                    <li>Supports discussion with research and correct referencing.</li>
+                                    <li>Integrates design principles into hypothetical survival contexts.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/1qflme9emkw3e6l267shx/Futuristic-Textiles-Case-Study-copy.pdf?rlkey=djka9zihwxzusu7qqbckk4riu&st=ytac7b8g&dl=0" target="_blank" rel="noopener"> Case Study Report</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-ts4">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/R.M-Williams.jpg" alt="A pair of brown leather Chelsea boots and a matching leather belt with a brass buckle displayed on a wooden post, with a scenic lake and hills in the background.">
+                            <h3>Textiles Industry Report</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>This report provides a detailed comparison of two leather shoe and goods manufacturers, R.M.Williams and Wootten, offering a comprehensive analysis of how their manufacturing processes and sustainability practices affect their market appeal.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-ts4b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-ts4b" aria-hidden="true" hidden>
+                            <img src="Images/R.M-Williams.jpg" alt="A pair of brown leather Chelsea boots and a matching leather belt with a brass buckle displayed on a wooden post, with a scenic lake and hills in the background.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Researches industry context and company histories.</li>
+                                    <li>Analyses and compares manufacturing processes and techniques.</li>
+                                    <li>Evaluates sustainability practices of different businesses.</li>
+                                    <li>Applies subject knowledge of textiles, leather, and production methods.</li>
+                                    <li>Uses evidence and examples to support analysis.</li>
+                                    <li>Organises and structures information clearly in report format.</li>
+                                    <li>Communicates ideas effectively with accurate terminology.</li>
+                                    <li>Uses correct academic referencing for sources and images.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/iuyqpq65355mnp2xf55tg/Industry-Report-A1-copy.pdf?rlkey=xhv3wpcn2fjj50nua8q73paxz&st=ajgkk550&dl=0" target="_blank" rel="noopener"> Industry Report</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-ts5">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Properties-performance.png" alt="Close-up of six fabric swatches arranged side by side in a gradient from light to dark shades of blue, showing the texture and weave of the textile samples.">
+                            <h3>Textile Properties & Performance Test Report</h3>
+                            <p class="muted">Stage 5 (Year 9 or 10)</p> 
+                            <p>This report provides a detailed report on fibre identification, dye affinity, fabric care, yarn identification, and fabric/dye/finish identification.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-ts5b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-ts5b" aria-hidden="true" hidden>
+                            <img src="Images/Properties-performance.png" alt="Close-up of six fabric swatches arranged side by side in a gradient from light to dark shades of blue, showing the texture and weave of the textile samples.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Conduct textile experiments safely and accurately.</li>
+                                    <li>Record and organise results in tables and reports.</li>
+                                    <li>Analyse and interpret findings using textile theory.</li>
+                                    <li>Differentiate fibres, yarns, fabrics, dyes, and finishes with correct terminology.</li>
+                                    <li>Link practical outcomes to theoretical knowledge through conclusions.</li>
+                                    <li>Use academic research and referencing to support claims.</li>
+                                    <li>Communicate clearly in lab report format (aim, method, results, conclusion).</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/2lf5r87v33hio00zixc33/A2-c-Lab-Reports-Textile-Properties-Performance-Tests-copy.pdf?rlkey=ok8xzm27yvqwwjvsrsfvynw4c&st=2zulpd7f&dl=0" target="_blank" rel="noopener"> Laboratory Report</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects">
+            <p class="small-tagline">Check out my other projects here:</p>
+
+            <div class="projects-cta">
+                <div class="projects-row-top">
+                    <a class="button btn-3" href="industrial.html">Industrial Technology</a>
+                    <a class="button btn-3" href="d&t.html">Design & Technology</a>
+                    <a class="button btn-3" href="food.html">Food Technology</a>
+                </div>
+
+                <div class="projects-row-bottom">
+                    <a class="button btn-3" href="engineering.html">Engineering Technology</a>
+                    <a class="button btn-3" href="computing.html">Digital Technology</a>
+                </div>
+            </div>
+        </section>  
+    </section>  
 </section>
-</main>
+
 
 <!-- This is the footer of my website -->
 <footer>
@@ -311,26 +456,35 @@
             <div class="quick-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="teaching.html">Teaching Practice</a></li>
-                    <li><a href="projects.html">Project Showcase</a></li>
-                    <li><a href="worksamples.html">Samples of Work</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="worksamples.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Right Section: Contact & Social -->
-        <div class="footer-contact">
+        <div class="socials">
             <h4>Socials</h4>
 
-            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener">LinkedIn</a> |
-            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener">Instagram</a> |
-            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener">IMDB</a> |
-            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener">Stunt Book Australia</a>      
+            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener noreferrer">
+                <img src="Images/LinkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/IMDB.png" alt="IMDB" />
+            </a>
+            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener noreferrer">
+                <img src="Images/SBAus.png" alt="Stunt Book Australia" />
+            </a>     
         </div>
     </section>
 </footer>
 
+<script src="themes.js"></script>
 </body>
 </html>

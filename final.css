@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');  /* Imports Inter + Outfit fonts from Google Fonts */
 
 *, *::before, *::after {
   box-sizing: border-box;   /* Include padding & border in total size for all elements + pseudo-elements */
 }
 
-html, body { height: 100%; }
+html, body { 
+  height: 100%;             /* Ensures root elements stretch to full viewport height */
+}
 
 img { 
   max-width: 100%;  /* Ensures images never exceed container width */
@@ -21,8 +23,8 @@ img {
   --brand-2: #020659;         /* Accent colour 1 */
   --brand-3: #cfe4ff;         /* Accent colour 2 */
   --brand-4: #6B6B6B;         /* Accent colour 3 */
-  --brand-5: #CeD4DB;           /* Accent colour 4 */
-  --brand-6: #D6D6D6;           /* Accent colour 5 */
+  --brand-5: #CeD4DB;         /* Accent colour 4 */
+  --brand-6: #D6D6D6;         /* Accent colour 5 */
   --bg: #f2f3f5;              /* Page background */
   --title: #8c0303;           /* Main header colour */
   --title-1: #0D0D0D;         /* Secondary header colour */
@@ -66,9 +68,9 @@ body.dark-mode {
 
 html,
 body {
-  height: 100%;
-  min-height: 100vh; /* ensures full page height */
-  overflow-x: hidden; /* prevents stripe overflow on sides */
+  height: 100%;                 /* Ensures full viewport height coverage */
+  min-height: 100vh;            /* ensures full page height */
+  overflow-x: hidden;           /* prevents stripe overflow on sides */
 }
 
 
@@ -83,11 +85,11 @@ body{
 }
 
 main {
-  max-width: var(--maxw);
-  margin: 32px auto;                /* still centered */
-  padding-inline: var(--gutter);    /* guaranteed side space */
-  padding-block: 24px;              /* restores top/bottom breathing room */
-  box-sizing: border-box;           /* make padding not blow out width */
+  max-width: var(--maxw);           /* Max width of page */
+  margin: 32px auto;                /* Centered */
+  padding-inline: var(--gutter);    /* Guaranteed side space */
+  padding-block: 24px;              /* Top and bottom breathing room */
+  box-sizing: border-box;           /* Make padding not blow out width */
 }
 
 /* ---------- 4) Typography ------------------ */
@@ -98,8 +100,8 @@ h1 {
   color: var(--title);              /* Brand colour */
   letter-spacing: 1px;             /* Spacing between letters*/
   font-size: clamp(1.8rem, 3vw + 2rem, 3.4rem); /* Font size*/
-  font-weight: 700;                 /* Font thickness*/
-  text-transform: uppercase;  
+  font-weight: 700;                 /* Font thickness */
+  text-transform: uppercase;        /* Text all uppercase */
 }
 
 h2 {
@@ -110,7 +112,7 @@ h2 {
   letter-spacing: .2px;             /* Spacing between letters*/
   font-size: clamp(1.7rem, 1.8vw + 0.3rem, 2.4rem);  /* Font size*/
   font-weight: 700;                 /* Font thickness*/
-  text-transform: uppercase;  
+  text-transform: uppercase;        /* Text all uppercase */
 }
 
 h3 {
@@ -129,21 +131,21 @@ h3 {
   color: var(--muted);          /* Font colour */
   font-size: 1.25rem;           /* Font size*/
   margin-bottom:.2rem;          /* Space under */
-  text-transform: uppercase;  
+  text-transform: uppercase;    /* Text all uppercase */
 }
 
 .small-tagline {
   letter-spacing: .1em;         /* Letter spacing */
   font-weight: 400;             /* Font boldness */
   color: var(--muted);          /* Font colour */
-  font-size: 1rem;           /* Font size*/
-  margin-top: .1rem;
+  font-size: 1rem;              /* Font size */
+  margin-top: .1rem;            /* Space above */
   margin-bottom:.2rem;          /* Space under */
-   text-transform: uppercase; 
+  text-transform: uppercase;   /* Text all uppercase */
 }
 
 h2 + .small-tagline {
-  margin-top: -1rem;   /* gently pulls tagline upward */
+  margin-top: -1rem;           /* gently pulls tagline upward */
 }
 
 h1 span {
@@ -155,7 +157,7 @@ h2 span {
 }
 
 p {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* Font */
   font-size: 1.1rem;            /* Base readable size */
   line-height: 1.6;             /* Comfortable spacing */
   color: var(--text);           /* Uses theme color */
@@ -187,7 +189,7 @@ header .container {
   margin: 0 auto;                                     /* Centers horizontally */
   display: flex;                                      /* Aligns children horizontally */
   gap: var(--spacing);                                /* Space between flex items */
-  align-items: flex-start;                                /* Vertically centers items */
+  align-items: flex-start;                            /* Vertically centers items */
   justify-content: space-between;                     /* Pushes items apart */
 }
 
@@ -203,7 +205,7 @@ nav {
   width: 100%;                         /* Spans full width */
   margin: 0;                           /* Space above page content; no top gap */
   margin-top: 0;                       /* Removes top gap above nav */
-  position: relative;
+  position: relative;                  /* Keeps nav positioned within header flow */
   z-index: 6;                          /* Above the header & stripe */
   padding: 8px 0;                      /* Vertical breathing room */
   box-shadow: none;                    /* Depth for the bar area */
@@ -221,10 +223,10 @@ nav .container {
 
 /* Push first 3 buttons towards middle and end 3 buttons towards the middle */
 .nav-left { 
-  justify-self: end; 
+  justify-self: end;  /* Aligns left nav group towards centre */
 }
 .nav-right { 
-  justify-self: start; 
+  justify-self: start;  /* Aligns right nav group towards centre */
 }
 
 nav ul {
@@ -245,8 +247,8 @@ nav a {
 
 nav a:hover { 
   background: color-mix(in oklab, var(--text) 10%, transparent);   /* Grey tint background on hover */
-  transform: scale(1.05);
-  transition: all 0.3s ease;
+  transform: scale(1.05);                                          /* Size of button transform on hover */
+  transition: all 0.3s ease;                                       /* Speed of enlargment on hover */
 }
 
 nav a:focus-visible {     
@@ -276,18 +278,18 @@ nav a:focus-visible {
 
 /* Light Mode Hover */
 body:not(.dark-mode) .logo:hover {
-  background: black;
-  color: var(--brand);
-  transform: scale(1.05);
-  transition: all 0.5s ease;
+  background: black;                            /* Black background */
+  color: var(--brand);                            /* Red text */
+  transform: scale(1.05);                         /* Size of button transform on hover */
+  transition: all 0.5s ease;                      /* Speed of enlargment on hover */
 }
 
 /* Dark Mode Hover */
 body.dark-mode .logo:hover {
-  background: white; /* a softer white for dark mode */
-  color: var(--brand);
-  transform: scale(1.05);
-  transition: all 0.5s ease;
+  background: white;                      /* Softer white for dark mode */
+  color: var(--brand);                      /* Red text */
+  transform: scale(1.05);                   /* Size of button transform on hover */
+  transition: all 0.5s ease;                /* Speed of enlargment on hover */
 }
 
 /* ---------- 7) Sections ---------------- */
@@ -296,41 +298,41 @@ body.dark-mode .logo:hover {
 
 .page-container {
   min-height: calc(100vh - var(--header-h)); /* fill the page minus header height */
-  max-width: var(--maxw);
-  margin: 165px auto 0 auto;    /* adds more top margin (80px), auto centers horizontally */
-  padding-inline: 0.2rem;        /* slightly less side padding */
-  box-sizing: border-box;
+  max-width: var(--maxw);                    /* Max width of page */
+  margin: 165px auto 0 auto;                 /* Top offset under header + centered horizontally */
+  padding-inline: 0.2rem;                    /* Side padding */
+  box-sizing: border-box;                    /* Keeps width consistent even with padding */
 }
 
 .open-container {
-  display: flex;
-  align-items: flex-start;     /* top-align both sides */
-  justify-content: space-between;
-  gap: 2rem;
-  position: relative;
-  padding-bottom: 120px;        /* keeps space at bottom */
-  z-index: 2;
+  display: flex;                 /* Creates two-column layout */
+  align-items: flex-start;       /* top-align both sides */
+  justify-content: space-between;/* Space between columns */
+  gap: 2rem;                     /* Horizontal gap */
+  position: relative;            /* For layered children if needed */
+  padding-bottom: 40px;          /* keeps space at bottom */
+  z-index: 2;                    /* Above background stripes */
 }
 
 .section {
-  position: relative;
-  background: #fff;               /* or var(--surface) */
+  position: relative;                             /* Allows layering of inner elements */
+  background: #fff;               /* or var(--surface) */  /* Section background colour */
   border-radius: 24px;              /* softer curved edges */
   padding: 2rem;                    /* breathing space inside */
   margin: 2rem auto;                /* spacing outside the section */
   max-width: 1200px;                /* keeps it neat on big screens */
   box-shadow: 0 8px 24px rgba(0,0,0,.06); /* soft card-like shadow */
-  z-index: 1;
+  z-index: 1;                        /* Keeps above background graphics */
 }
 
 /* Left side container */
 .container-left {
-  flex: 1 1 520px;
-  max-width: 530px;
-  min-width: 0;
-  text-align: left;
-  margin: 0;
-  padding: 0;
+  flex: 1 1 520px;    /* Grows to fill but prefers 520px */
+  max-width: 530px;   /* Caps width for readability */
+  min-width: 0;       /* Prevents overflow */
+  text-align: left;   /* Left-aligns content */
+  margin: 0;          /* Removes extra margin */
+  padding: 0;         /* No padding by default */
 }
 
 .left-paragraph { 
@@ -339,11 +341,11 @@ body.dark-mode .logo:hover {
 
 /* Right side container */
 .container-right {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;     /* top-align image */
-  min-width: 0;
+  flex: 0 0 auto;               /* Keeps width based on content */
+  display: flex;                /* Enables alignment of children */
+  justify-content: flex-end;    /* Pushes items to the right */
+  align-items: flex-start;      /* top-align image */
+  min-width: 0;                 /* Prevents overflow pushing layout */
 }
 
 
@@ -364,14 +366,14 @@ body.dark-mode .logo:hover {
   box-shadow: var(--shadow);       /* Shadow around button */
   text-decoration: none;             /* Remove link underline */
   transition: all 0.25s ease;        /* Smooth hover transition */
-  cursor: pointer;
+  cursor: pointer;                   /* Pointer cursor on hover */
 }
 
 /* Hover state */
 .button:not(.btn-2):not(.btn-3):hover {
   background: #a10404;               /* Slightly brighter red */
   transform: translateY(-2px);       /* Lift effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);  /* Stronger shadow on hover */
 }
 
 /* White Button - Black Text */
@@ -384,8 +386,8 @@ body.dark-mode .logo:hover {
 
 .btn-2:hover {
   background: #eeeeee;     /* soft grey on hover */
-  color: black;
-  transform: translateY(-2px);
+  color: black;            /* Keeps text black on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Blue Button - White text */
@@ -398,20 +400,20 @@ body.dark-mode .logo:hover {
 
 .btn-3:hover {
   background: #041080;    /* slightly darker blue */
-  color: #fff;
-  transform: translateY(-2px);
+  color: #fff;            /* Ensures text is bright white on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Active (when clicked) */
 .button:active {
   transform: translateY(0);          /* Pressed-down effect */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);  /* Softer shadow when pressed */
 }
 
 .cta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  display: flex;          /* Lays buttons in a row */
+  gap: 1rem;              /* Space between buttons */
+  flex-wrap: wrap;        /* Wraps to next line on small screens */
 }
 
 /* Images */
@@ -420,7 +422,12 @@ body.dark-mode .logo:hover {
  
 
 .contact-inner {
-    text-align: center;
+    text-align: center;      /* Centers contact section content */
+}
+
+.contact-inner p {
+  text-align: center;       /* Centers contact section content */
+  margin: 0 auto;           /* Centers contact section content */
 }
 
 form{ 
@@ -430,10 +437,10 @@ form{
 
 label{
   font-weight:700;                   /* Semi-bold labels */
-  font-size:.78rem;
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:.12em;
+  font-size:.78rem;                  /* Compact label size */
+  color:var(--muted);                /* Muted label colour */
+  text-transform:uppercase;          /* Uppercase labels */
+  letter-spacing:.12em;              /* Spaced-out label letters */
 }
 
 input[type="text"],
@@ -460,12 +467,12 @@ textarea {
 }
 
 .checkbox-group {
-   font-weight: 700;
-   font-size: .9rem;
-   color: var(--muted);
-   margin-bottom: .25rem;
-   text-transform: uppercase;
-   letter-spacing: .08em;
+   font-weight: 700;              /* Bold label text */
+  font-size: .9rem;              /* Slightly larger text */
+  color: var(--muted);           /* Muted label colour */
+  margin-bottom: .25rem;         /* Space below checkbox label */
+  text-transform: uppercase;     /* Uppercase label text */
+  letter-spacing: .08em;         /* Slightly spaced-out letters */
 }
 
 input[type="checkbox"] {
@@ -480,22 +487,45 @@ input[type="submit"]{
   padding:12px 16px;                                                        /* Internal spacing */
   border-radius:var(--radius);                                              /* Rounded corners */
   cursor:pointer;                                                           /* Pointer on hover */
-  transition:transform .15s ease, box-shadow .15s ease, background .2s;
+  transition:transform .15s ease, box-shadow .15s ease, background .2s;     /* Smooth hover/focus transitions */
 }
 
 button:hover,
 input[type="submit"]:hover{
   background:var(--brand-2);                                /* Darker brand colour on hover */
-  transform:translateY(-1px);
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transform:translateY(-1px);                               /* Small lift effect */
+  box-shadow:0 10px 30px rgba(0,0,0,.08);                   /* Deeper shadow on hover */
 }
 
 /* Error text can match the micro-title sizing */
 .error{
-  color:#e11d48;
-  font-size:.85rem;
-  display:block;
-  margin-top:6px;
+  color:#e11d48;          /* Red error colour */
+  font-size:.85rem;       /* Compact error text */
+  display:block;          /* Ensures error takes its own line */
+  margin-top:6px;         /* Space above error text */
+}
+
+/* Stripe background positioned under the header */
+.stripe-section-contact {
+  position: relative;     /* Anchor for pseudo-element stripe */
+  z-index: 0;             /* Behind main content */
+  isolation: isolate; /* keeps the pseudo-element scoped to this section */
+  padding-top: 2rem;  /* space for hero content */
+  padding-bottom: 30px;           /* Adds buffer below project content */
+}
+
+/* Create the red stripe */
+.stripe-section-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;               /* start directly under the header */
+  left: 50%;
+  transform: translateX(-50%);            /* Centers stripe */
+  width: clamp(100px, 10vw, 180px);       /* responsive width */
+  height: 100%;                           /* Runs full section height */
+  background: var(--brand);
+  z-index: -1;           /* behind content */
+  opacity: 0.97;         /* Slight transparency */
 }
 
 /* ---------- 10) Footer --------------------- */
@@ -511,7 +541,7 @@ footer {
 footer h4 {
   font-size: 1.1rem;                 /* adjust to taste */
   font-weight: 700;                  /* bold for emphasis */
-  color: var(--title);               /* your red brand colour (#8c0303) */
+  color: var(--title);               /* Red brand colour (#8c0303) */
   text-transform: uppercase;         /* optional: makes them consistent in style */
   letter-spacing: 0.05em;            /* subtle spacing for polish */
   text-align: left;                  /* aligns text neatly with links */
@@ -561,28 +591,28 @@ footer p {
 }
 
 footer .socials {
-  grid-column: 4;
-  grid-row: 1;
-  justify-self: end;
-  align-self: start;
+  grid-column: 4;                  /* Places socials in column 4 */
+  grid-row: 1;                     /* Aligns socials to top row */
+  justify-self: end;               /* Pushes socials to right edge */
+  align-self: start;               /* Aligns socials to top of cell */
 }
 
 footer .socials {
-  display: grid;
-  grid-template-columns: repeat(2, 42px); /* match icon size */
-  grid-auto-rows: 42px;                   /* match icon size */
-  gap: 14px 16px;                         /* row gap / column gap */
-  margin-top: 1.5rem;
+  display: grid;                               /* Grid for social icons */
+  grid-template-columns: repeat(2, 42px);      /* match icon size */
+  grid-auto-rows: 42px;                        /* match icon size */
+  gap: 14px 16px;                              /* row gap / column gap */
+  margin-top: 1.5rem;                          /* Space above icons */
 }
 
 footer .socials h4 {
   grid-column: 1 / -1;   /* title stretches across all columns */
-  margin: 0 0 0.3rem 0;  
+  margin: 0 0 0.3rem 0;  /* Tightens spacing around title */
 }
 
 .socials a img {
-  width: 42px;
-  height: 42px;
+  width: 42px;                                      /* Icon width */
+  height: 42px;                                     /* Icon height */
   transition: transform 0.25s ease, color 0.25s ease; /* smooth hover animation */
 }
 
@@ -602,7 +632,7 @@ footer .socials h4 {
 }
 
 footer a { 
-color: var(--brand-6);                       /* Makes link text white */
+  color: var(--brand-6);                       /* Makes link text white */
 }
 
 
@@ -610,18 +640,18 @@ color: var(--brand-6);                       /* Makes link text white */
 
 /* give the highlights block bottom clearance so content after it sits lower */
 .home-page .open-container.highlights {
-  padding-bottom: 220px;  
+  padding-bottom: 20px;  /* Adds spacing below highlights row */
 }
 
 /* ALSO push the footer back down on the home page */
 .home-page footer {
-  margin-top: 80px;       /* creates a buffer so footer doesn't ride up into the portrait */
+  margin-top: 195px;       /* creates a buffer so footer doesn't ride up into the portrait */
 }
 
 /* Stripe background positioned under the header */
 .stripe-section-index {
-  position: relative;
-  z-index: 0;
+  position: relative;     /* Positions pseudo-element relative to this section */
+  z-index: 0;             /* Sits under foreground content */
   isolation: isolate; /* keeps the pseudo-element scoped to this section */
   padding-top: 2rem;  /* space for hero content */
 }
@@ -632,48 +662,80 @@ color: var(--brand-6);                       /* Makes link text white */
   position: absolute;
   top: 0;               /* start directly under the header */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%);       /* Centers stripe horizontally */
   width: clamp(100px, 10vw, 180px);  /* responsive width */
   height: 150vh;          /* ends halfway down hero image*/
   background: var(--brand);
   z-index: -1;           /* behind content */
-  opacity: 0.97;
+  opacity: 0.97;         /* Slight transparency */
+}
+
+.open-container-index {
+  display: flex;                  /* Two-column layout */
+  align-items: flex-start;        /* top-align both sides */
+  justify-content: space-between; /* Space between columns */
+  gap: 2rem;                      /* Space between left/right */
+  position: relative;             /* For layered children */
+  padding-bottom: 120px;          /* keeps space at bottom */
+  z-index: 2;                     /* Above stripe background */
 }
 
 /* ---------- Java Script Pop Up (only happens once on index page ---------------- */
 /* Tip base (only visible in light mode) */
 .theme-tip {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  max-width: 280px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: #ffffff;
-  color: #222;
-  border: 1px solid rgba(0,0,0,.12);
-  box-shadow: 0 8px 24px rgba(0,0,0,.12);
-  font: 500 0.9rem/1.3 var(--font-body, system-ui);
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition: opacity .25s ease, transform .25s ease;
-  z-index: 1000;
+  position: fixed;                       /* Stays in corner on scroll */
+  top: 50%;                               /* Center vertically */
+  left: 50%;                              /* Center horizontally */
+  transform: translate(-50%, -50%) scale(0.98); /* Center alignment + slight offset for animation */
+  max-width: 620px;                      /* Limits width of tip */
+  padding: 22px 26px 28px;                    /* Internal spacing */
+  border-radius:14px;                   /* Rounded corners */
+  background: #ffffff;                   /* White background */
+  color: #222;                           /* Dark text */
+  border: 1px solid rgba(0,0,0,.12);     /* Subtle border */
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);/* Drop shadow */
+  font: 500 1rem/1.5 var(--font-body, system-ui); /* Typography for tip */
+  opacity: 0;                            /* Hidden by default */
+  pointer-events: none;                  /* Non-interactive while hidden */
+  transition: opacity .25s ease, transform .25s ease; /* Fade + slide animation */
+  z-index: 2000;                         /* Sits above other UI */
+  text-align: center;                    /* Align text to center*/
 }
 
 /* Show state */
 .theme-tip.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  opacity: 1;                /* Makes tip visible */
+  transform: translate(-50%, -50%) scale(1);  /* Resets vertical offset */
+  pointer-events: auto;      /* Allows interaction when shown */
+}
+
+/* Button styling */
+.theme-tip .tip-close {
+  margin-top: 14px;
+  background: var(--brand, #8c0303);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font: 600 0.9rem var(--font-body, system-ui);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.theme-tip .tip-close:hover {
+  background: #700202;
 }
 
 /* Hide entirely in dark mode */
-body.dark-mode .theme-tip { display: none; }
+body.dark-mode .theme-tip { 
+  display: none;             /* Don’t show tip in dark mode */
+}
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .theme-tip { transition: none; }
+  .theme-tip { 
+    transition: none;        /* Disables animation for reduced motion */
+  }
 }
 
 /* -- Sections --*/
@@ -681,56 +743,56 @@ body.dark-mode .theme-tip { display: none; }
 /* two columns: left + right */
 .open-container.highlights{
   position: relative;     /* for the absolute middle image */
-  display: flex !important;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: nowrap;      /* keeps right column from dropping */
+  display: flex !important; /* Force flex even if overridden */
+  align-items: flex-start;  /* Align content to top */
+  justify-content: space-between; /* Spread left/right evenly */
+  gap: 2rem;                /* Horizontal spacing */
+  flex-wrap: nowrap;        /* keeps right column from dropping */
 }
 
 .title-image {
-  width: 100%;
-  max-width: 560px;       
-  height: auto;
-  border-radius: 40px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,.15);
-  position: relative;
-  margin-right: -1rem;
-  transform: translateX(-2rem); /* subtle overlap without breaking layout */
+  width: 100%;                       /* Full width within column */
+  max-width: 560px;                  /* Caps image width */
+  height: auto;                      /* Keeps aspect ratio */
+  border-radius: 40px;               /* Rounded corners */
+  object-fit: cover;                 /* Crops image nicely */
+  box-shadow: 0 4px 12px rgba(0,0,0,.15); /* Soft shadow */
+  position: relative;                /* For fine positioning tweaks */
+  margin-right: -1rem;               /* Slight overlap rightwards */
+  transform: translateX(-2rem);      /* subtle overlap without breaking layout */
 }
 
 /* left: bullets + image inline */
 .hl-content{
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  display: flex;               /* Layout image + list inline */
+  align-items: flex-start;     /* Align tops */
+  gap: 1.5rem;                 /* Space between image and list */
 }
 
 .highlights{
-  position: relative;    
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: nowrap;     /* ⬅️ prevents the right column from wrapping under */
+  position: relative;        /* For layered positioning */
+  display: flex;             /* Horizontal layout */
+  align-items: flex-start;   /* Align columns on top */
+  gap: 2rem;                 /* Gap between columns */
+  flex-wrap: nowrap;         /* ⬅️ prevents the right column from wrapping under */
 }
 
 .hl-content {
-  display: flex;
-  align-items: flex-start;  /* aligns image and list at the top */
-  gap: 1.5rem;              /* space between image and list */
+  display: flex;             /* Layout children inline */
+  align-items: flex-start;   /* aligns image and list at the top */
+  gap: 1.5rem;               /* space between image and list */
 }
 
 .hl-left {
-  padding-right: calc(clamp(220px, 18vw, 300px) / 2 + 1rem);
+  padding-right: calc(clamp(220px, 18vw, 300px) / 2 + 1rem);  /* Makes room for centre portrait overlap */
 }
 
 .hl-right {
-  padding-left:  calc(clamp(220px, 18vw, 300px) / 2 + 1rem);
+  padding-left:  calc(clamp(220px, 18vw, 300px) / 2 + 1rem);  /* Balances space on right side */
   text-align: right;         /* makes all inline text (headings, links, etc.) right-aligned */
   margin-left: auto;         /* pushes the entire column to the right edge */
   align-items: flex-end;     /* aligns any flex children (if they exist) to the right */
-  transform: translateX(-.8rem);
+  transform: translateX(-.8rem); /* Nudge content slightly left for balance */
 }
 
 .hl-list-right {
@@ -740,33 +802,33 @@ body.dark-mode .theme-tip { display: none; }
 }
 
 .hl-photo {
-  margin: 1rem 0; /* space above & below image */
-  flex: 0 0 220px;          /* fixed image width */
+  margin: 1rem 0;         /* space above & below image */
+  flex: 0 0 220px;        /* fixed image width */
   transform: translateY(-16px); /* nudges image up slightly */
 }
 
 .hl-photo img {
-  width: 100%;
-  border-radius: 40px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 100%;                                 /* Full width inside wrapper */
+  border-radius: 40px;                         /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);     /* Soft shadow */
 }
 
 .hl-list {
-  flex: 1 1 auto;
-  margin: 0;
-  padding-left: 0;
+  flex: 1 1 auto;       /* Allows list to fill remaining width */
+  margin: 0;            /* Removes default margin */
+  padding-left: 0;      /* Aligns list with container edge */
 }
 
 .hl-list li {
-  list-style: disc inside;
-  margin-bottom: 1.8rem;
-  padding-left: 1.45rem;
-  text-indent: -1.35rem;
+  list-style: disc inside;   /* Bullets aligned with text */
+  margin-bottom: 1.8rem;     /* Space between list items */
+  padding-left: 1.45rem;     /* Indent text for hanging bullets */
+  text-indent: -1.35rem;     /* Pulls bullets out for neat alignment */
 }
 
 .highlights-right {
-  margin-left: 1rem;
-  padding-left: 1rem;
+  margin-left: 1rem;   /* Extra left margin */
+  padding-left: 1rem;  /* Padding buffer from list edge */
 }
 
 /* Let left & right columns share the row evenly */
@@ -774,7 +836,7 @@ body.dark-mode .theme-tip { display: none; }
 .hl-right {
   flex: 1 1 0;           /* split available width */
   min-width: 0;          /* prevent overflow pushing to next line */
-  max-width: none;       
+  max-width: none;       /* No artificial max width */
 }
 
 .hl-right a,
@@ -791,67 +853,67 @@ body.dark-mode .theme-tip { display: none; }
 
 /* Right side of Community section: stacked images */
 .hl-gallery {
-  display: flex;
-  flex-direction: column;   /* stack vertical */
-  gap: 1rem;                /* space between the two images */
-  flex: 0 0 220px;          /* keeps a nice fixed column width */
+  display: flex;              /* Vertical stack of images */
+  flex-direction: column;     /* stack vertical */
+  gap: 1rem;                  /* space between the two images */
+  flex: 0 0 220px;            /* keeps a nice fixed column width */
   transform: translateY(20px); /* align visually with top of list */
 }
 
 /* first image style is already .hl-photo {...} */
 .hl-photo {
-  margin: 0;
+  margin: 0;                         /* Reset margin for gallery use */
 }
 
 .hl-photo img {
-  width: 100%;
-  border-radius: 40px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
+  width: 100%;                       /* Fill container width */
+  border-radius: 40px;               /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);  /* Soft shadow */
+  transition: transform 0.35s ease, box-shadow 0.35s ease; /* Smooth hover animation */
+  cursor: pointer;                   /* Pointer cursor on hover */
 }
 
 .hl-photo img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: scale(1.03);           /* Slight zoom on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);  /* Stronger shadow on hover */
 }
 
 /* second image under it */
 .h2-photo {
-  margin: 0;
-  margin-top: 2rem;
+  margin: 0;             /* Reset all margins */
+  margin-top: 2rem;      /* Add space above second image */
 }
 
 .h2-photo img {
-  width: 90%;
+  width: 90%;                        /* Slightly narrower than container */
   height: 150px;           /* keep the height you like */
   object-fit: cover;       /* crops instead of squishing */
   object-position: center; /* centers the visible part */
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
+  border-radius: 30px;     /* Softer rounding for secondary image */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Soft shadow */
+  transition: transform 0.35s ease, box-shadow 0.35s ease; /* Smooth hover animation */
+  cursor: pointer;         /* Pointer cursor */
 }
 
 .h2-photo img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: scale(1.03);  /* Slight zoom on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
 }
 
 .title-image-2 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-59%);
-  top: 0;
-  width: clamp(450px, 30vw, 750px);  /* wider responsive range */
-  z-index: 3;
+  position: absolute;                        /* Positions image in centre overlap */
+  left: 50%;                                 /* Centers horizontally */
+  transform: translateX(-59%);               /* Slightly off-centre for visual balance */
+  top: 0;                                    /* Anchored at top of section */
+  width: clamp(450px, 30vw, 750px);          /* wider responsive range */
+  z-index: 3;                                /* Above other content */
 }
 
 .title-image-2 img {
-  width: 100%;
-  height: 1000px;
-  object-fit: cover;
-  display: block;
+  width: 100%;              /* Fill wrapper width */
+  height: 1000px;           /* Fixed tall height */
+  object-fit: cover;        /* Crops image rather than stretching */
+  display: block;           /* Removes inline-gap */
 }
 
 
@@ -859,8 +921,8 @@ body.dark-mode .theme-tip { display: none; }
 
 /* Stripe background positioned under the header */
 .stripe-section-about {
-  position: relative;
-  z-index: 0;
+  position: relative;     /* Anchor for pseudo-element stripe */
+  z-index: 0;             /* Behind main content */
   isolation: isolate; /* keeps the pseudo-element scoped to this section */
   padding-top: 2rem;  /* space for hero content */
 }
@@ -871,71 +933,71 @@ body.dark-mode .theme-tip { display: none; }
   position: absolute;
   top: 0;               /* start directly under the header */
   left: 50%;
-  transform: translateX(-50%);
-  width: clamp(100px, 10vw, 180px);  /* responsive width */
-  height: 100%;
+  transform: translateX(-50%);            /* Centers stripe */
+  width: clamp(100px, 10vw, 180px);       /* responsive width */
+  height: 100%;                           /* Runs full section height */
   background: var(--brand);
   z-index: -1;           /* behind content */
-  opacity: 0.97;
+  opacity: 0.97;         /* Slight transparency */
 }
 
 /* Left side container */
 .about-container-left {
-  position: relative;   
-  flex: 0 0 auto;
-  min-width: 0;
+  position: relative;    /* For positioning any overlays */
+  flex: 0 0 auto;        /* Keeps width constrained to content */
+  min-width: 0;          /* Prevents flex overflow */
 }
 
 .about-media-1 {
-  width: 100%;
-  max-width: 650px;       
-  height: auto;
-  border-radius: 40px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,.15);
-  position: relative;
-  margin-right: -1rem;
-  margin-top: 12px;
+  width: 100%;                                 /* Fill available width */
+  max-width: 650px;                            /* Cap image size */
+  height: auto;                                /* Maintain aspect ratio */
+  border-radius: 40px;                         /* Rounded corners */
+  object-fit: cover;                           /* Crops nicely */
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);      /* Soft shadow */
+  position: relative;                          /* Allows local adjustments */
+  margin-right: -1rem;                         /* Slight negative margin for overlap */
+  margin-top: 12px;                            /* Space from top */
   overflow: hidden;           /* keeps rounded corners clean */
 }
 
 /* Right side container */
 .about-container-right {
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;     /* top-align image */
+  flex: 1 1 auto;               /* Flexible column width */
+  display: flex;                /* Enable flexbox layout */
+  justify-content: flex-end;    /* Align content right */
+  align-items: flex-start;      /* top-align image */
   max-width: 650px;            /* Keeps text column narrow and readable */
   padding-right: 2rem;         /* Keeps text from touching right edge */
   box-sizing: border-box;      /* Ensures padding doesn’t blow out width */
-  margin-left: 1.9rem;
+  margin-left: 1.9rem;         /* Space from image column */
 }
 
 .teaching-areas {
-  display: flex;
+  display: flex;              /* Stack title and scroller */
   flex-direction: column;    /* stack title then scroller */
   align-items: flex-start;   /* keep the title left aligned */
   gap: 1rem;                 /* space between title and scroller */
-  width: 100%;
+  width: 100%;               /* Allow scroller to fill width */
 }
 
 /* Left side title */
 .about-title-left {
-  max-width: 530px;
-  text-align: left;
-  margin: 0;
-  padding: 0;
+  max-width: 530px;   /* Keeps heading text readable */
+  text-align: left;   /* Left-aligned for readability */
+  margin: 0;          /* Remove extra margin */
+  padding: 0;         /* No padding by default */
 }
 
 .scroller {
   display:grid; 
-  grid-auto-flow: column; 
-  grid-auto-columns: clamp(260px, 28%, 340px);
-  overflow-x: auto; 
-  gap: 1rem; 
-  padding: 1rem 0 1.5rem 0; 
-  scroll-snap-type: x mandatory;
-  width: 100%;
+  grid-auto-flow: column;                         /* Cards flow horizontally */
+  grid-auto-columns: clamp(260px, 28%, 340px);    /* Card width range */
+  overflow-x: auto;                               /* Horizontal scroll */
+  gap: 1rem;                                      /* Spacing between cards */
+  padding: 1rem 0 1.5rem 0;                       /* Vertical padding */
+  scroll-snap-type: x mandatory;                  /* Snaps scrolling to cards */
+  width: 100%;                                    /* Fills container width */
 }
 
 .chip { 
@@ -946,7 +1008,7 @@ body.dark-mode .theme-tip { display: none; }
   padding: 1rem; 
   text-decoration: none;   /* remove underline */
   color: inherit;          /* keep text color consistent */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;  /* Smooth hover animation */
 }
 
 .chip img { 
@@ -965,160 +1027,971 @@ body.dark-mode .theme-tip { display: none; }
 }
 
 .chip h3 { 
-  margin-bottom: .1rem; 
+  margin-bottom: .1rem;  /* Tighten space under chip titles */
 }
 
 
 /* ---------- Teaching Page --------------------- */
 
 .open-container.teaching-row {
-  display: flex;
+  display: flex;                    /* Lays out teaching content in a row */
   flex-wrap: nowrap;                /* keep them on one line on desktop */
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  padding-top: 35px;
-  padding-bottom: 70px;
+  align-items: flex-start;          /* Aligns top edges of left + right columns */
+  justify-content: space-between;   /* Pushes left and right columns apart */
+  gap: 2rem;                        /* Space between text and media columns */
+  padding-top: 35px;                /* Space above teaching row */
+  padding-bottom: 70px;             /* Space below teaching row */
 }
 
 /* Left side: text column */
 .open-container.teaching-row .teaching-container-left {
-  flex: 0 0 65%;
-  max-width: 65%;
+  flex: 0 0 65%;                    /* Left column takes up 65% width */
+  max-width: 65%;                   /* Prevents left column from growing beyond 65% */
   min-width: 0;                     /* prevents it from forcing wrap */
 }
 
 /* Right side: media column */
 .open-container.teaching-row .teaching-media {
-  flex: 0 0 35%;
-  max-width: 35%;
+  flex: 0 0 35%;                    /* Right column takes up 35% width */
+  max-width: 35%;                   /* Prevents media column from growing beyond 35% */
   min-width: 0;                     /* prevents overflow that would push it down */
-  display: flex;
-  justify-content: flex-end;
-  margin-left: -40px;
-  margin-top: 12px;
+  display: flex;                    /* Enables flex alignment for media */
+  justify-content: flex-end;        /* Pushes image to the far right */
+  margin-left: -40px;               /* Pulls image slightly towards centre overlap */
+  margin-top: 12px;                 /* Adds breathing room above media */
 }
 
 .open-container.teaching-row .teaching-media img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  object-fit: cover;
+  width: 100%;                      /* Image fills the media column width */
+  height: auto;                     /* Keeps image aspect ratio */
+  border-radius: 20px;              /* Soft rounded corners on teaching image */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Subtle depth shadow */
+  object-fit: cover;                /* Crops image instead of stretching */
 }
 
 .open-container.table-section {
-  padding-bottom: 0;
-  margin-bottom: 20px;
+  padding-bottom: 0;                /* Removes extra padding under table section */
+  margin-bottom: 20px;              /* Small gap below table section */
 } 
 
 .table-wrap{
-  margin: .25rem 0;
-  border-radius: var(--radius);
-  overflow: auto;                 /* horizontal scroll on small screens */
-  box-shadow: var(--shadow);
-  background: var(--bg);               /* keeps the table readable over the page bg */
-  margin-top: -40px
+  margin: .25rem 0;                 /* Slim vertical margins around wrapper */
+  border-radius: var(--radius);     /* Rounded corners for table wrapper */
+  overflow: auto;                   /* horizontal scroll on small screens */
+  box-shadow: var(--shadow);        /* Card-like shadow around table */
+  background: var(--bg);            /* keeps the table readable over the page bg */
+  margin-top: -40px;                /* Pulls table closer to content above */
 }
 
 table.table{
-  width: 100%;
-  border-collapse: separate;      /* so radius works */
-  border-spacing: 0;
-  font-family: var(--font-body);
-  color: var(--text);
-  background: var(--bg);
-  min-width: 640px;               /* let it scroll if content is wide */
+  width: 100%;                      /* Table spans full wrapper width */
+  border-collapse: separate;        /* so radius works */
+  border-spacing: 0;                /* No gaps between cells */
+  font-family: var(--font-body);    /* Matches site body font */
+  color: var(--text);               /* Uses main text colour */
+  background: var(--bg);            /* Table background colour */
+  min-width: 640px;                 /* let it scroll if content is wide */
 }
 
 /* Caption */
 .table caption{
-  caption-side: top;
-  text-align: left;
-  font-weight: 800;
-  color: var(--muted);
-  padding: 0.75rem 1rem;
+  caption-side: top;                /* Places caption above table */
+  text-align: left;                 /* Aligns caption with table content */
+  font-weight: 800;                 /* Bold caption text */
+  color: var(--muted);              /* Muted caption colour */
+  padding: 0.75rem 1rem;            /* Space around caption text */
 }
 
 /* Head */
 .table thead th{
-  position: sticky; top: 0; z-index: 1;
-  background: var(--brand);     /* navy header */
-  color: #fff;
-  text-align: left;
-  font-weight: 800;
-  letter-spacing: .02em;
-  padding: 0.9rem 1rem;
-  border-bottom: 2px solid color-mix(in oklab, white 20%, transparent);
+  position: sticky;                 /* Keeps header row fixed while scrolling */
+  top: 0;                           /* Sticks to top of scroll area */
+  z-index: 1;                       /* Ensures header stays above body rows */
+  background: var(--brand);         /* navy header */
+  color: #fff;                      /* White header text */
+  text-align: left;                 /* Left-align header labels */
+  font-weight: 800;                 /* Strong header weight */
+  letter-spacing: .02em;            /* Slightly spaced header letters */
+  padding: 0.9rem 1rem;             /* Comfortable header cell padding */
+  border-bottom: 2px solid color-mix(in oklab, white 20%, transparent); /* Highlighted bottom border */
 }
 
 /* Cells */
 .table th,
 .table td{
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1rem;             /* Consistent cell padding */
   border-bottom: 1px solid var(--brand-5); /* light divider */
-  vertical-align: middle;
+  vertical-align: middle;           /* Vertically centres cell content */
 }
 
 /* Zebra + hover */
 .table tbody tr:nth-child(even){ 
-  background: var(--surface); 
+  background: var(--surface);       /* Alternating row background colour */
 }
 
 .table tbody tr:hover{ 
-  background: color-mix(in oklab, var(--surface) 70%, white); 
+  background: color-mix(in oklab, var(--surface) 70%, white);  /* Slightly brighter row on hover */
 }
 
 /* First/last cell rounding */
 .table thead th:first-child { 
-  border-top-left-radius: var(--radius); 
+  border-top-left-radius: var(--radius);   /* Rounds top-left table corner */
 }
 
 .table thead th:last-child  { 
-  border-top-right-radius: var(--radius); 
+  border-top-right-radius: var(--radius);  /* Rounds top-right table corner */
 }
 
 .table tbody tr:last-child td:first-child { 
-  border-bottom-left-radius: var(--radius); 
+  border-bottom-left-radius: var(--radius); /* Rounds bottom-left table corner */
 }
 
 .table tbody tr:last-child td:last-child  { 
-  border-bottom-right-radius: var(--radius); 
+  border-bottom-right-radius: var(--radius); /* Rounds bottom-right table corner */
 }
 
 /* Numeric / tight columns */
-.table .num{ text-align: right; font-variant-numeric: tabular-nums; }
-.table .muted{ color: var(--muted); }
+.table .num{ 
+  text-align: right;                         /* Right-aligns numeric values */
+  font-variant-numeric: tabular-nums;        /* Uses tabular numbers for better alignment */
+}
+
+.table .muted{ 
+  color: var(--muted);                       /* Applies muted colour to secondary text */
+}
 
 /* Compact variant (optional) */
-.table--compact td, .table--compact th{ padding: 0.55rem 0.75rem; }
-.table--compact{ font-size: 0.92rem; }
+.table--compact td, 
+.table--compact th{ 
+  padding: 0.55rem 0.75rem;                  /* Tighter padding for denser tables */
+}
+
+.table--compact{ 
+  font-size: 0.92rem;                        /* Slightly smaller text for compact tables */
+}
 
 /* Mobile tweaks */
 @media (max-width: 700px){
-  .table{ min-width: 540px; } /* encourage scrolling instead of squishing */
+  .table{ 
+    min-width: 540px;                        /* encourage scrolling instead of squishing */
+  }
 }
 
 .schools {
   text-align: center;             /* centers the heading */
-  display: flex;
-  flex-direction: column;
+  display: flex;                  /* Enables flexbox layout */
+  flex-direction: column;         /* Stacks children vertically */
   align-items: center;            /* centers everything horizontally */
-  justify-content: center;
-  margin-top: 0.5rem;
-  margin-bottom: 50px;
-  position: relative;
-  z-index: 1;
-  transform: none;
+  justify-content: center;        /* Vertically centres content in container */
+  margin-top: 0.5rem;             /* Small gap above schools block */
+  margin-bottom: 50px;            /* Larger gap below schools block */
+  position: relative;             /* Allows layering if needed */
+  z-index: 1;                     /* Keeps content above background effects */
+  transform: none;                /* Ensures no transform is applied */
 }
 
 /* Center the buttons inside */
 .schools .cta {
-  display: flex;
+  display: flex;                  /* Lays buttons out in a row */
   justify-content: center;        /* centers the buttons horizontally */
   align-items: center;            /* aligns them vertically */
   gap: 1rem;                      /* even spacing between buttons */
   flex-wrap: wrap;                /* stack on small screens */
-  margin-top: 1rem;
-  width: 100%;
+  margin-top: 1rem;               /* Space above button group */
+  width: 100%;                    /* Allows buttons to wrap within full width */
+}
+
+
+/* ---------- Projects Page --------------------- */
+
+/* --- Projects stripe background --- */
+.stripe-section-projects{
+  position: relative;             /* Anchor for decorative stripe pseudo-elements */
+  isolation: isolate;             /* keeps the graphics behind only this section */
+  padding-bottom: 30px;           /* Adds buffer below project content */
+}
+
+/* Vertical stripe (centered) */
+.stripe-section-projects::before{
+  content:"";                     /* Generates decorative pseudo-element */
+  position:absolute;              /* Positions stripe independently of layout flow */
+  left:50%;                       /* Centers stripe horizontally */
+  transform:translateX(-50%);     /* Adjusts centering to true middle */
+  top: clamp(180px, 12vh, 160px); /* where the vertical bar begins */
+  bottom: 0;                      /* runs to end of section */
+  width: clamp(100px, 10vw, 180px);  /* stripe thickness */
+  background: var(--brand);       /* Brand red */
+  border-radius: 0;               /* Straight ends */
+  z-index:-1;                     /* behind content */
+}
+
+/* Top horizontal bar with rounded caps */
+.stripe-section-projects::after{
+  content:"";                     /* Creates top horizontal bar */
+  position:absolute;              /* Positions independently over content */
+  left:50%;                       /* Center horizontally */
+  transform:translateX(-50%);     /* True centering */
+  top: clamp(175px, 11vh, 150px); /* sits just above the vertical bar */
+  width: min(92%, 1000px);        /* long bar across the page */
+  height: 10px;                   /* Thickness of horizontal bar */
+  background: var(--brand);       /* Same red as vertical stripe */
+  border-radius: 999px;           /* rounded ends */
+  z-index:-1;                     /* Places bar behind content */
+}
+
+
+/* make sure content renders above the stripe */
+.projects-container{ 
+  position:relative;              /* Allows layering atop the stripe */
+  z-index:0;                      /* Keeps content above pseudo-elements */
+  text-align: center;             /* centers the text itself */
+  width: 100%;                    /* ensures it spans the full container */
+  margin: 0 auto 1.5rem auto;     /* adds spacing below */
+  padding-top: 2rem;              /* Space above projects intro text */
+}
+
+.projects-container .tagline {
+  margin: 0 auto;                 /* removes default <p> margins */
+  max-width: 80ch;                /* keeps the line length readable */
+  color: var(--muted);            /* matches existing theme */
+  text-align: center;             /* reinforces centering */
+}
+
+.project-row {
+  display: grid;                              /* Grid-based card layout */
+  grid-template-columns: repeat(3, 1fr);      /* Three equal-width columns */
+  gap: 1.5rem;                                /* Space between cards */
+  align-items: stretch;                       /* Cards stretch to equal height */
+  margin-top: 3rem;                           /* Space above first row of cards */
+  margin-bottom: 8rem;                        /* Deep space below card grid */
+  padding: 0 2rem;                            /* ⬅ adds equal space on both sides */
+}
+
+/* --- Individual Card --- */
+.project-card {
+  background: var(--surface);                 /* Card background colour */
+  border-radius: var(--radius, 12px);         /* Rounded corners for cards */
+  overflow: hidden;                           /* Clips child content to radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle elevation shadow */
+  transition: transform 0.25s ease, 
+              box-shadow 0.25s ease;          /* Smooth hover/focus transitions */
+  cursor: pointer;                            /* Indicates card is interactive */
+  display: flex;                              /* Flex to stack content vertically */
+  flex-direction: column;                     /* Column layout inside card */
+}
+
+/* --- Hover / Focus --- */
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-6px);                /* Lifts card slightly on hover/focus */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Stronger shadow when hovered */
+}
+
+/* --- Optional Inner Padding --- */
+.project-card-content {
+  padding: 1.25rem 1.5rem;                    /* Content padding inside card */
+  text-align: left;                           /* Left-aligns card text */
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;                      /* Space under card title */
+  color: var(--brand);                        /* Title uses brand colour */
+  font-size: 1.15rem;                         /* Card heading size */
+}
+
+.project-card p {
+  color: var(--text);                         /* Body text in normal colour */
+  font-size: 0.95rem;                         /* Slightly smaller than base text */
+  line-height: 1.5;                           /* Comfortable reading line height */
+}
+
+/* Make each card a tidy vertical stack */
+.project-card a{
+  display: flex;                              /* Enables vertical stacking */
+  flex-direction: column;                     /* Stacks image + text vertically */
+  text-decoration: none;                      /* Removes underline from links */
+  color: inherit;                             /* Inherits text colour from parent */
+}
+
+/* ✅ Force all thumbnails to the same shape */
+.project-card > a > img{
+  display: block;                             /* Removes inline-gap from image */
+  width: 100%;                                /* Image fills card width */
+  aspect-ratio: 4 / 3;                        /* choose 1/1, 4/3, or 16/9 */
+  height: auto;                               /* height is computed from width + aspect-ratio */
+  object-fit: cover;                          /* fill the box, crop edges if needed */
+  object-position: center;                    /* Centers subject in crop */
+  border-radius: 0;                           /* Image corners follow card clipping */
+}
+
+/* Content area */
+.project-card-body{
+  padding: 1.1rem 1.25rem;                    /* Inner spacing for project content */
+}
+
+/* ---------- Projects Inner Pages --------------------- */
+
+/* Stripe background positioned under the header */
+.stripe-section-inner-projects {
+  position: relative;                         /* Anchor for inner project stripe */
+  z-index: 0;                                 /* Behind foreground content */
+  isolation: isolate;                         /* keeps the pseudo-element scoped to this section */
+  padding-top: 2rem;                          /* space for hero content */
+  padding-bottom: 120px;                      /* ~40px gap */
+}
+
+/* Create the red stripe */
+.stripe-section-inner-projects::before {
+  content: "";                                /* Creates central vertical stripe */
+  position: absolute;                         /* Positions stripe independently */
+  top: 0;                                     /* Starts at top of section */
+  left: 50%;                                  /* Centers horizontally */
+  transform: translateX(-50%);                /* True centering */
+  width: clamp(100px, 10vw, 180px);           /* Stripe width scales with viewport */
+  bottom: 0;                                  /* fills to the end of the section */
+  background: var(--brand);                   /* Brand red stripe colour */
+  z-index: -1;                                /* Places stripe behind content */
+  opacity: 0.97;                              /* Slightly transparent */
+  border-radius: 0;                           /* ensures squared ends on the stripe */
+}
+
+.stripe-section-inner-projects .page-container > *:last-child {
+  margin-bottom: 0;                           /* Removes extra margin under last block */
+}
+
+.title-image-projects {
+  width: 100%;                                /* Image fills container width */
+  max-width: 620px;                           /* Caps image width for layout */
+  height: auto;                               /* Maintains aspect ratio */
+  border-radius: 40px;                        /* Large rounded corners */
+  object-fit: cover;                          /* Crops image nicely */
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);     /* Soft drop shadow */
+  position: relative;                         /* Allows positional tweaks */
+  margin-right: -1rem;                        /* Small negative margin for overlap */
+  margin-top: 0.6rem;                         /* Tiny top spacing */
+  transform: translateX(-2rem);               /* subtle overlap without breaking layout */
+}
+
+/* Wrapper to position arrows around the scroller */
+.project-scroller-wrap{
+  position: relative;                         /* Allows arrows to sit over scroller */
+  width: 100%;                                /* Wrapper spans full width */
+}
+
+.project-scroller {
+  display:grid;                               /* Grid layout for horizontal cards */
+  grid-auto-flow: column;                     /* Cards flow horizontally */
+  grid-auto-columns: clamp(260px, 28%, 340px);/* Card width range */
+  overflow-x: auto;                           /* Enables horizontal scrolling */
+  gap: 1rem;                                  /* Space between cards */
+  padding: 1rem 0 1.5rem 0;                   /* Vertical spacing around scroller */
+  scroll-snap-type: x mandatory;              /* Snaps scrolling to each card */
+  width: 100%;                                /* Uses full width */
+  scroll-behavior: smooth;                    /* smooth scroll */
+}
+
+.project-chip { 
+  scroll-snap-align: start;                   /* Aligns card at start when snapping */
+  text-decoration: none;                      /* remove underline */
+  color: inherit;                             /* keep text color consistent */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;           /* Smooth hover animation */
+  perspective: 1000px;                        /* enable 3D space */
+  position: relative;                         /* Anchor for rotating inner card */
+  scroll-snap-align: start;                   /* Ensure consistent snap behaviour */
+}
+
+.chip-inner {
+  position: relative;                         /* Base for front/back faces */
+  height: 600px;                              /* Fixed card height */
+  transform-style: preserve-3d;               /* Allows 3D flip effect */
+  transition: transform 0.6s ease, box-shadow 0.2s ease;           /* Smooth flip + hover transitions */
+  background: var(--brand-5);                 /* Card background colour */
+  border-radius: var(--radius);               /* Rounded card corners */
+  box-shadow: var(--shadow);                  /* General card shadow */
+  padding: 1rem;                              /* Inner padding for content */
+  --ry: 0deg;                                 /* Custom property: default Y rotation */
+  transform: translateY(var(--ty, 0)) rotateY(var(--ry)); /* Uses CSS vars for motion + rotation */
+}
+
+
+.project-chip img { 
+  width: 100%;                                /* Image fills card width */
+  aspect-ratio: 1/1;                          /* Makes image perfectly square */
+  object-fit: cover;                          /* Crops to fit without distortion */
+  border-radius: 50%;                         /* Circular portrait image */
+  margin-bottom: .8rem;                       /* Space below image */
+  border: 8px solid #fff;                     /* White circular frame */
+  background-color: var(--bg);                /* Neutral background behind image */
+  box-shadow: var(--shadow);                  /* Subtle shadow around image */
+  text-align: center;                         /* Center all inline text and links */
+}
+
+/* Faces */
+.face {
+  position: absolute;                         /* Stacks faces on top of each other */
+  inset: 0;                                   /* Fills entire chip-inner area */
+  min-height: 100%;                           /* Ensures face covers full height */
+  padding: 1rem;                              /* matches .project-chip padding feel */
+  backface-visibility: hidden;                /* Hides backside when flipped away */
+  overflow: auto;                             /* scroll if content taller than card */
+  border-radius: var(--radius);               /* Matches outer card rounding */
+  display: flex;                              /* Flex column for content layout */
+  flex-direction: column;                     /* Stacks face elements vertically */
+  align-items: center;                        /* Center horizontally */
+  text-align: center;                         /* Center text inside */
+}
+
+.face img {
+  width: 100%;                                /* Face image fills width */
+  aspect-ratio: 1/1;                          /* Square avatar */
+  object-fit: cover;                          /* Crops image */
+  border-radius: 50%;                         /* Circular portrait */
+  margin-bottom: .8rem;                       /* Gap below image */
+  border: 8px solid #fff;                     /* White frame around image */
+  box-shadow: var(--shadow);                  /* Shadow around avatar */
+}
+
+.face h4 {
+  margin-bottom: 0.4rem;                      /* reduces space between the heading and next element */
+  margin-top: 0.8rem;                         /* gives a little breathing room above */
+  font-size: 1.1rem;                          /* optional: makes it visually distinct from <h3> */
+  line-height: 1.2;                           /* keeps text compact */
+}
+
+.project-chip p,
+.face p {
+  text-align: center;                         /* centers paragraph text */
+  margin: 0.5rem 0;                           /* keeps spacing neat */
+}
+
+/* Remove bullet points and tidy list spacing */
+.project-chip ul,
+.face ul {
+  list-style: none;                           /* removes dot points */
+  padding-left: 0;                            /* removes left indent */
+  margin: 0.5rem 0 1rem 0;                    /* balances spacing above/below */
+}
+
+.project-chip ul li {
+  margin-bottom: 0.4rem;                      /* soft space between items */
+  line-height: 1.4;                           /* better readability */
+}
+
+/* Improve link appearance inside project chips */
+.project-chip a,
+.face a {
+  display: inline-block;                      /* Allows transform on links */
+  text-decoration: none;                      /* remove underline */
+  color: var(--brand, #0B1E3F);               /* primary navy colour */
+  font-weight: 600;                           /* make it stand out slightly */
+  transition: color 0.35s ease, 
+              transform 0.35s ease;           /* Smooth colour/scale transitions */
+}
+
+/* Hover / focus style for links */
+.project-chip a:hover,
+.project-chip a:focus,
+.face a:hover,
+.face a:focus {
+  color: color-mix(in oklab, var(--brand) 70%, #ff4d4d); /* subtle red tint on hover */
+  transform: scale(1.08);          /* slightly enlarges the link */
+}
+
+.face-back {
+  transform: rotateY(180deg);      /* Back face rotated for flip effect */
+}
+
+/* Hover “lift” applies to the rotating card */
+.project-chip:hover .chip-inner,
+.project-chip:focus-within .chip-inner {
+  --ty: -4px;                       /* Slight upward translation on hover/focus */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25); /* Stronger shadow when active */
+}
+
+/* Flip sets the rotation var on the wrapper */
+.project-chip.is-flipped .chip-inner { 
+  --ry: 180deg;                     /* Rotates card 180deg on Y-axis */
+}
+
+.project-chip h3 { 
+  margin-bottom: .1rem;             /* Tight gap under main chip heading */
+}
+
+/* When flipped */
+.project-chip.is-flipped .chip-inner {
+  transform: rotateY(180deg);       /* Applies actual flip transform */
+}
+
+/* Optional: make the flip buttons look consistent */
+.flip-toggle {
+  margin-top: .5rem;                /* Space above flip toggle button */
+  display: inline-block;            /* Allows sizing + margin as inline element */
+}
+
+.pfc-btn {
+  appearance:none;                                      /* Removes default button styling */
+  border:1px solid color-mix(in oklab, var(--text) 15%, transparent); /* Soft border colour */
+  background: color-mix(in oklab, var(--surface) 85%, transparent);   /* Subtle background fill */
+  padding:.4rem .7rem;                                  /* Button padding */
+  border-radius:10px;                                   /* Rounded button corners */
+  cursor:pointer;                                       /* Pointer cursor on hover */
+  font-weight:700;                                      /* Bold button label */
+}
+
+.pfc-btn:hover { 
+  transform:translateY(-1px);                           /* Tiny lift on hover */
+}
+
+/* Arrow buttons */
+.scroller-arrow{
+  position: absolute;                                   /* Positions arrows over scroller */
+  top: 50%;                                             /* Vertically centres buttons */
+  transform: translateY(-50%);                          /* Perfect vertical centering */
+  z-index: 2;                                           /* Sits above scroller content */
+  width: 40px;                                          /* Arrow button width */
+  height: 40px;                                         /* Arrow button height */
+  border-radius: 999px;                                 /* Fully round buttons */
+  border: 1px solid var(--outline, #09122A);            /* Thin outline border */
+  background: color-mix(in oklab, var(--surface) 85%, transparent); /* Soft button background */
+  color: var(--text);                                   /* Icon/arrow colour */
+  display: grid;                                        /* Use grid to centre icon */
+  place-items: center;                                  /* Centres content inside button */
+  cursor: pointer;                                      /* Pointer cursor on hover */
+  box-shadow: var(--shadow);                            /* Soft button shadow */
+  transition: transform .2s ease, 
+              background .2s ease, 
+              opacity .2s ease;                         /* Smooth hover/disabled transitions */
+}
+
+.scroller-arrow:hover { 
+  transform: translateY(-50%) scale(1.05);              /* Slight scale up on hover */
+}
+
+.scroller-arrow:disabled { 
+  opacity: .35;                                         /* Fade out when inactive */
+  cursor: default;                                      /* Default cursor when disabled */
+}
+
+/* Left / Right positions */
+.scroller-arrow.prev { 
+  left: -4px;                                           /* Positions left arrow near edge */
+}
+.scroller-arrow.next { 
+  right: -4px;                                          /* Positions right arrow near edge */
+}
+
+/* Keep arrows inside on small screens */
+@media (max-width: 720px){
+  .scroller-arrow.prev{ left: 4px; }                    /* Nudges left arrow inside padding */
+  .scroller-arrow.next{ right: 4px; }                   /* Nudges right arrow inside padding */
+}
+
+/* Muted text */
+.muted { 
+  color: var(--muted);                                  /* Uses muted colour for secondary text */
+  font-size:.95rem;                                     /* Slightly smaller than base text */
+}
+
+/* Optional: dark-mode polish */
+body.dark-mode .pfc-btn{ 
+  border-color: color-mix(in oklab, #fff 15%, transparent);  /* Lightens button border in dark mode */
+}
+
+.projects {
+  text-align: center;                    /* Center-aligns text inside projects block */
+  display: flex;                         /* Flex container for projects intro */
+  flex-direction: column;                /* Stacks children vertically */
+  align-items: center;                   /* Centres content horizontally */
+  justify-content: center;               /* Centres content vertically within block */
+  margin-top: 0.5rem;                    /* Small gap above projects heading */
+  position: relative;                    /* Allows layering over stripe */
+  z-index: 1;                            /* Keeps content above decorative background */
+}
+
+.projects-cta {
+  display: flex;                         /* Flex container for CTA buttons */
+  flex-direction: column;                /* Stack rows of buttons vertically */
+  align-items: center;                   /* centers both rows */
+  gap: 1rem;                             /* space between rows */
+  margin-top: 1rem;                      /* Space above CTA area */
+}
+
+/* first row: 3 buttons */
+.projects-row-top {
+  display: flex;                         /* Lays top row buttons horizontally */
+  justify-content: center;               /* Center top row buttons */
+  gap: 1rem;                             /* Space between buttons */
+}
+
+/* second row: 2 buttons centered under top row */
+.projects-row-bottom {
+  display: flex;                         /* Lays bottom row buttons horizontally */
+  justify-content: center;               /* Center bottom row buttons */
+  gap: 1rem;                             /* Space between buttons */
+}
+
+/* optional button width for nice balance */
+.projects-cta a.button {
+  min-width: 220px;                      /* Ensures buttons have a consistent width */
+  text-align: center;                    /* Centers button labels */
+}
+
+.projects .small-tagline {
+  color: var(--text);                    /* makes it black */
+}
+
+
+/* Only widens the left column on this specific page */
+.container-left:has(.industrial-c-left) {
+  flex: 2;                               /* Left column takes twice the space */
+  max-width: 1000px;                     /* Caps max width for readability */
+}
+
+.container-left:has(.industrial-c-left) > p {
+  max-width: 530px;                      /* max width */
+  margin: 0;                             /* ensures it stays left-aligned under the title */
+}
+
+.title-image-projects-industrial {
+  width: 100%;                           /* Image fills right column */
+  max-width: 600px;                      /* Caps width for layout */
+  height: 390px;                         /* Fixed height for consistent crop */
+  border-radius: 40px;                   /* Softly rounded image corners */
+  object-fit: cover;                     /* Crops image to fit frame */
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);/* Subtle shadow for depth */
+  position: relative;                    /* Allows fine position tweaks */
+  margin-right: -1rem;                   /* Slight overlap towards centre */
+  margin-top: 0.6rem;                    /* Small gap above image */
+  transform: translateX(-2rem);          /* subtle overlap without breaking layout */
+}
+
+.hl-left-design {
+  padding-right: calc(clamp(220px, 18vw, 300px) / 2 + 1rem); /* Reserves space for centre image overlap */
+  min-width: 0;                         /* prevent overflow pushing to next line */
+  max-width: 600px;                     /* Keeps text column nicely readable */
+}
+
+
+.title-image-projects-engineering {
+  width: 100%;                           /* Image fills right column */
+  max-width: 533.5px;                    /* Specific width for engineering image */
+  height: 390px;                         /* Fixed height for consistency */
+  border-radius: 40px;                   /* Rounded corners */
+  object-fit: cover;                     /* Crops image cleanly */
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);/* Subtle elevation */
+  position: relative;                    /* Allows adjustment inside layout */
+  margin-right: -1rem;                   /* Slight negative margin for overlap */
+  margin-top: 0.6rem;                    /* Small top offset */
+  transform: translateX(-2rem);          /* subtle overlap without breaking layout */
+}
+
+/* ---------- Resources Page --------------------- */
+
+.center {
+  text-align: center;   /* centers inline text and inline-block elements */
+  margin-left: auto;    /* optional: centers the block itself if it has a set width */
+  margin-right: auto;   /* optional: centers the block itself if it has a set width */
+}
+
+/* --- Projects stripe background --- */
+.stripe-section-resources{
+  position: relative;            /* Anchor for resources stripe graphics */
+  isolation: isolate;            /* keeps the graphics behind only this section */
+}
+
+/* Vertical stripe (centered) */
+.stripe-section-resources::before{
+  content:"";                    /* Creates vertical decorative bar */
+  position:absolute;             /* Freely positions the stripe */
+  left:50%;                      /* Centers stripe */
+  transform:translateX(-50%);    /* Perfect horizontal centering */
+  top: clamp(180px, 12vh, 160px);/* where the vertical bar begins */
+  bottom: 0;                     /* runs to end of section */
+  width: clamp(100px, 10vw, 180px);  /* stripe thickness */
+  background: var(--brand);      /* Brand red */
+  border-radius: 0;              /* Straight ends */
+  z-index:-1;                    /* behind content */
+}
+
+/* Top horizontal bar with rounded caps */
+.stripe-section-resources::after{
+  content:"";                    /* Creates matching horizontal bar */
+  position:absolute;             /* Positions above vertical stripe */
+  left:50%;                      /* Centers horizontally */
+  transform:translateX(-50%);    /* True centering */
+  top: clamp(175px, 11vh, 150px);/* sits just above the vertical bar */
+  width: min(92%, 1000px);       /* long bar across the page */
+  height: 10px;                  /* Bar thickness */
+  background: var(--brand);      /* Same red as vertical bar */
+  border-radius: 999px;          /* rounded ends */
+  z-index:-1;                    /* Places bar under main content */
+}
+
+/* 1) Medium screens (≤ 1200px): basic scaling */
+@media (max-width: 1200px) {
+
+  /* Give all pages a bit more breathing room on the sides */
+  main {
+    padding-inline: 2rem;
+  }
+
+  .page-container {
+    padding-inline: 1.5rem;
+  }
+
+  /* Projects grid: 3 → 2 columns */
+  .project-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 1.5rem;
+  }
+}
+
+/* 2) iPad / medium screens (769px–1200px): stripes + contact tweaks */
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    /* INDEX STRIPE (iPad): control how far it extends */
+  .stripe-section-index::before {
+    height: 95vh;   /* Shorter stripe */
+  }
+  
+  /* CONTACT PAGE (iPad): remove the big bottom gap */
+  .contact-page .page-container {
+    min-height: auto;          /* don’t force full viewport height */
+  }
+
+  .contact-page .open-container {
+    padding-bottom: 0;         /* no extra space under the form */
+  }
+
+  .contact-page footer {
+    margin-top: 10px;          /* almost flush under the content */
+  }
+
+  /* PROJECTS & RESOURCES (iPad): start stripes a fraction lower */
+  .stripe-section-projects::before,
+  .stripe-section-resources::before {
+    top: 250px;                 /* move stripe visuals down a bit more */
+  }
+
+  .stripe-section-projects::after,
+  .stripe-section-resources::after {
+    top: 240px;
+  }
+
+  /* ABOUT PAGE (iPad): image narrower and not pushing too far across */
+  .about-media-1 {
+    max-width: 460px;          /* pull the image in a bit */
+    margin-right: 0;
+    transform: none;
+  }
+
+  .about-container-right {
+    padding-right: 1.5rem;     /* extra breathing room for text */
+  }
+
+   /* FOOTER (iPad): nudge socials column inward */
+  footer .socials {
+    justify-self: end;        /* keep it on the right side */
+    padding-right: 3rem;      /* ⬅ brings it slightly in from the page edge */
+  }
+
+  .footer-container {
+    width: min(100% - 3rem, var(--maxw)); /* adds a little more side padding */
+  }
+}
+
+
+
+
+/* 3) Small laptops / tablets (≤ 900px): stack 2-column layouts */
+@media (max-width: 900px) {
+
+  /* Stack main two-column shells instead of side-by-side */
+  .open-container,
+  .open-container-index,
+  .open-container.teaching-row,
+  .home-page .open-container.highlights {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+
+  /* Make both sides full-width when stacked */
+  .container-left,
+  .container-right,
+  .about-container-left,
+  .about-container-right,
+  .open-container.teaching-row .teaching-container-left,
+  .open-container.teaching-row .teaching-media {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .open-container.teaching-row .teaching-media {
+    justify-content: flex-start;
+    margin-top: 1.25rem;
+  }
+
+  /* Index / About / Projects hero images – stop the big sideways shift on narrow */
+  .title-image,
+  .title-image-2,
+  .title-image-projects,
+  .title-image-projects-industrial,
+  .title-image-projects-engineering,
+  .about-media-1 {
+    max-width: 100%;
+    margin: 1.25rem 0 0 0;
+    transform: none;
+    position: relative;   /* keep them in normal flow */
+  }
+
+  /* Highlights: let left + right stack nicely */
+  .highlights,
+  .hl-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .hl-left,
+  .hl-right {
+    padding: 0;
+    text-align: left;
+  }
+
+  .hl-gallery {
+    width: 100%;
+    max-width: 420px;
+    transform: none;
+  }
+}
+
+/* 4) Phones / narrow screens (≤ 768px): stripes off, hero off, table scroll */
+@media (max-width: 768px) {
+
+  /* a) Turn OFF red stripes on small screens so they don't mess layout */
+  .stripe-section-index::before,
+  .stripe-section-about::before,
+  .stripe-section-projects::before,
+  .stripe-section-projects::after,
+  .stripe-section-inner-projects::before,
+  .stripe-section-resources::before,
+  .stripe-section-resources::after {
+    content: none;
+  }
+
+  /* b) Side padding + BIGGER top margin so titles aren't hidden under the fixed nav */
+  main {
+    padding-inline: 1.25rem;
+  }
+
+  .page-container {
+    padding-inline: 1.25rem;
+    margin-top: 190px;   /* ⬅ bump this up/down if headings still clip */
+  }
+
+  /* c) NAV: clean vertical stack, not broken into 3 strange lines */
+  nav .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    justify-self: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .logo {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+  }
+
+  /* d) INDEX: stack neatly and HIDE the big hero image on phones */
+  .open-container-index,
+  .open-container.highlights {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title-image-2 {
+    display: none;
+  }
+
+  .hl-left,
+  .hl-right {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* e) ABOUT: force text first, image second on mobile */
+  .stripe-section-about .about-container-right {
+    order: 1;       /* text column */
+  }
+
+  .stripe-section-about .about-container-left {
+    order: 2;       /* image column */
+    margin-top: 1rem;
+  }
+
+  /* f) PROJECTS / RESOURCES: spacing tidy now stripes are gone */
+  .projects-container {
+    padding-top: 1.5rem;
+  }
+
+/* g) FOOTER: single-column layout (phones only) */
+  .footer-container {
+    grid-template-columns: 1fr;         /* one column on mobile */
+    row-gap: 1.25rem;
+    text-align: left;
+    justify-items: flex-start;          /* align everything to the left */
+  }
+
+  /* Put all sections in that single column */
+  .footer-about,
+  .footer-links,
+  footer .socials,
+  .footer-note {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: flex-start;
+  }
+
+  /* Socials directly under Quick Links, aligned with them */
+  footer .socials {
+    display: grid;
+    grid-template-columns: repeat(2, 42px);
+    grid-auto-rows: 42px;
+    gap: 14px 16px;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+
+  /* “All rights reserved” text below socials */
+  .footer-note {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  /* h) TEACHING TABLE: horizontal scroll instead of being cut off */
+  .table-wrap {
+    max-width: 100%;
+    overflow-x: auto;                 /* enables horizontal scroll */
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
+  }
+
+  table.table {
+    min-width: 700px;                 /* wider than the screen so scrolling is obvious */
+  }
 }

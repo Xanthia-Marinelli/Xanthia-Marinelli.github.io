@@ -3,66 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xanthia's Teaching Portfolio - Computing Project Page</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Xanthia's Teaching Portfolio - Textiles Projects Page</title>
+    <link rel="stylesheet" href="final.css">
+
 </head>
 
-<body>
-    
+
 <!-- This is the main header navigation for my page -->
     <header class="header">
             <nav>   
                 <div class="container">
                     <ul class="nav-left">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="teaching.html">Teaching Practice</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
                     </ul>
                 
-                        <div class="logo">XM</div>
+                        <div class="logo" id="themeToggle">XM</div>
 
                     <ul class="nav-right">
-                        <li><a href="projects.html">Project Showcase</a></li>
-                        <li><a href="worksamples.html">Samples of Work</a></li>
-                        <li><a href="contact.html">Contact Me</a></li>
+                        <li><a class="active" href="projects.html">Projects</a></li>
+                        <li><a href="worksamples.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
     </header>
 
-<main>
+<section class="stripe-section-inner-projects">
 
-    <!-- This Section will house all my textiles projects -->
-<section class="projects-wrapper">
-    <!-- Left Column - Projects -->
-    <div class="column-left">
-        <h2>Computing Projects</h2>
-            
-        <div class="project-card-2">
-            <img src="Images/Farm-bot.png" alt="Large green water tanks fitted with a Farmbot solar-powered water monitoring device, overlooking farmland with red soil, trees, and a partly cloudy sky in the background.">
-            <h3>Project Title:</h3>
-            <h4>Farmbot Automatic Water Monitoring System Analysis</h4>
-            <h3>Brief Description:</h3>
-            <p>This project researched the Farmbot Automatic Water Monitoring System, an Internet of Things (IoT) device used in Australian agriculture. Farmbot uses solar-powered sensors placed in water tanks, dams, and bores to track water levels and transmit real-time data to farmers through the MyFarmbot app. The system helps farmers save time, reduce costs, and improve water management by allowing them to monitor tanks remotely and even control pumps from their phones. The study looked at how Farmbot works, its benefits (efficiency, sustainability, safety) and its challenges (reliance on Wi-Fi/satellite connectivity and data privacy concerns). It showed how digital technologies like IoT can transform agriculture, especially in remote areas, but also highlighted the limitations of infrastructure in rural Australia. </p>
-            <h3>Skills Showcased:</h3>
-                    
-            <ul style="font-size: medium;">
-                <li>Research skills: investigating how IoT and smart sensors work in farming.</li>
-                <li>Digital technologies knowledge: understanding cloud data, apps, and wireless systems.</li>
-                <li>Critical thinking: weighing up benefits (efficiency, sustainability) and risks (connectivity, privacy).</li>
-                <li>Communication: presenting findings in a clear, structured research report.</li>
-                <li>Problem solving: analysing how tech solutions could improve water monitoring challenges.</li>
-                <li>Reflection & evaluation: considering the future of digital agriculture and possible improvements.</li>
-            </ul>
+    <section class="page-container">
+        <section class="open-container">
+            <section class="container-left">
+                <h1><span>Digital Project</span> Showcase</h1>
+                <p> A collection of projects undertaken as assignments for different computing units spaning through COMP107 (Fundamentals of Digital Technologies and Computing), COMP108 (Fundamentals of Programming Design), COMP207 (Object Oriented Programming Design) and COMP208 (Web Application Development).</p>
 
-            <h3>Best Suited For:</h3>
-            <p>Stage 4 (Year 7 or 8)</p>
-            <h3>Documentation/Resources for Project</h3>
-            <p><a href="https://www.dropbox.com/scl/fi/y9yh22a7a2p6rifi8p0p0/A-Study-of-the-Farmbot-Automatic-Water-Monitoring-System-1-copy.pdf?rlkey=91xbyw18at93h5vbajntc1ptn&st=26fh3trk&dl=0" target="_blank" rel="noopener"> Report</a></p>
+            </section>
+
+            <section class="container-right"> 
+                <img class="title-image-projects" src="Images/projects-comp.png" alt="A photo of a young woman sewing fabric on an industrial sewing machine with spools of thread nearby, showcasing textile production and garment construction skills." />
+            </section>
+        </section>
+
+        <div class="hl-right">
+                <h2><span>Digital</span> Projects</h2>
         </div>
-    </div>
+
+        <!-- ===== CAROUSEL 1: Comp Projects ===== -->
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-cp1">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Website.png" alt="A clean portfolio homepage featuring Xanthia Marinelli smiling on a bridge beside bold text reading “Welcome to My Teaching Folio,” with a red vertical stripe, navigation bar, and buttons to download her CV and transcript.">
+                            <h3>Teaching Portfolio Website Design</h3>
+                            <p class="muted">Stage 6 (Year 11 or 12)</p> 
+                            <p>This website is a self-designed and fully hand-coded digital teaching portfolio built from the ground up using HTML, CSS, and JavaScript. It showcases my professional identity, teaching philosophy, and design projects through an interactive and visually cohesive layout. Every component, from the navigation bar and red signature stripe to the animated carousels and flip-cards—has been custom-built to reflect my personal brand (XM) and highlight both my creative and technical capabilities in design and education.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-cp1b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-cp1b" aria-hidden="true" hidden>
+                            <img src="Images/Website.png" alt="A clean portfolio homepage featuring Xanthia Marinelli smiling on a bridge beside bold text reading “Welcome to My Teaching Folio,” with a red vertical stripe, navigation bar, and buttons to download her CV and transcript.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Front-End Web Development: Semantic HTML5, advanced CSS3 (Flexbox, Grid, pseudo-elements), responsive and adaptive layouts.</li>
+                                    <li>JavaScript Functionality: Interactive features such as flip-cards, carousels, and theme toggles (dark/light mode).</li>
+                                    <li>UI/UX Design: Consistent colour palette, brand identity, visual hierarchy, and accessibility (contrast, readability, alt-text).</li>
+                                    <li>Branding & Visual Design: Creation of the XM logo, cohesive typography system, and distinctive red vertical stripe motif.</li>
+                                    <li>Content Architecture: Structuring information for intuitive navigation and professional readability across multiple pages.</li>
+                                    <li>Version Control & Deployment: Website hosted via GitHub Pages, with clean, maintainable file organisation.</li>
+                                    <li>Responsive Design: Fully functional across mobile, tablet, and desktop with fluid grids and adaptive typography.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/fd8z181x4iwmizt25yxqr/COMP208_AT2_Marinelli_Xanthia-copy.pdf?rlkey=7dhyy0svi6md4baevzal4y3p8&st=3vz38j15&dl=0" target="_blank" rel="noopener">Website Documentation</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="hl-left">
+            <h2><span>Digital Case</span> Studies</h2>
+        </div>
+
+         <!-- ===== CAROUSEL 2: Comp Case Studies ===== -->
+
+        <section class="project-scroller-wrap">
+            <button class="scroller-arrow prev" aria-label="Previous projects" type="button">‹</button>
+            <button class="scroller-arrow next" aria-label="Next projects" type="button">›</button>
+
+            <div class="project-scroller" tabindex="0">
+
+                <!-- Card 1 -->
+                <article class="project-chip" data-card>
+                    <div class="chip-inner" id="card-cs1">
+                    
+                        <!-- Front -->
+                        <section class="face face-front" aria-hidden="false">
+                            <img src="Images/Farm-bot.png" alt="Large green water tanks fitted with a Farmbot solar-powered water monitoring device, overlooking farmland with red soil, trees, and a partly cloudy sky in the background.">
+                            <h3>Farmbot Automatic Water Monitoring System Analysis</h3>
+                            <p class="muted">Stage 4 (Year 7 or 8)</p> 
+                            <p>This project researched the Farmbot Automatic Water Monitoring System, an Internet of Things (IoT) device used in Australian agriculture. Farmbot uses solar-powered sensors placed in water tanks, dams, and bores to track water levels and transmit real-time data to farmers through the MyFarmbot app. The system helps farmers save time, reduce costs, and improve water management by allowing them to monitor tanks remotely and even control pumps from their phones. The study looked at how Farmbot works, its benefits (efficiency, sustainability, safety) and its challenges (reliance on Wi-Fi/satellite connectivity and data privacy concerns). It showed how digital technologies like IoT can transform agriculture, especially in remote areas, but also highlighted the limitations of infrastructure in rural Australia.</p>
+                            <button class="flip-toggle" aria-expanded="false" aria-controls="card-cs1b" type="button">More</button>
+                        </section>
+
+                        <!-- Back -->
+                        <section class="face face-back" id="card-cs1b" aria-hidden="true" hidden>
+                            <img src="Images/Farm-bot.png" alt="Large green water tanks fitted with a Farmbot solar-powered water monitoring device, overlooking farmland with red soil, trees, and a partly cloudy sky in the background.">
+                            <h4>Skills Showcased:</h4>
+                                <ul>
+                                    <li>Research skills: investigating how IoT and smart sensors work in farming.</li>
+                                    <li>Digital technologies knowledge: understanding cloud data, apps, and wireless systems.</li>
+                                    <li>Critical thinking: weighing up benefits (efficiency, sustainability) and risks (connectivity, privacy).</li>
+                                    <li>Communication: presenting findings in a clear, structured research report.</li>
+                                    <li>Problem solving: analysing how tech solutions could improve water monitoring challenges.</li>
+                                    <li>Reflection & evaluation: considering the future of digital agriculture and possible improvements.</li>
+                                </ul>
+
+                            <h4>Documentation/Resources for Project</h4>
+                            <p><a href="https://www.dropbox.com/scl/fi/y9yh22a7a2p6rifi8p0p0/A-Study-of-the-Farmbot-Automatic-Water-Monitoring-System-1-copy.pdf?rlkey=91xbyw18at93h5vbajntc1ptn&st=26fh3trk&dl=0" target="_blank" rel="noopener"> Report</a></p>
+                            <button class="flip-toggle" aria-expanded="true" type="button">Back</button>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects">
+            <p class="small-tagline">Check out my other projects here:</p>
+
+            <div class="projects-cta">
+                <div class="projects-row-top">
+                    <a class="button btn-3" href="textiles.html">Textiles Technology</a>
+                    <a class="button btn-3" href="industrial.html">Industrial Technology</a>
+                    <a class="button btn-3" href="d&t.html">Design & Technology</a>
+                </div>
+
+                <div class="projects-row-bottom">
+                    <a class="button btn-3" href="food.html">Food Technology</a>
+                    <a class="button btn-3" href="engineering.html">Engineering Technology</a>
+                </div>
+            </div>
+        </section>  
+    </section>  
 </section>
-</main>
+
 
 <!-- This is the footer of my website -->
 <footer>
@@ -84,26 +179,35 @@
             <div class="quick-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="teaching.html">Teaching Practice</a></li>
-                    <li><a href="projects.html">Project Showcase</a></li>
-                    <li><a href="worksamples.html">Samples of Work</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="worksamples.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Right Section: Contact & Social -->
-        <div class="footer-contact">
+        <div class="socials">
             <h4>Socials</h4>
 
-            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener">LinkedIn</a> |
-            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener">Instagram</a> |
-            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener">IMDB</a> |
-            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener">Stunt Book Australia</a>      
+            <a href="https://www.linkedin.com/in/xanthia-marinelli-39b91037b" target="_blank" rel="noopener noreferrer">
+                <img src="Images/LinkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.instagram.com/xanthiamarinelli/?hl=en" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.imdb.com/name/nm10903038/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/IMDB.png" alt="IMDB" />
+            </a>
+            <a href="https://www.stuntbookaustralia.com.au/member-profile-details.php?sba_member=763" target="_blank" rel="noopener noreferrer">
+                <img src="Images/SBAus.png" alt="Stunt Book Australia" />
+            </a>     
         </div>
     </section>
 </footer>
 
+<script src="themes.js"></script>
 </body>
 </html>
